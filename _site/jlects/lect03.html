@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/f23/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/f23/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "F23",
+	"url" : "/",
+	"baseurl" : "/f23",
+	"items" : [
+	    
+	    {
+		"title" : "F23",
+		"url" : "/",
+		"baseurl" : "/f23",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "PA",		    
+		     "url": "/pa_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Lab",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Lab Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Cal",		    
+		     "url": "/info/calendar/", 		    
+		     "description": "Assignment Calendar", 
+		    		    
+		},
+	
+		{
+		    "title": "More",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Syllabus",		    
+			    "url": "/info/syllabus/", 
+			     "description": "Syllabus", 
+			},
+			
+			{
+			    "title": "Info Pages",		    
+			    "url": "/info_list/", 
+			     "description": "List of General Information Pages", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Links",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Gauchospace",		    
+			    "url": "https://gauchospace.ucsb.edu", 
+			     "description": "Overall Grade Information", 
+			},
+			
+			{
+			    "title": "GradeScope",		    
+			    "url": "https://gradescope.com", 
+			     "description": "HW and Lab Grades", 
+			},
+			
+			{
+			    "title": "Piazza",		    
+			    "url": "https://piazza.com", 
+			     "description": "Q&A Forum", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-f23",		    
+			    "url": "https://github.com/ucsb-cs24-f23", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+    
+  <title> CS24 Fall 2023</title>
+  </head>
+  <body id="page-top">
+    <div class="container">
+    
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/f23");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/f23");
+  console.log("offering_url_final=/f23/");
+  console.log("offering_title=F23");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/f23/">
+    F23
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/f23/pa_list/"title="Programming Assignments"data-term="" >PA</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/lab_list/"title="Lab Assignments"data-term="" >Lab</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/info/calendar/"title="Assignment Calendar"data-term="" ><i class='fa fa-calendar' aria-hidden='true'></i>&nbsp;Cal</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-More" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">More</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-More"><a class="dropdown-item" href="/f23/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+<a class="dropdown-item" href="/f23/info_list/"title="List of General Information Pages"data-term="" >Info Pages</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Links" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Links</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Links"><a class="dropdown-item" href="https://gauchospace.ucsb.edu"title="Overall Grade Information"data-term="" >Gauchospace</a>
+
+<a class="dropdown-item" href="https://gradescope.com"title="HW and Lab Grades"data-term="" >GradeScope</a>
+
+<a class="dropdown-item" href="https://piazza.com"title="Q&A Forum"data-term="" >Piazza</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-f23"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-f23</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+    <div id="content"  class="ui-content">
+      
+      
+        <p class="topic-summary">Where does memory go? Stack and Heap</p>
+      
+        
+          
+      
+      <h2 id="relevant-topics-in-the-textbook">Relevant topics in the textbook:</h2>
+<p>Data Structures and Other Objects Using C++ Chapter 4.1</p>
+
+<h1 id="structs---refreshment">Structs - refreshment</h1>
+
+<ul>
+  <li>Structs are a programmer-defined type containing a set of associated values with possibly varying types.</li>
+  <li>C++ gives us a lot of tools and types to work with out-of-the-box.
+    <ul>
+      <li>However, it’s impossible for a programming language to give us all possible types of abstractions</li>
+      <li>Programmers can organize data into types that fit the needs of an application.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="defining-a-struct">Defining a struct</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct Student { // Student is now a new defined type
+	string name;
+	int perm;
+	double tuition;
+}; // Syntactically, a ‘;’ is needed at the end of a struct definition.
+</code></pre></div></div>
+
+<ul>
+  <li>You can use the ‘.’ operator to assign values to and access values from a member of a struct type.</li>
+</ul>
+
+<h2 id="example">Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int main() {
+	Student s1; // defining a variable containing the struct type Student
+	s1.name = "Chris Gaucho";
+	s1.perm = 1234567;
+	s1.tuition = 3000.50;
+
+	cout &lt;&lt; "Name: " &lt;&lt; s1.name &lt;&lt; ", perm: " &lt;&lt; s1.perm
+		 &lt;&lt; ", tuition: " &lt;&lt; s1.tuition &lt;&lt; endl;
+
+	return 0;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>We can use this representation to do more interesting things like keep collections of students in a class, department, university, etc.</li>
+</ul>
+
+<h2 id="struct-values-as-pointers">Struct values as pointers</h2>
+
+<ul>
+  <li>A pointer can point to any C++ type, including structs!</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Student* s2 = &amp;s1; // OK
+s2.name = "Mr. E"; // ERROR! Why?
+</code></pre></div></div>
+
+<ul>
+  <li>The code above won’t work because s2 is a pointer containing an address to a Student struct.
+    <ul>
+      <li>Remember, pointers contain memory addresses to a type!</li>
+      <li>If we wanted to modify a memory address, we would have to dereference the pointer.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*s2.name = "Mr. E"; // Still contains an error!
+</code></pre></div></div>
+
+<ul>
+  <li>In this case, the ‘.’ operator has precedence over the ‘*’ operator.
+    <ul>
+      <li>So it’s still trying to access the name field from a pointer variable without dereferencing it.</li>
+    </ul>
+  </li>
+  <li>One way to correct this is to dereference the variable first, then access the struct’s variable.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(*s2).name = "Mr. E"; // OK. Pointer is dereferenced first, then name is accessed
+</code></pre></div></div>
+
+<ul>
+  <li>When dealing with pointers, this mechanism is so common that there is a shortcut to do this.</li>
+  <li>The ‘-&gt;’ operator is used.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>s2-&gt;name = "Mr. E"; // OK. Same as (*s2).name
+</code></pre></div></div>
+
+<h1 id="reference-variables">Reference Variables</h1>
+
+<ul>
+  <li>Reference variables are considered another alias to a variable that was assigned to it.
+    <ul>
+      <li>Any changes to either variable are reflected in both variables.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int x = 100;
+int&amp; y = x; // y references x
+
+cout &lt;&lt; x &lt;&lt; ", " &lt;&lt; y &lt;&lt; endl;
+x = 500;
+cout &lt;&lt; x &lt;&lt; ", " &lt;&lt; y &lt;&lt; endl;
+x = 200;
+cout &lt;&lt; x &lt;&lt; ", " &lt;&lt; y &lt;&lt; endl;
+</code></pre></div></div>
+
+<h2 id="some-differences-between-reference-variables-and-pointers">Some differences between reference variables and pointers</h2>
+
+<ul>
+  <li>Reference variables may not change after it was assigned to reference another variable.
+    <ul>
+      <li>Pointers can change what it’s pointing to.</li>
+    </ul>
+  </li>
+  <li>Reference variables must be initialized.
+    <ul>
+      <li>Pointers can be uninitialized.</li>
+    </ul>
+  </li>
+  <li>Reference variables cannot refer to other reference variables
+    <ul>
+      <li>Pointers can have pointers to pointers to pointers …</li>
+    </ul>
+  </li>
+  <li>Reference variables’ address is the same address as the variable it binds to.
+    <ul>
+      <li>Pointers’ values have the address it points to, but occupies its own space on the stack and has its own memory address.</li>
+      <li>So when we pass-by-reference, we are technically using reference variables that are using the same memory address as the function caller’s parameter variables.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="example-observe-the-addresses">Example (observe the addresses)</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int a = 10;
+int* p = &amp;a;
+int&amp; r = a;
+
+cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+cout &lt;&lt; "&amp;a = " &lt;&lt; &amp;a &lt;&lt; endl;
+cout &lt;&lt; "p = " &lt;&lt; p &lt;&lt; endl;
+cout &lt;&lt; "&amp;p = " &lt;&lt; &amp;p &lt;&lt; endl;
+cout &lt;&lt; "r = " &lt;&lt; r &lt;&lt; endl;
+cout &lt;&lt; "&amp;r = " &lt;&lt; &amp;r &lt;&lt; endl;
+</code></pre></div></div>
+
+<h1 id="memory-stack">Memory Stack</h1>
+
+<ul>
+  <li>Types are important in compiled languages like C++
+    <ul>
+      <li>Knowing exactly the amount of memory a function will occupy is essential for memory organization during execution.</li>
+      <li>Function calls are laid out in memory as a data structure called a <b>stack</b>.
+        <ul>
+          <li>Think of a stack like a canister of tennis balls.</li>
+          <li>You can only add to the top of the stack.</li>
+          <li>You can only remove an item at the top of the stack.</li>
+        </ul>
+      </li>
+      <li>Every time a function is called, memory footprint is created and added to the top of the memory stack.</li>
+      <li>When the function returns a value, the memory reserved for the function is removed from the stack.</li>
+      <li><code class="language-plaintext highlighter-rouge">int main()</code> is the bottom most function on the stack throughout execution.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="example-1">Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int doubleValue(int x) {
+	return 2 * x;
+}
+
+int quadrupleValue(int x) {
+	return doubleValue(x) + doubleValue(x); 
+}
+
+int main() {
+	int result = quadrupleValue(4);
+	cout &lt;&lt; result &lt;&lt; endl;
+	return 0;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>Start Execution</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|                       |
+|-----------------------|
+| int main()            |
+|_______________________|
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">quadrupleValue(4)</code> is called</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|                       |
+|-----------------------|
+| int quadrupleValue(4) |
+|-----------------------|
+| int main()            |
+|_______________________|
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">doubleValue(x)</code> is called</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|                       |
+|-----------------------|
+| int doubleValue(4)    |
+|-----------------------|
+| int quadrupleValue(4) |
+|-----------------------|
+| int main()            |
+|_______________________|
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">doubleValue(4)</code> finishes executing and returns a value</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|                       |
+|-----------------------|
+| int quadrupleValue(4) |
+|-----------------------|
+| int main()            |
+|_______________________|
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">doubleValue(4)</code> is called again</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|                       |
+|-----------------------|
+| int doubleValue(4)    |
+|-----------------------|
+| int quadrupleValue(4) |
+|-----------------------|
+| int main()            |
+|_______________________|
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">doubleValue(4)</code> finishes executing and returns a value</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|                       |
+|-----------------------|
+| int quadrupleValue(4) |
+|-----------------------|
+| int main()            |
+|_______________________|
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">quadrupleValue</code> returns the sum of the two <code class="language-plaintext highlighter-rouge">doubleValue(4)</code> function calls</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|                       |
+|-----------------------|
+| int main()            |
+|_______________________|
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">main</code> prints the result of <code class="language-plaintext highlighter-rouge">quadrupleValue</code> return value. Program exits.</li>
+</ul>
+
+<h1 id="stack-vs-heap">Stack vs heap:</h1>
+<ul>
+  <li>memory management (stack - automatic, heap - manual)</li>
+  <li>available memory size (larger in heap)</li>
+  <li>memory fragmentation (heap) vs continuous allocation (stack)</li>
+  <li>fixed memory allocation (stack) vs flexible - resizing (heap)</li>
+  <li>memory time access (slower for heap)</li>
+</ul>
+</div><!-- content -->
+    <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/jlects/lect03.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/f23">
+	  <img src="https://travis-ci.org/ucsb-cs24/f23.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+    </div><!-- container -->
+  </body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/f23/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/f23/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "F23",
+	"url" : "/",
+	"baseurl" : "/f23",
+	"items" : [
+	    
+	    {
+		"title" : "F23",
+		"url" : "/",
+		"baseurl" : "/f23",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "PA",		    
+		     "url": "/pa_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Lab",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Lab Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Cal",		    
+		     "url": "/info/calendar/", 		    
+		     "description": "Assignment Calendar", 
+		    		    
+		},
+	
+		{
+		    "title": "More",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Syllabus",		    
+			    "url": "/info/syllabus/", 
+			     "description": "Syllabus", 
+			},
+			
+			{
+			    "title": "Info Pages",		    
+			    "url": "/info_list/", 
+			     "description": "List of General Information Pages", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Links",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Gauchospace",		    
+			    "url": "https://gauchospace.ucsb.edu", 
+			     "description": "Overall Grade Information", 
+			},
+			
+			{
+			    "title": "GradeScope",		    
+			    "url": "https://gradescope.com", 
+			     "description": "HW and Lab Grades", 
+			},
+			
+			{
+			    "title": "Piazza",		    
+			    "url": "https://piazza.com", 
+			     "description": "Q&A Forum", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-f23",		    
+			    "url": "https://github.com/ucsb-cs24-f23", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+    
+  <title> CS24 Fall 2023</title>
+  </head>
+  <body id="page-top">
+    <div class="container">
+    
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/f23");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/f23");
+  console.log("offering_url_final=/f23/");
+  console.log("offering_title=F23");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/f23/">
+    F23
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/f23/pa_list/"title="Programming Assignments"data-term="" >PA</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/lab_list/"title="Lab Assignments"data-term="" >Lab</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/info/calendar/"title="Assignment Calendar"data-term="" ><i class='fa fa-calendar' aria-hidden='true'></i>&nbsp;Cal</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-More" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">More</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-More"><a class="dropdown-item" href="/f23/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+<a class="dropdown-item" href="/f23/info_list/"title="List of General Information Pages"data-term="" >Info Pages</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Links" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Links</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Links"><a class="dropdown-item" href="https://gauchospace.ucsb.edu"title="Overall Grade Information"data-term="" >Gauchospace</a>
+
+<a class="dropdown-item" href="https://gradescope.com"title="HW and Lab Grades"data-term="" >GradeScope</a>
+
+<a class="dropdown-item" href="https://piazza.com"title="Q&A Forum"data-term="" >Piazza</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-f23"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-f23</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+    <div id="content"  class="ui-content">
+      
+      
+        <p class="topic-summary">Course overview, intro to Git and C++ classes</p>
+      
+        
+          
+      
+      <h1 id="topics">Topics</h1>
+
+<ul>
+  <li>Course overview
+    <ul>
+      <li>why study data structures, C++ and git?</li>
+      <li>what are the goals of this class?</li>
+    </ul>
+  </li>
+  <li>Intro to Object Oriented Programming</li>
+  <li>Intro to OOP</li>
+  <li>Implementing classes: class vs instance, syntax for classes, scope, methods, instance variables</li>
+  <li>Classes: structs but with methods</li>
+  <li>Accessors and modifiers</li>
+  <li>ADT (Abstract Data Type) ~ class (w/ info hiding) for use by other programmers</li>
+</ul>
+
+<h2 id="github-intro">Github intro</h2>
+<ul>
+  <li>What is github? How and why we plan to use it in this class</li>
+  <li>What is a git repo?</li>
+  <li>
+    <p>Creating a github repo and using github’s web interface to store your first program</p>
+  </li>
+  <li>
+    <p>Gentle intro to github: what is a repo, creating a repo,  cloning a repo to a local machine, syncing repos with git add, commit and push</p>
+  </li>
+  <li>Read the articles on <a href="https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/">creating a github repo under an organization</a>, <a href="https://ucsb-cs56-pconrad.github.io/topics/git_cloning_your_first_repo/">cloning your first repo</a> and <a href="https://ucsb-cs56-pconrad.github.io/topics/git_basic_workflow/">git basic workflow</a>.  We will now put the concepts from all the articles that you have read so far into practice. You may need to refer back to these articles to complete the following steps.</li>
+</ul>
+
+<h1 id="makefiles-a-simple-example">Makefiles (a simple example)</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// main.cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+	cout &lt;&lt; "Hello CS 32!" &lt;&lt; endl;
+	return 0;
+}
+</code></pre></div></div>
+
+<h2 id="can-compile-this-with-g-or-clang">Can compile this with g++ or clang++:</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ g++ main.cpp
+$ ls
+a.out		main.cpp
+$ ./a.out
+Hello CS 32!
+</code></pre></div></div>
+
+<ul>
+  <li>Note that the executable is called <code class="language-plaintext highlighter-rouge">a.out</code>. This is the default name of the executable.</li>
+</ul>
+
+<h2 id="using-make-command">Using <code class="language-plaintext highlighter-rouge">make</code> command</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ make main
+c++     main.cpp   -o main
+</code></pre></div></div>
+
+<ul>
+  <li>This default behavior of <code class="language-plaintext highlighter-rouge">make</code> tries to compile the .cpp with that name and output the executable to that name.</li>
+  <li>Works well for very simple programs that exist in one file.</li>
+</ul>
+
+<h2 id="change-the-output-of-the-executable-with-the--o-flag">Change the output of the executable with the <code class="language-plaintext highlighter-rouge">-o</code> flag</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ g++ -o main main.cpp
+$ ls
+main		main.cpp
+$ ./main
+Hello CS 32!
+</code></pre></div></div>
+<ul>
+  <li>Changes the executable name from <code class="language-plaintext highlighter-rouge">a.out</code> to <code class="language-plaintext highlighter-rouge">main</code></li>
+</ul>
+
+<h1 id="c-build-process">C++ Build Process</h1>
+
+<ol>
+  <li>
+    <p>Preprocessor: Text-based program that runs before the compilation step. Looks for statements such as #include and modifies the source which is the input for compilation.</p>
+  </li>
+  <li>
+    <p>Compiler: A program that translates source code into “object code,” which is a lower-level representation optimized for executing instructions on the specific platform. Lower level representations are usually stored in a .o (object) file.</p>
+  </li>
+  <li>
+    <p>Linker: Resolves dependencies and maps appropriate functions located in various object files. The output of the linker is an executable file for the specific platform.</p>
+  </li>
+</ol>
+
+<h1 id="compiling-multiple-files-example">Compiling multiple files example</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--------
+// functions.h
+
+int doubleInt(int x);
+--------
+// functions.cpp
+
+int doubleInt(int x) {
+	return 2 * x;
+}
+--------
+// main.cpp
+#include &lt;iostream&gt;
+#include “functions.h”
+
+using namespace std;
+
+int main() {
+    cout &lt;&lt; doubleInt(12) &lt;&lt; endl;
+    return 0;
+}
+--------
+</code></pre></div></div>
+
+<ul>
+  <li>We can’t just compile main.cpp anymore…</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ g++ main.cpp
+Undefined symbols for architecture x86_64:
+  "doubleInt(int)", referenced from:
+      _main in main-7c4a04.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+</code></pre></div></div>
+
+<ul>
+  <li>we see a “linker” error.</li>
+  <li>The linker doesn’t know where to find the <code class="language-plaintext highlighter-rouge">doubleInt()</code> function definition.</li>
+  <li>We need to compile <code class="language-plaintext highlighter-rouge">functions.cpp</code> so <code class="language-plaintext highlighter-rouge">main.cpp</code> knows where to find the <code class="language-plaintext highlighter-rouge">doubleInt()</code> function.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ g++ -o main main.cpp functions.cpp
+$ ls
+functions.cpp	functions.h	main		main.cpp
+$ ./main
+24
+</code></pre></div></div>
+
+<ul>
+  <li>Makefiles are useful since writing commands with many files is tedious and error-prone.</li>
+  <li>Makefiles are used to define compilation rules and dependencies so we can simply type <code class="language-plaintext highlighter-rouge">make [some_target]</code> and not have to type everything out all the time.</li>
+</ul>
+
+<h1 id="general-format-of-a-makefile">General format of a Makefile</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[target]: [dependencies]
+	[commands]
+</code></pre></div></div>
+
+<ul>
+  <li>Example:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Makefile
+
+main: functions.cpp main.cpp
+	g++ -o main main.cpp functions.cpp
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ make main
+g++ -o main main.cpp functions.cpp
+$ make main
+make: `main' is up to date.
+</code></pre></div></div>
+
+<ul>
+  <li>In this case, <code class="language-plaintext highlighter-rouge">make</code> uses timestamps to determine if something needs to be recompiled.</li>
+  <li>If a recent change occurred, then it will recompile. If nothing changes, then nothing is done since everything is <code class="language-plaintext highlighter-rouge">up to date</code></li>
+</ul>
+
+<h2 id="note">Note:</h2>
+<ul>
+  <li>The object (.o) files are not explicitly generated.</li>
+  <li>You will need to use the <code class="language-plaintext highlighter-rouge">-c</code> (compile only) flag.</li>
+  <li>Having make use .o files as a dependency is useful for maintenance reasons.
+    <ul>
+      <li><b>Only</b> recompiles source files that have changed.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Makefile
+
+main: functions.o main.o
+	g++ -o main main.o functions.o
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ make main
+c++    -c -o functions.o functions.cpp
+c++    -c -o main.o main.cpp
+g++ -o main main.o functions.o
+$ ls
+Makefile	functions.h	main		main.o
+functions.cpp	functions.o	main.cpp
+</code></pre></div></div>
+
+<h2 id="variables-in-makefiles">Variables in Makefiles</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Makefile
+#CXX=clang++
+CXX=g++
+DEPENDENCIES=functions.o main.o
+
+main: ${DEPENDENCIES}
+	${CXX} -o main ${DEPENDENCIES}
+</code></pre></div></div>
+
+<h2 id="make-clean">make clean</h2>
+
+<ul>
+  <li>Useful when trying to remove the executable and all .o files so everything can be recompiled from scratch.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Makefile
+main: functions.o main.o
+	g++ -o main main.o functions.o
+
+clean:
+	rm -f *.o main
+</code></pre></div></div>
+
+<ul>
+  <li>If we want to “start fresh” and recompile everything, it’s nice to have a “clean” target to remove all object files and the executable</li>
+</ul>
+
+<h1 id="compiling-a-specific-version-of-c">Compiling a specific version of C++</h1>
+
+<ul>
+  <li>We can specify the specific C++ version to use when compiling our programs with a special std flag.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>main: ${DEPENDENCIES}
+	${CXX} -std=c++11 -o main ${DEPENDENCIES}
+clean:
+	rm -f *.o main
+</code></pre></div></div>
+
+<h1 id="using--and-">Using <code class="language-plaintext highlighter-rouge">$@</code> and <code class="language-plaintext highlighter-rouge">$^</code></h1>
+
+<ul>
+  <li>Obtaining the target and dependencies is a common pattern when writing Makefile rules.</li>
+  <li>We can use <code class="language-plaintext highlighter-rouge">$@</code> and <code class="language-plaintext highlighter-rouge">$^</code> to obtain the target and dependencies respectively.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">$@</code> - target</li>
+      <li><code class="language-plaintext highlighter-rouge">$^</code> - dependencies</li>
+    </ul>
+  </li>
+  <li>Example:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>main: ${DEPENDENCIES}
+	${CXX} -std=c++11 -o $@ $^
+
+# Expands out to
+# main: functions.o main.o
+#	g++ -std=c++11 -o main functions.o main.o
+</code></pre></div></div>
+</div><!-- content -->
+    <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/jlects/lect01.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/f23">
+	  <img src="https://travis-ci.org/ucsb-cs24/f23.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+    </div><!-- container -->
+  </body>
+</html>

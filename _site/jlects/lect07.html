@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/f23/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/f23/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "F23",
+	"url" : "/",
+	"baseurl" : "/f23",
+	"items" : [
+	    
+	    {
+		"title" : "F23",
+		"url" : "/",
+		"baseurl" : "/f23",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "PA",		    
+		     "url": "/pa_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Lab",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Lab Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Cal",		    
+		     "url": "/info/calendar/", 		    
+		     "description": "Assignment Calendar", 
+		    		    
+		},
+	
+		{
+		    "title": "More",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Syllabus",		    
+			    "url": "/info/syllabus/", 
+			     "description": "Syllabus", 
+			},
+			
+			{
+			    "title": "Info Pages",		    
+			    "url": "/info_list/", 
+			     "description": "List of General Information Pages", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Links",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Gauchospace",		    
+			    "url": "https://gauchospace.ucsb.edu", 
+			     "description": "Overall Grade Information", 
+			},
+			
+			{
+			    "title": "GradeScope",		    
+			    "url": "https://gradescope.com", 
+			     "description": "HW and Lab Grades", 
+			},
+			
+			{
+			    "title": "Piazza",		    
+			    "url": "https://piazza.com", 
+			     "description": "Q&A Forum", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-f23",		    
+			    "url": "https://github.com/ucsb-cs24-f23", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+    
+  <title> CS24 Fall 2023</title>
+  </head>
+  <body id="page-top">
+    <div class="container">
+    
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/f23");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/f23");
+  console.log("offering_url_final=/f23/");
+  console.log("offering_title=F23");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/f23/">
+    F23
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/f23/pa_list/"title="Programming Assignments"data-term="" >PA</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/lab_list/"title="Lab Assignments"data-term="" >Lab</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/info/calendar/"title="Assignment Calendar"data-term="" ><i class='fa fa-calendar' aria-hidden='true'></i>&nbsp;Cal</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-More" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">More</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-More"><a class="dropdown-item" href="/f23/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+<a class="dropdown-item" href="/f23/info_list/"title="List of General Information Pages"data-term="" >Info Pages</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Links" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Links</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Links"><a class="dropdown-item" href="https://gauchospace.ucsb.edu"title="Overall Grade Information"data-term="" >Gauchospace</a>
+
+<a class="dropdown-item" href="https://gradescope.com"title="HW and Lab Grades"data-term="" >GradeScope</a>
+
+<a class="dropdown-item" href="https://piazza.com"title="Q&A Forum"data-term="" >Piazza</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-f23"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-f23</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+    <div id="content"  class="ui-content">
+      
+      
+        <p class="topic-summary">Operator overloading. Friend functions</p>
+      
+        
+          
+      
+      <h2 id="relevant-topics-in-the-textbook">Relevant topics in the textbook:</h2>
+<p>Data Structures and Other Objects Using C++ Chapter 2.5</p>
+
+<h1 id="operator-overloading">Operator overloading:</h1>
+
+<ul>
+  <li>Code examples
+Account.h</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#ifndef ACCOUNT_H
+#define ACCOUNT_H
+
+#include &lt;iostream&gt;
+
+
+class Account {
+	public:
+		Account(); 				
+		Account(std::string name, int balance);	
+		Account(Account&amp; account);	
+		Account&amp; operator=(const Account&amp; rhs);
+		~Account();	
+
+		Account operator+(Account&amp; rhs);
+
+	private:
+		std::string name;
+		int balance;
+};
+
+
+
+#endif
+</code></pre></div></div>
+
+<p>Account.cpp</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include "Account.h"
+
+using namespace std;
+
+Account::Account() {
+	cout &lt;&lt; "Default Constructor" &lt;&lt; endl;
+	name = "Checking account";
+	balance = 0;
+	
+}
+
+Account::Account(string name, int balance) {
+	cout &lt;&lt; "Overloaded constructor" &lt;&lt; endl;
+	this-&gt;name = name;
+	this-&gt;balance = balance;
+	
+}
+
+Account::Account(Account&amp; account) {
+	cout &lt;&lt; "Copy constructor" &lt;&lt; endl;
+	this-&gt;name = account.name;
+	this-&gt;balance = account.balance;
+	
+}
+
+Account&amp; Account::operator=(const Account&amp; rhs) {
+	cout &lt;&lt; "Overloaded assignment operator" &lt;&lt; endl;
+	
+	if (this == &amp;rhs){
+		return *this;	
+	}
+
+	this-&gt;name = rhs.name;
+	this-&gt;balance = rhs.balance;
+
+
+	return *this;
+}
+
+Account Account::operator+(Account&amp; rhs) {
+	cout &lt;&lt; "Overloaded addition operator" &lt;&lt; endl;
+
+	Account a;
+
+	// balance of b: this-&gt;balance
+	// balance of c: rhs.balance
+	a.balance = this-&gt;balance + rhs.balance;
+	a.name = rhs.name;
+
+	this-&gt;balance = 0;
+	rhs.balance = 0;
+
+	return a;
+}
+
+
+Account::~Account() {
+ 	cout &lt;&lt; "Deconstructor" &lt;&lt; endl;
+}
+</code></pre></div></div>
+
+<p>main.cpp</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
+#include "Account.h"
+
+using namespace std;
+
+int main() {
+	Account a;
+	Account b("Savings", 1111);
+	Account c = b;
+	a = b + c;
+	
+
+	cout &lt;&lt; "exiting main..." &lt;&lt; endl;
+	return 0;
+}
+</code></pre></div></div>
+
+<h1 id="friend-functions">Friend functions:</h1>
+
+<ul>
+  <li>Code examples
+In Account.h add:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public:
+  friend std::ostream &amp;operator&lt;&lt;(std::ostream &amp;output, const Account&amp; account);
+  friend std::istream &amp;operator&gt;&gt;(std::istream &amp;input, Account&amp; account);
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>main.cpp</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
+#include "Account.h"
+
+using namespace std;
+
+ostream &amp;operator&lt;&lt;(ostream &amp;output, const Account&amp; account){
+	output &lt;&lt; "Account name: " &lt;&lt; account.name &lt;&lt; " Account balance: " &lt;&lt; account.balance;
+	return output;
+}
+
+istream &amp;operator&gt;&gt;(istream &amp;input, Account&amp; account){
+	input &gt;&gt; account.name &gt;&gt; account.balance;
+	return input;
+}
+
+int main() {
+	Account a;
+	Account b("Savings", 1111);
+	Account c = b;
+	a = b + c;
+	
+	cout &lt;&lt; a &lt;&lt; endl;
+	cout &lt;&lt; b &lt;&lt; endl;
+	cout &lt;&lt; c &lt;&lt; endl;
+
+	cout &lt;&lt; "Provide new account name and new balance:" &lt;&lt; endl;
+	cin &gt;&gt; a;
+	cout &lt;&lt; a &lt;&lt; endl;
+
+	cout &lt;&lt; "exiting main..." &lt;&lt; endl;
+	return 0;
+}
+</code></pre></div></div>
+</div><!-- content -->
+    <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/jlects/lect07.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/f23">
+	  <img src="https://travis-ci.org/ucsb-cs24/f23.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+    </div><!-- container -->
+  </body>
+</html>

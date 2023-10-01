@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/f23/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/f23/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "F23",
+	"url" : "/",
+	"baseurl" : "/f23",
+	"items" : [
+	    
+	    {
+		"title" : "F23",
+		"url" : "/",
+		"baseurl" : "/f23",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "PA",		    
+		     "url": "/pa_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Lab",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Lab Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Cal",		    
+		     "url": "/info/calendar/", 		    
+		     "description": "Assignment Calendar", 
+		    		    
+		},
+	
+		{
+		    "title": "More",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Syllabus",		    
+			    "url": "/info/syllabus/", 
+			     "description": "Syllabus", 
+			},
+			
+			{
+			    "title": "Info Pages",		    
+			    "url": "/info_list/", 
+			     "description": "List of General Information Pages", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Links",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Gauchospace",		    
+			    "url": "https://gauchospace.ucsb.edu", 
+			     "description": "Overall Grade Information", 
+			},
+			
+			{
+			    "title": "GradeScope",		    
+			    "url": "https://gradescope.com", 
+			     "description": "HW and Lab Grades", 
+			},
+			
+			{
+			    "title": "Piazza",		    
+			    "url": "https://piazza.com", 
+			     "description": "Q&A Forum", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-f23",		    
+			    "url": "https://github.com/ucsb-cs24-f23", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+    
+  <title> CS24 Fall 2023</title>
+  </head>
+  <body id="page-top">
+    <div class="container">
+    
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/f23");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/f23");
+  console.log("offering_url_final=/f23/");
+  console.log("offering_title=F23");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/f23/">
+    F23
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/f23/pa_list/"title="Programming Assignments"data-term="" >PA</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/lab_list/"title="Lab Assignments"data-term="" >Lab</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/info/calendar/"title="Assignment Calendar"data-term="" ><i class='fa fa-calendar' aria-hidden='true'></i>&nbsp;Cal</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-More" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">More</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-More"><a class="dropdown-item" href="/f23/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+<a class="dropdown-item" href="/f23/info_list/"title="List of General Information Pages"data-term="" >Info Pages</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Links" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Links</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Links"><a class="dropdown-item" href="https://gauchospace.ucsb.edu"title="Overall Grade Information"data-term="" >Gauchospace</a>
+
+<a class="dropdown-item" href="https://gradescope.com"title="HW and Lab Grades"data-term="" >GradeScope</a>
+
+<a class="dropdown-item" href="https://piazza.com"title="Q&A Forum"data-term="" >Piazza</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-f23"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-f23</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+    <div id="content"  class="ui-content">
+      
+      
+        <p class="topic-summary">Introduction to pointers. Pass-by-value, pass-by-reference</p>
+      
+        
+          
+      
+      <h2 id="relevant-topics-in-the-textbook">Relevant topics in the textbook:</h2>
+<p>Data Structures and Other Objects Using C++ Chapter 4.1</p>
+
+<h1 id="memory-addresses">Memory Addresses</h1>
+
+<ul>
+  <li>We can find out what the memory address of variables stored in memory using the ‘&amp;’ symbol.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int i = 1;
+cout &lt;&lt; &amp;i &lt;&lt; endl;
+</code></pre></div></div>
+
+<ul>
+  <li>Memory addresses are usually byte-addressable and displayed in hexadecimal notation.</li>
+</ul>
+
+<h1 id="pointers">Pointers</h1>
+
+<ul>
+  <li>Pointers contain the memory address of a variable.</li>
+  <li>Pointers are two things:
+    <ul>
+      <li>A memory address</li>
+      <li>A type</li>
+    </ul>
+  </li>
+  <li>Therefore a pointer represents <i>a memory location storing a specific type</i>.</li>
+  <li>Size of a pointer depends on the operating system the application is running on.
+    <ul>
+      <li>64-bit Operating Systems can map to 2<sup>64</sup> memory addresses.</li>
+      <li>32-bit Operating Systems can map to 2<sup>32</sup> memory addresses</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="example-of-declaring-a-pointer">Example of declaring a pointer</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int* p; // p is a pointer to an int type
+cout &lt;&lt; sizeof(p) &lt;&lt; endl; // pointer address is 8 bytes since I have a 64-bit OS
+cout &lt;&lt; p &lt;&lt; endl;
+</code></pre></div></div>
+
+<ul>
+  <li>Note: p is not an <code class="language-plaintext highlighter-rouge">int</code> type. It should contain a memory address where an int is located.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int i = 1;
+//int* p = i; 		// can’t do this! i is an int, not a pointer to an int
+int* p = &amp;i; 		// OK. p points to the address of i
+cout &lt;&lt; p &lt;&lt; endl;
+int* q = p; 		// make q point to the same place p does (&amp; not needed)
+cout &lt;&lt; q &lt;&lt; endl;
+</code></pre></div></div>
+
+<h2 id="dereferencing-pointers">Dereferencing Pointers</h2>
+
+<ul>
+  <li>When you want to access a value of an object that a pointer points to, you must use the dereferencing operator (*).</li>
+  <li>Or we can overwrite the memory location a pointer is referring to by assigning a value to a dereferenced pointer.</li>
+</ul>
+
+<h2 id="larger-example-with-dereferencing-pointers">Larger example with dereferencing pointers</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int i = 1;
+int* p = &amp;i; // point to memory location of int i var
+
+cout &lt;&lt; "p points to the memory address " &lt;&lt; p &lt;&lt; endl;
+cout &lt;&lt; "p points to the integer value " &lt;&lt; *p &lt;&lt; endl;
+cout &lt;&lt; "----" &lt;&lt; endl;
+
+*p = 10; // change value in the memory address.
+
+cout &lt;&lt; "p points to memory address " &lt;&lt; p &lt;&lt; endl;
+cout &lt;&lt; "p points to the integer " &lt;&lt; *p &lt;&lt; endl;
+cout &lt;&lt; "i = " &lt;&lt; i &lt;&lt; endl;
+cout &lt;&lt; "----" &lt;&lt; endl;
+
+i = 25;
+
+cout &lt;&lt; "p points to memory address " &lt;&lt; p &lt;&lt; endl;
+cout &lt;&lt; "p points to the integer " &lt;&lt; *p &lt;&lt; endl;
+cout &lt;&lt; "i = " &lt;&lt; i &lt;&lt; endl;
+
+p = NULL; // or assign p = 0;
+cout &lt;&lt; p &lt;&lt; endl;
+cout &lt;&lt; *p &lt;&lt; endl;
+</code></pre></div></div>
+
+<h2 id="example-of-pointers-to-pointers">Example of pointers to pointers</h2>
+
+<ul>
+  <li>Possible to chain pointers by having pointers point to pointers that point to pointers …</li>
+  <li>For the example below, follow along and observe the memory addresses:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// A larger example (with pointers to pointers)
+int x = 5, y = 10, z = 15;
+int* p1 = &amp;x;
+int* p2 = &amp;y;
+
+p2 = p1;
+int** p3; // pointer pointing to another pointer
+p3 = &amp;p1;
+p1 = &amp;z;
+
+x /= 5;
+y /= 5;
+z /= 5;
+
+cout &lt;&lt; "x = " &lt;&lt; x &lt;&lt; endl;
+cout &lt;&lt; "&amp;x = " &lt;&lt; &amp;x &lt;&lt; endl;
+cout &lt;&lt; "y = " &lt;&lt; y &lt;&lt; endl;
+cout &lt;&lt; "&amp;y = " &lt;&lt; &amp;y &lt;&lt; endl;
+cout &lt;&lt; "z = " &lt;&lt; z &lt;&lt; endl;
+cout &lt;&lt; "&amp;z = " &lt;&lt; &amp;z &lt;&lt; endl;
+cout &lt;&lt; "----" &lt;&lt; endl;
+
+cout &lt;&lt; "&amp;p1 = " &lt;&lt; &amp;p1 &lt;&lt; endl;
+cout &lt;&lt; "p1 = " &lt;&lt; p1 &lt;&lt; endl;
+cout &lt;&lt; "*p1 = " &lt;&lt; *p1 &lt;&lt; endl;
+cout &lt;&lt; "----" &lt;&lt; endl;
+
+cout &lt;&lt; "&amp;p2 = " &lt;&lt; &amp;p2 &lt;&lt; endl;
+cout &lt;&lt; "p2 = " &lt;&lt; p2 &lt;&lt; endl;
+cout &lt;&lt; "*p2 = " &lt;&lt; *p2 &lt;&lt; endl;
+cout &lt;&lt; "----" &lt;&lt; endl;
+
+cout &lt;&lt; "&amp;p3 = " &lt;&lt; &amp;p3 &lt;&lt; endl;
+cout &lt;&lt; "p3 = " &lt;&lt; p3 &lt;&lt; endl;
+cout &lt;&lt; "*p3 = " &lt;&lt; *p3 &lt;&lt; endl;
+cout &lt;&lt; "**p3 = " &lt;&lt; **p3 &lt;&lt; endl;
+</code></pre></div></div>
+
+<h1 id="pass-by-reference-vs-pass-by-value">Pass-by-reference vs. pass-by-value</h1>
+
+<ul>
+  <li>Also known as call-by-value and call-by-reference.</li>
+  <li>Pass-by-value copies the parameter value into a variable that is local to the function.</li>
+  <li>
+    <p>Pass-by-reference modifies the value in memory and does not create a local copy.</p>
+  </li>
+  <li>Example of pass by value</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// pass by value
+void addTwo(int x) {
+	x = x + 2;
+	cout &lt;&lt; x &lt;&lt; endl;
+}
+
+int main() {
+	int a = 10;
+	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl; // 10
+	addTwo(a);
+	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl; // 10
+}
+</code></pre></div></div>
+
+<ul>
+  <li>Example of pass by reference</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// pass by reference
+void addTwo(int &amp;x) {
+	x = x + 2;
+	cout &lt;&lt; x &lt;&lt; endl;
+}
+
+int main() {
+	int a = 10;
+	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl; // 10
+	addTwo(a);
+	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl; // 12 – changes value in memory location
+}
+</code></pre></div></div>
+
+<ul>
+  <li>Pass by reference can be thought of using the value’s memory address.
+    <ul>
+      <li>Any changes in the function will reflect the value outside of the function.</li>
+      <li>Pass by reference can be more efficient – if a copy of a very large type is passed in, can be inefficient.</li>
+      <li>Can be useful if we want the function to change a value globally.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Pass by value may be useful if you want to keep the original value unmodified after a function uses it.</p>
+  </li>
+  <li>You can also pass pointers into functions.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void addTwo(int* x) {
+	*x = *x + 2;
+	cout &lt;&lt; *x &lt;&lt; endl;
+}
+
+int main() {
+	int a = 10;
+	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+	addTwo(&amp;a); // pointers are memory addresses, need to pass this.
+	cout &lt;&lt; "a = " &lt;&lt; a &lt;&lt; endl;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>Since we’re modifying the memory location referred to by a pointer, this behaves similar to pass-by-reference.</li>
+</ul>
+
+<h2 id="passing-arrays-into-functions">Passing arrays into functions</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void printArray(int values[], int size) {
+	// Note: size is passed in since we won’t know how to get the size with
+	// just the array variable.
+
+	cout &lt;&lt; values &lt;&lt; endl; // prints memory location of start of values[]
+
+	for (int i = 0; i &lt; size; i++) {
+		cout &lt;&lt; "values[" &lt;&lt; i &lt;&lt; "] = " &lt;&lt; values[i] &lt;&lt; endl;
+		cout &lt;&lt; "&amp;values[" &lt;&lt; i &lt;&lt; "] = " &lt;&lt; &amp;values[i] &lt;&lt; endl;
+		// Note: The address values are 4 bytes away since an int type is 4 bytes
+	}
+}
+
+int main() {
+	int values[3] = { 5, 10, 15 };
+	printArray(values, 3);
+	return 0;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>Under-the-hood, arrays are pointers referring to the memory location of the first element in the array.</li>
+  <li>We can redefine the printArray signature with a pointer value and this will still work:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void printArray(int* values, int size)
+</code></pre></div></div>
+
+</div><!-- content -->
+    <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/jlects/lect02.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/f23">
+	  <img src="https://travis-ci.org/ucsb-cs24/f23.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+    </div><!-- container -->
+  </body>
+</html>

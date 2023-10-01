@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/f23/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/f23/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "F23",
+	"url" : "/",
+	"baseurl" : "/f23",
+	"items" : [
+	    
+	    {
+		"title" : "F23",
+		"url" : "/",
+		"baseurl" : "/f23",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "PA",		    
+		     "url": "/pa_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Lab",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Lab Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Cal",		    
+		     "url": "/info/calendar/", 		    
+		     "description": "Assignment Calendar", 
+		    		    
+		},
+	
+		{
+		    "title": "More",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Syllabus",		    
+			    "url": "/info/syllabus/", 
+			     "description": "Syllabus", 
+			},
+			
+			{
+			    "title": "Info Pages",		    
+			    "url": "/info_list/", 
+			     "description": "List of General Information Pages", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Links",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Gauchospace",		    
+			    "url": "https://gauchospace.ucsb.edu", 
+			     "description": "Overall Grade Information", 
+			},
+			
+			{
+			    "title": "GradeScope",		    
+			    "url": "https://gradescope.com", 
+			     "description": "HW and Lab Grades", 
+			},
+			
+			{
+			    "title": "Piazza",		    
+			    "url": "https://piazza.com", 
+			     "description": "Q&A Forum", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-f23",		    
+			    "url": "https://github.com/ucsb-cs24-f23", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <title>lab07 - Implementing a min-heap - </title>
+  </head>
+    <body id="page-top">
+      <div class="container">
+      
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/f23");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/f23");
+  console.log("offering_url_final=/f23/");
+  console.log("offering_title=F23");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/f23/">
+    F23
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/f23/pa_list/"title="Programming Assignments"data-term="" >PA</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/lab_list/"title="Lab Assignments"data-term="" >Lab</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/info/calendar/"title="Assignment Calendar"data-term="" ><i class='fa fa-calendar' aria-hidden='true'></i>&nbsp;Cal</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-More" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">More</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-More"><a class="dropdown-item" href="/f23/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+<a class="dropdown-item" href="/f23/info_list/"title="List of General Information Pages"data-term="" >Info Pages</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Links" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Links</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Links"><a class="dropdown-item" href="https://gauchospace.ucsb.edu"title="Overall Grade Information"data-term="" >Gauchospace</a>
+
+<a class="dropdown-item" href="https://gradescope.com"title="HW and Lab Grades"data-term="" >GradeScope</a>
+
+<a class="dropdown-item" href="https://piazza.com"title="Q&A Forum"data-term="" >Piazza</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-f23"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-f23</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+        <div id="content"  class="ui-content">
+          <h1>lab07 : Implementing a min-heap</h1>
+          <table class="asn_table">
+            <!-- asn_table_header_row.html -->
+<tr>
+  <th class="asn_num"  >num</th>
+  <th class="asn_ready">ready?</th>
+  <th class="asn_desc" >description</th>
+  <th class="asn_date" >assigned</th>
+  <th class="asn_date" >due</th>
+</tr>
+
+
+            
+            <tr class="ready" >
+  <td class="asn_num"  ><a href="/f23/backup_lab/lab07.html" data-ajax="false">lab07</a></td>
+  <td class="asn_ready">true</td>
+  <td class="asn_desc" >Implementing a min-heap</td>
+  <td class="asn_date" >Thu 03/09 09:00AM</td> 
+  <td class="asn_date" >Thu 03/16 11:59PM</td>
+</tr>
+
+
+
+          </table>
+          <h1 id="collaboration-policy">Collaboration policy</h1>
+<p>The lab may be done solo or with a partner of your choice. If you need help finding a partner, please reach out to your section TA</p>
+
+<h1 id="goals-for-this-lab">Goals for this lab</h1>
+
+<p>By the time you have completed this lab, you should be able to</p>
+
+<ul>
+  <li>Understand the purpose and behavior of a priority queue</li>
+  <li>Understand how to implement an array-based heap</li>
+</ul>
+
+<p>This lab may be done with a partner</p>
+
+<h2 id="step-by-step-instructions">Step by Step Instructions</h2>
+
+<h2 id="step-1-get-the-starter-code">Step 1: Get the starter code</h2>
+<p>Use scp to copy the starter code from CSIL from the following directory:</p>
+
+<p><a href="https://github.com/ucsb-cs24-w22/Lab07-data">Lab07-data</a></p>
+
+<p>You should have the following files:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-bash-4.3$ ls
+examheap.cpp heap.cpp heap.h
+</code></pre></div></div>
+
+<p>First look at heap.h to see the basic operations for a heap. You will implement all of these operations of a min-heap in this lab. Also notice the storage mechanism we will be using for the heap: a <a href="http://www.cplusplus.com/reference/vector/">http://www.cplusplus.com/reference/vector/</a>. It will probably be a good idea to read through the documentation for this standard library class (linked above) if you are not familiar with it.</p>
+
+<p>Now look at examheap.cpp. This file will test your heap’s behavior. The first test is quite simple and just adds a couple elements to your heap. For larger numbers of inputs, it uses the <code class="language-plaintext highlighter-rouge">std::priority_queue</code> class from the standard library as ground truth to test your code against. The first thing you need to do is compose your Makefile to compile <code class="language-plaintext highlighter-rouge">examheap.cpp</code> with <code class="language-plaintext highlighter-rouge">heap.cpp</code> to executable <code class="language-plaintext highlighter-rouge">examheap</code>. Then, feel free to compile and run <code class="language-plaintext highlighter-rouge">examheap</code> before starting on your code. However, note that all the tests will fail and say “Aborted (core dumped)”.</p>
+
+<h2 id="step-2-implement-the-functions-of-heapcpp">Step 2: Implement the functions of heap.cpp</h2>
+
+<p>There are four functions you need to implement in heap.cpp: <code class="language-plaintext highlighter-rouge">push</code>, <code class="language-plaintext highlighter-rouge">pop</code>, <code class="language-plaintext highlighter-rouge">top</code>, and <code class="language-plaintext highlighter-rouge">empty</code>. Note that only <code class="language-plaintext highlighter-rouge">push</code> and <code class="language-plaintext highlighter-rouge">pop</code> modify the heap, while <code class="language-plaintext highlighter-rouge">empty</code> and <code class="language-plaintext highlighter-rouge">top</code> only return values. When testing your code, be sure to run the large tests (4 and 5) to find any minor bugs in your code that may not show up on the smaller tests.</p>
+
+<p>You are allowed to add helper functions in heap.h and heap.cpp if you need them. However, you should use the vector in heap.h as the underlying storage for your heap.</p>
+
+<h2 id="step-3-submit-heapcpp-and-heaph">Step 3: Submit heap.cpp and heap.h</h2>
+
+<p>Submit the files heap.cpp, heap.h, and Makefile to the assignment on Gradescope.</p>
+
+<h2 id="evaluation-and-grading">Evaluation and Grading</h2>
+
+<p>Each student must accomplish the following to earn full credit for this lab:
+heap.cpp and heap.h are saved, with your name(s) in a comment at the top and other evidence of your work. Both of these files should compile and execute properly too.</p>
+
+<h2 id="course-evaluation">Course evaluation</h2>
+<p>Please fill out the course (ESCIs) for the instructor and TAs. Links should be available through Gauchospace.</p>
+
+        </div><!-- content -->
+        
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/backup_lab/lab07.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/f23">
+	  <img src="https://travis-ci.org/ucsb-cs24/f23.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+      </div><!-- container -->
+  </body>
+</html>

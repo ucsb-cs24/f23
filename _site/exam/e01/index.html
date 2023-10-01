@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/f23/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/f23/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "F23",
+	"url" : "/",
+	"baseurl" : "/f23",
+	"items" : [
+	    
+	    {
+		"title" : "F23",
+		"url" : "/",
+		"baseurl" : "/f23",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "PA",		    
+		     "url": "/pa_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Lab",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Lab Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Cal",		    
+		     "url": "/info/calendar/", 		    
+		     "description": "Assignment Calendar", 
+		    		    
+		},
+	
+		{
+		    "title": "More",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Syllabus",		    
+			    "url": "/info/syllabus/", 
+			     "description": "Syllabus", 
+			},
+			
+			{
+			    "title": "Info Pages",		    
+			    "url": "/info_list/", 
+			     "description": "List of General Information Pages", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Links",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Gauchospace",		    
+			    "url": "https://gauchospace.ucsb.edu", 
+			     "description": "Overall Grade Information", 
+			},
+			
+			{
+			    "title": "GradeScope",		    
+			    "url": "https://gradescope.com", 
+			     "description": "HW and Lab Grades", 
+			},
+			
+			{
+			    "title": "Piazza",		    
+			    "url": "https://piazza.com", 
+			     "description": "Q&A Forum", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-f23",		    
+			    "url": "https://github.com/ucsb-cs24-f23", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <title>e01 - Midterm Exam  - </title>
+  </head>
+    <body id="page-top">
+      <div class="container">
+      
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/f23");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/f23");
+  console.log("offering_url_final=/f23/");
+  console.log("offering_title=F23");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/f23/">
+    F23
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/f23/pa_list/"title="Programming Assignments"data-term="" >PA</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/lab_list/"title="Lab Assignments"data-term="" >Lab</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/info/calendar/"title="Assignment Calendar"data-term="" ><i class='fa fa-calendar' aria-hidden='true'></i>&nbsp;Cal</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-More" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">More</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-More"><a class="dropdown-item" href="/f23/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+<a class="dropdown-item" href="/f23/info_list/"title="List of General Information Pages"data-term="" >Info Pages</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Links" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Links</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Links"><a class="dropdown-item" href="https://gauchospace.ucsb.edu"title="Overall Grade Information"data-term="" >Gauchospace</a>
+
+<a class="dropdown-item" href="https://gradescope.com"title="HW and Lab Grades"data-term="" >GradeScope</a>
+
+<a class="dropdown-item" href="https://piazza.com"title="Q&A Forum"data-term="" >Piazza</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-f23"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-f23</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+        <div id="content"  class="ui-content">
+          <h1>e01 : Midterm Exam </h1>
+          <table class="asn_table">
+            <!-- exam_table_header_row.html -->
+<tr>
+  <th class="asn_num"  >num</th>
+  <th class="asn_ready">ready?</th>
+  <th class="asn_desc" >description</th>
+  <th class="asn_date" >exam date</th>
+</tr>
+
+            
+            <tr>
+  <td class="asn_num"  ><a href="/f23/exam/e01/">e01</a></td>
+  <td class="asn_ready">true</td>
+  <td class="asn_desc" >Midterm Exam </td>
+  <td class="asn_date" >Wed 11/08 12:30PM</td> 
+</tr>
+
+          </table>
+          <h2 id="instructions-for-the-exam">Instructions for the exam</h2>
+
+<ul>
+  <li>Exam will be in person during lecture time</li>
+  <li>The exam will be closed book, no laptops or electronic devices are allowed.</li>
+  <li>Posting the exam questions online or collaborating with anyone is a serious violation of academic integrity. Seeking or giving help to others will result in an F in the course.</li>
+  <li>Seating will be assigned, please look for an announcement on Piazza. I will post a link to the seating chart here a day before the exam.</li>
+</ul>
+
+<h2 id="topics">Topics</h2>
+<p>TBD</p>
+
+<h2 id="instructor-and-ta-prepared-review-problems">Instructor and TA prepared Review problems</h2>
+<p>Please note that the review problems are not an exhaustive list.
+These are just a sample of the material for the exam.</p>
+
+<p><a href="https://docs.google.com/document/d/1geHT81CINv_vwXYlGj_EYl53KzZzMiDOr7v4-9CTjg4/edit?usp=sharing">Review notes</a></p>
+
+<p>1) Given the head to a linked list, write a function to determine if there’s a cycle. (A cycle appears when a Node’s next pointer points to a Node previously visited)</p>
+
+<p>2) Write two functions to return the sum of a linked list’s values - one iterative and one recursive.</p>
+
+<p>3) Find and explain any errors in this class definition:</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">class</span> <span class="nc">Student</span><span class="p">{</span>
+	<span class="nl">public:</span>
+		<span class="n">Student</span><span class="p">(</span><span class="n">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">ID</span><span class="p">,</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">){</span>
+			<span class="k">this</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+			<span class="n">ID_number</span> <span class="o">=</span> <span class="n">ID</span><span class="p">;</span>
+			<span class="n">GPA</span> <span class="o">=</span> <span class="n">gpa</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="n">string</span> <span class="n">getName</span><span class="p">()</span> <span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">name</span><span class="p">;}</span>
+		<span class="kt">double</span> <span class="n">getGPA</span><span class="p">()</span> <span class="k">const</span><span class="p">{</span> <span class="k">return</span> <span class="n">GPA</span><span class="p">;}</span>
+	<span class="nl">private:</span>
+		<span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+                <span class="kt">double</span> <span class="n">GPA</span><span class="p">;</span>
+		<span class="k">const</span> <span class="n">ID_number</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>4) The StudentList class represents this year’s graduating class.
+Implement  getAvgGPA() function. This should return the average GPA of the graduating class.
+Implement the getValedictorianName() function. The valedictorian is the student with the highest GPA. If there are multiple students with the highest GPA, return any one of their names.</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">StudentList</span><span class="p">{</span>
+	<span class="nl">public:</span>
+		<span class="n">StudentList</span><span class="p">(</span><span class="k">const</span> <span class="n">StudentList</span><span class="o">&amp;</span> <span class="n">source</span><span class="p">);</span>
+		<span class="n">StudentList</span><span class="p">();</span>
+		<span class="o">~</span><span class="n">StudentList</span><span class="p">();</span>
+		<span class="n">string</span> <span class="n">getValedictorianName</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span> <span class="c1">// implement this</span>
+		<span class="kt">double</span> <span class="n">getAvgGPA</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span> 		    <span class="c1">// implement this</span>
+	<span class="nl">private:</span>
+		<span class="k">class</span> <span class="nc">Node</span><span class="p">{</span>
+			<span class="nl">public:</span>
+		  <span class="n">Node</span><span class="p">();</span>
+			<span class="n">Node</span><span class="p">(</span><span class="n">Student</span><span class="o">&amp;</span> <span class="n">s</span><span class="p">);</span>
+			<span class="n">Student</span> <span class="n">data</span><span class="p">;</span>
+			<span class="n">Node</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>
+		<span class="p">};</span>
+		<span class="n">Node</span><span class="o">*</span> <span class="n">head</span><span class="p">;</span>
+		<span class="n">Node</span><span class="o">*</span> <span class="n">tail</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>5) OutFit is a class that has objects of type ClothingItem as private member variables. (1) Implement the constructor for the OutFit class. (Keep in mind private member variables of a given class may only be accessed directly within that class’s member functions).</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ClothingItem</span><span class="p">{</span>
+	<span class="nl">public:</span>
+		<span class="n">ClothingItem</span><span class="p">();</span>
+		<span class="o">~</span><span class="n">ClothingItem</span><span class="p">();</span>
+		<span class="n">string</span> <span class="n">getBrand</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+		<span class="n">string</span> <span class="n">getColor</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+		<span class="kt">int</span> <span class="n">getSize</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+		<span class="kt">void</span> <span class="n">setBrand</span><span class="p">(</span><span class="n">string</span> <span class="n">BrandOfItem</span><span class="p">);</span>
+		<span class="kt">void</span> <span class="n">setColor</span><span class="p">(</span><span class="n">string</span> <span class="n">ColorOfItem</span><span class="p">);</span>
+		<span class="kt">void</span> <span class="n">setSize</span><span class="p">(</span><span class="kt">int</span> <span class="n">SizeOfItem</span><span class="p">);</span>
+	<span class="nl">private:</span>
+		<span class="n">string</span> <span class="n">brand</span><span class="p">;</span>
+                <span class="n">string</span> <span class="n">color</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">OutFit</span><span class="p">{</span>
+	<span class="nl">public:</span>
+		<span class="n">OutFit</span><span class="p">(</span><span class="n">ClothingItem</span> <span class="n">Top</span><span class="p">,</span> <span class="n">ClothingItem</span> <span class="n">Bottoms</span><span class="p">);</span>		<span class="c1">//Implement</span>
+		<span class="o">~</span><span class="n">OutFit</span><span class="p">();</span>
+		<span class="k">friend</span> <span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span> <span class="n">OutFit</span><span class="o">&amp;</span> <span class="n">FirstOutfit</span><span class="p">;</span> <span class="k">const</span> <span class="n">OutFit</span><span class="o">&amp;</span> <span class="n">SecondOutfit</span><span class="p">);</span> <span class="c1">//implement </span>
+			
+	<span class="nl">private:</span>
+		<span class="n">ClothingItem</span> <span class="n">tShirt</span><span class="p">;</span>		
+		<span class="n">ClothingItem</span> <span class="n">Pants</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>6) Looking at the above classes, implement the == operator used to check if two outfits are the same. (Two outfits are considered the same if they have the same tShirt and same bottoms, two tShirts and two bottoms are considered the same if they are of the same brand, color, and size).</p>
+
+<p>7) IntList is a class that defines a LinkedList of integers. Write a non-recursive implementation of the reverse() function that reverses the order of the linked list. The class definition is given below.</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">class</span> <span class="nc">IntList</span> <span class="p">{</span>
+    <span class="nl">public:</span>
+    <span class="c1">// constructor and 3 methods already done in intlist.cpp (NO CHANGE):</span>
+    <span class="n">IntList</span><span class="p">();</span>              <span class="c1">// constructor</span>
+    <span class="kt">void</span> <span class="n">append</span><span class="p">(</span><span class="kt">int</span> <span class="n">value</span><span class="p">);</span> <span class="c1">// append value at end of list</span>
+    <span class="kt">void</span> <span class="n">reverse</span><span class="p">();</span> <span class="c1">// function to implement, reverse the linked list</span>
+    <span class="o">~</span><span class="n">IntList</span><span class="p">();</span>                      <span class="c1">// destructor</span>
+
+    <span class="nl">private:</span>
+    <span class="n">Node</span><span class="o">*</span> <span class="n">reverse</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">node</span><span class="p">);</span> <span class="c1">// helper function for reverse(), returns the new head node</span>
+    <span class="c1">// definition of Node structure (DO NOT CHANGE):</span>
+    <span class="k">struct</span> <span class="nc">Node</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">info</span><span class="p">;</span>
+        <span class="n">Node</span><span class="o">*</span> <span class="n">next</span><span class="p">;</span>
+    <span class="p">};</span>
+    <span class="n">Node</span><span class="o">*</span> <span class="n">first</span><span class="p">;</span> <span class="c1">// pointer to first node (DO NOT CHANGE):</span>
+    <span class="p">};</span>
+</code></pre></div></div>
+
+<p>8) Write the reverse() function again, but this time recursively. You will likely need to use the private helper function to accomplish this. The private helper function returns a pointer to a Node, so try using it to return the last node (which will be the new first node in the list)</p>
+
+<p>9) Consider the following definition of the class LinkedList:</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">LinkedList</span> <span class="p">{</span>
+<span class="nl">public:</span>
+	<span class="n">LinkedList</span><span class="p">(){</span><span class="n">head</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">tail</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;}</span>   <span class="c1">//constructor</span>
+	<span class="o">~</span><span class="n">LinkedList</span><span class="p">();</span>		<span class="c1">//destructor</span>
+	<span class="kt">void</span> <span class="n">append</span><span class="p">(</span><span class="kt">int</span> <span class="n">value</span><span class="p">);</span>	<span class="c1">//already implemented, takes an integer value and adds a Node with that value to the end of the linked list</span>
+<span class="nl">private:</span>
+	<span class="k">class</span> <span class="nc">Node</span><span class="p">{</span>
+		<span class="kt">int</span> <span class="n">data</span><span class="p">;</span>
+		<span class="n">Node</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="n">Node</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
+	<span class="n">Node</span> <span class="o">*</span><span class="n">tail</span><span class="p">;</span>
+	<span class="kt">void</span> <span class="n">clear</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">h</span><span class="p">);</span>   <span class="c1">// Recursively deletes all the nodes starting at h</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<p>Implement the private method clear(Node *h)</p>
+
+<p>10) Using the LinkedList definition from above, describe what happens when this code is run. Draw a pointer diagram if you need to.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LinkedList l1;
+l1.append(1);
+l1.append(2);
+l1.append(3);
+LinkedList l2(l1);
+</code></pre></div></div>
+
+<p>Solutions available <a href="https://docs.google.com/document/d/10g2DLYeGFpRUubLm0LN3dN4SPv2CGmokQQEnEP0k_j4/edit?usp=sharing">HERE</a></p>
+
+<h1 id="study-guide">Study guide</h1>
+<ul>
+  <li>Converting procedural code to OOP</li>
+  <li>Basic design of classes - member variables and methods. Corrrect declaration of accessors and modifiers and the appropriate use of the const keyword</li>
+  <li>Distinguishing between class vs.instance</li>
+  <li>Understanding how to create instances of a class on the stack and heap</li>
+  <li>Member functions and non-member functions - why and how</li>
+  <li>Operator overloading - why and how</li>
+  <li>Constructor (different forms and why they are needed)</li>
+  <li>The big 3- Destructor, copy-constructor, assignment operator (default behavior, overloaded implementation and identifying when each is invoked in any given code)</li>
+  <li>Linked-lists - you may be asked to implement any function that involves a linked list</li>
+  <li>Unit testing classes</li>
+  <li>Binary search trees (all operations covered in class)</li>
+  <li>Recursion on linked lists and BST: you should be able to do any of the problems in lab04 recursively</li>
+  <li>The big 3 for linked-lists and BST - why and how to overload the de-stor, copy-c’tor and copy assignment</li>
+</ul>
+
+<h1 id="past-exams">Past exams</h1>
+
+<p>Past exams available on gauchospace. Again, please don’t use these as your only source of preparing for the exam.</p>
+
+
+        </div><!-- content -->
+        
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/_exam/e01.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/f23">
+	  <img src="https://travis-ci.org/ucsb-cs24/f23.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+      </div><!-- container -->
+  </body>
+</html>

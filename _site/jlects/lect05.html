@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/f23/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/f23/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "F23",
+	"url" : "/",
+	"baseurl" : "/f23",
+	"items" : [
+	    
+	    {
+		"title" : "F23",
+		"url" : "/",
+		"baseurl" : "/f23",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "PA",		    
+		     "url": "/pa_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Lab",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Lab Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Cal",		    
+		     "url": "/info/calendar/", 		    
+		     "description": "Assignment Calendar", 
+		    		    
+		},
+	
+		{
+		    "title": "More",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Syllabus",		    
+			    "url": "/info/syllabus/", 
+			     "description": "Syllabus", 
+			},
+			
+			{
+			    "title": "Info Pages",		    
+			    "url": "/info_list/", 
+			     "description": "List of General Information Pages", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Links",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Gauchospace",		    
+			    "url": "https://gauchospace.ucsb.edu", 
+			     "description": "Overall Grade Information", 
+			},
+			
+			{
+			    "title": "GradeScope",		    
+			    "url": "https://gradescope.com", 
+			     "description": "HW and Lab Grades", 
+			},
+			
+			{
+			    "title": "Piazza",		    
+			    "url": "https://piazza.com", 
+			     "description": "Q&A Forum", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-f23",		    
+			    "url": "https://github.com/ucsb-cs24-f23", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+    
+  <title> CS24 Fall 2023</title>
+  </head>
+  <body id="page-top">
+    <div class="container">
+    
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/f23");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/f23");
+  console.log("offering_url_final=/f23/");
+  console.log("offering_title=F23");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/f23/">
+    F23
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/f23/pa_list/"title="Programming Assignments"data-term="" >PA</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/lab_list/"title="Lab Assignments"data-term="" >Lab</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/info/calendar/"title="Assignment Calendar"data-term="" ><i class='fa fa-calendar' aria-hidden='true'></i>&nbsp;Cal</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-More" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">More</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-More"><a class="dropdown-item" href="/f23/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+<a class="dropdown-item" href="/f23/info_list/"title="List of General Information Pages"data-term="" >Info Pages</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Links" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Links</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Links"><a class="dropdown-item" href="https://gauchospace.ucsb.edu"title="Overall Grade Information"data-term="" >Gauchospace</a>
+
+<a class="dropdown-item" href="https://gradescope.com"title="HW and Lab Grades"data-term="" >GradeScope</a>
+
+<a class="dropdown-item" href="https://piazza.com"title="Q&A Forum"data-term="" >Piazza</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-f23"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-f23</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+    <div id="content"  class="ui-content">
+      
+      
+        <p class="topic-summary">The Big Three</p>
+      
+        
+          
+      
+      <h2 id="relevant-topics-in-the-textbook">Relevant topics in the textbook:</h2>
+<p>Data Structures and Other Objects Using C++ Chapter 2.1, 2.2, 2.5</p>
+
+<h1 id="classes">Classes</h1>
+
+<ul>
+  <li>Classes are a representation of a custom-defined type.</li>
+  <li>Classes consist of:
+    <ul>
+      <li>An <i>interface</i>: What operations and variables are available when using this class.</li>
+      <li>An <i>implementation</i>: The definition of how things are done.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="a-note-about-c-structs">A note about C++ structs</h2>
+
+<ul>
+  <li>structs and classes in C++ are <b>exactly</b> the same except for the following:
+    <ul>
+      <li>Struct members are set to <b>public</b> by default.</li>
+      <li>Class members are set to <b>private</b> by default.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="example---definition-of-a-class-representing-a-person">Example - definition of a class representing a Person</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Makefile
+
+CXX=g++
+DEPENDENCIES=main.o Person.o
+
+main: ${DEPENDENCIES}
+	${CXX} -o $@ -std=c++11 $^
+
+clean:
+	rm -f *.o main
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Person.h
+#ifndef PERSON_H
+#define PERSON_H
+
+#include &lt;iostream&gt;
+
+// Interface for class representing a Person
+
+class Person {
+	public:
+		Person(); 				// default constructor
+		Person(std::string name, int age);	// overloaded constructor
+		Person(Person&amp; person);			// copy constructor
+		std::string getName() const; 		// accessor / getter
+		int getAge() const; 			// accessor / getter
+		void setName(std::string name); 	// mutator / setter
+		void setAge(int age);			// mutator / setter
+
+	private:
+		std::string name;
+		int age;
+};
+
+#endif
+</code></pre></div></div>
+
+<p><b>Note:</b> You should not use <code class="language-plaintext highlighter-rouge">using namespace</code> in your header files. This forces consumers of the class to use the namespace, which may not be intended or expected.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Person.cpp
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include "Person.h"
+
+using namespace std;
+
+// default constructor
+Person::Person() {
+	name = "-";
+	age = 0;
+	cout &lt;&lt; "Default Constructor" &lt;&lt; endl;
+}
+
+// constructor overloading
+Person::Person(string name, int age) {
+	this-&gt;name = name;
+	this-&gt;age = age;
+}
+
+// copy constructor
+Person::Person(Person&amp; person) {
+	name = person.getName();
+	age = person.getAge();
+	cout &lt;&lt; "copy constructor" &lt;&lt; endl;
+}
+
+string Person::getName() const { return name; }
+
+int Person::getAge() const { return age; }
+
+void Person::setName(string name) { this-&gt;name = name; }
+
+void Person::setAge(int age) { this-&gt;age = age; }
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// main.cpp
+
+#include &lt;iostream&gt;
+#include "Person.h"
+
+using namespace std;
+
+int main() {
+	Person p;
+	return 0;
+}
+</code></pre></div></div>
+
+<h2 id="public-vs-private">Public vs. Private</h2>
+<ul>
+  <li>The variables and functions declared as private cannot be referenced anywhere except within the class’ functions.</li>
+  <li>The variables and functions declared as public can be referenced anywhere.
+    <ul>
+      <li>Why is this good?
+        <ul>
+          <li>Prevents unintended side-effects.</li>
+          <li>Hides complex details consumers of the class may not be concerned with.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="abstract-data-types-adts">Abstract Data Types (ADTs):</h2>
+<ul>
+  <li>A data type where the programmers who use this class do not have access to the details of how the values and operations are implemented.
+    <ul>
+      <li>Also known as data hiding, data abstraction, and encapsulation.</li>
+      <li>Typically, a consumer of the class only needs to be aware of all the public fields.</li>
+      <li>Imagine needing to know / manipulate buffers in iostream in order to print “Hello World”!</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="scope-resolution-operator-">Scope Resolution Operator (::)</h2>
+<ul>
+  <li>When a member function is defined, the definition must include the class name because there may be two or more classes that have member functions with the same name.</li>
+  <li>Without it, the compiler does not know which class’ member function the definition is for.</li>
+</ul>
+
+<h2 id="accessor-and-mutator-functions">Accessor and Mutator Functions</h2>
+<ul>
+  <li>A function that simply returns private members’ values are called accessor (getter) functions (i.e. they access the data).</li>
+  <li>A function that simply sets private members’ values are called mutator (setter) functions (i.e. they change the data).</li>
+</ul>
+
+<h2 id="constructors">Constructors</h2>
+<ul>
+  <li>A special kind of function with the same class name that it’s defined in.</li>
+  <li>A constructor is called when an object of that class is declared.</li>
+  <li>Constructors are the only functions that do not have a return type.</li>
+  <li>Default constructors can be defined by you (which is good style).</li>
+  <li>If a default constructor is not defined, the compiler will generate one if no other constructor is defined! <b>Otherwise it will not.</b></li>
+</ul>
+
+<h2 id="copy-constructor">Copy Constructor</h2>
+<ul>
+  <li>Take in an existing Object in a constructor’s parameter and set all of its fields to the fields of the object, thus copying one object’s fields to the current object.</li>
+  <li>Copy constructors must pass its parameter by reference…</li>
+  <li>If a copy constructor is not defined, then the compiler will generate one. However, this copy constructor only does a SHALLOW copy.
+    <ul>
+      <li>Think of it as copying the reference of memory, not the memory contents.</li>
+      <li>Two references may now share the same memory of an object…</li>
+    </ul>
+  </li>
+  <li>Try it: Comment out the defined copy constructor and note that
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Person s;
+Person t = s;
+</code></pre></div>    </div>
+    <p>still works. If the copy constructor is defined, then the assignment operator <code class="language-plaintext highlighter-rouge">=</code> will call the defined copy constructor. If the copy constructor is not defined, the default copy constructor is used.</p>
+  </li>
+</ul>
+
+<h3 id="shallow-copy-illustration">Shallow Copy illustration</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// modify class Person.h definition with vector v
+#include &lt;vector&gt;
+public:
+	std::vector&lt;int&gt;* getVector() const;
+
+private:
+	std::vector&lt;int&gt;* v;
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// modify constructor in Person.cpp to initialize vector and push 100 into it
+Person::Person() {
+	name = "default name";
+	age = 0;
+	v = new vector&lt;int&gt;();
+	v-&gt;push_back(100);
+}
+
+// Accessor function for the vector v
+vector&lt;int&gt;* Person::getVector() const {
+	return v;
+}
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// main.cpp
+
+// function to print out contents of the vector
+void printVector(vector&lt;int&gt; v) {
+	for (int i = 0; i &lt; v.size(); i++) {
+		cout &lt;&lt; v[i] &lt;&lt; endl;
+	}
+}
+
+// in main()
+s.getVector()-&gt;push_back(200);
+printVector(*s.getVector()); // 100 200
+printVector(*t.getVector()); // 100 200
+</code></pre></div></div>
+
+<ul>
+  <li>Vector is shared between two objects due to the shallow copy!</li>
+  <li>One way to do a “deep copy” of the vector is</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Person::Person(Person&amp; person) {
+	name = person.getName();
+	age = person.getAge();
+	v = new vector&lt;int&gt;();
+	
+	// DEEP COPY
+	for (int i = 0; i &lt; person.getVector()-&gt;size(); i++) {
+		v-&gt;push_back(person.getVector()-&gt;at(i));
+	}
+	cout &lt;&lt; "copy constructor" &lt;&lt; endl;
+}
+</code></pre></div></div>
+
+<h2 id="example-of-overloading-the-assignment-operator">Example of Overloading the Assignment Operator</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Person.h
+public:
+	Person&amp; operator=(const Person&amp; rhs);
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Person.cpp
+Person&amp; Person::operator=(const Person&amp; rhs) {
+	cout &lt;&lt; "overloaded assignment operator" &lt;&lt; endl;
+	
+	// check self-assignment, p1 = p1
+	if (this == &amp;rhs) {
+		return *this;
+	}
+	this-&gt;name = rhs.name;
+	this-&gt;age = rhs.age;
+	this-&gt;v-&gt;clear();
+
+	for (int i = 0; i &lt; rhs.v-&gt;size(); i++) {
+		v-&gt;push_back(rhs.v-&gt;at(i));
+	}
+	return *this;
+}
+</code></pre></div></div>
+
+<h2 id="copy-constructor-vs-assignment-operator">Copy Constructor vs. Assignment Operator</h2>
+
+<ul>
+  <li>The copy constructor is invoked when the object does not exist yet and you’re trying to assign an existing object to a new object.</li>
+  <li>Example:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int main() {
+	Person s;
+	cout &lt;&lt; "&amp;s = " &lt;&lt; &amp;s &lt;&lt; endl;
+	Person t = s; // copy constructor
+	cout &lt;&lt; "&amp;t = " &lt;&lt; &amp;t &lt;&lt; endl;
+	cout &lt;&lt; "---" &lt;&lt; endl;
+	Person a;
+	Person b;
+	a = b;	// overloaded assignment operator
+}
+</code></pre></div></div>
+
+<h2 id="destructor">Destructor</h2>
+<ul>
+  <li>A special member function that is called when a reference to an object
+    <ul>
+      <li>Goes out of scope.</li>
+      <li>Or a pointer to the object is called with <b>delete</b>.</li>
+    </ul>
+  </li>
+  <li>Example</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Person.h
+public:
+	~Person(); 	// destructor
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Person.cpp
+Person::~Person() {
+ 	delete v; // delete vector that should exist on the heap.
+ 	cout &lt;&lt; "DELETED: v" &lt;&lt; endl;
+}
+</code></pre></div></div>
+
+<h2 id="example-illustrating-destructor-call-when-exiting-function">Example illustrating destructor call when exiting function</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// main.cpp
+#include &lt;iostream&gt;
+#include "Person.h"
+
+using namespace std;
+
+void f() {
+	Person* p = new Person(); // default constructor assigns object on the heap
+	delete p; 	// manually call default constructor
+				// Memory leak in the heap if call is not made.
+
+	// Person p2; // default constructor on the stack
+	// when function exits, invokes destructor for objects on the stack.
+}
+
+int main() {
+	f();
+	cout &lt;&lt; "exiting main..." &lt;&lt; endl;
+	return 0;
+}
+</code></pre></div></div>
+
+<h2 id="big-three-rule-of-three">Big Three (Rule of Three)</h2>
+
+<ul>
+  <li>Rule of thumb: If you are implementing your own version of a copy constructor, destructor, or assignment operator, then you should implement all three.</li>
+  <li>Important when manually managing memory on the heap.</li>
+  <li>A good link illustrating the Big Three … in the context of programming a video game :)
+    <ul>
+      <li>https://www.youtube.com/watch?v=F-7Rpt2D-zo</li>
+    </ul>
+  </li>
+</ul>
+</div><!-- content -->
+    <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/jlects/lect05.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/f23">
+	  <img src="https://travis-ci.org/ucsb-cs24/f23.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+    </div><!-- container -->
+  </body>
+</html>

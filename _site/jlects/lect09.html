@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/f23/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/f23/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "F23",
+	"url" : "/",
+	"baseurl" : "/f23",
+	"items" : [
+	    
+	    {
+		"title" : "F23",
+		"url" : "/",
+		"baseurl" : "/f23",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "PA",		    
+		     "url": "/pa_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Lab",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Lab Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Cal",		    
+		     "url": "/info/calendar/", 		    
+		     "description": "Assignment Calendar", 
+		    		    
+		},
+	
+		{
+		    "title": "More",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Syllabus",		    
+			    "url": "/info/syllabus/", 
+			     "description": "Syllabus", 
+			},
+			
+			{
+			    "title": "Info Pages",		    
+			    "url": "/info_list/", 
+			     "description": "List of General Information Pages", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Links",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Gauchospace",		    
+			    "url": "https://gauchospace.ucsb.edu", 
+			     "description": "Overall Grade Information", 
+			},
+			
+			{
+			    "title": "GradeScope",		    
+			    "url": "https://gradescope.com", 
+			     "description": "HW and Lab Grades", 
+			},
+			
+			{
+			    "title": "Piazza",		    
+			    "url": "https://piazza.com", 
+			     "description": "Q&A Forum", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-f23",		    
+			    "url": "https://github.com/ucsb-cs24-f23", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+    
+  <title> CS24 Fall 2023</title>
+  </head>
+  <body id="page-top">
+    <div class="container">
+    
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/f23");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/f23");
+  console.log("offering_url_final=/f23/");
+  console.log("offering_title=F23");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/f23/">
+    F23
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/f23/pa_list/"title="Programming Assignments"data-term="" >PA</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/lab_list/"title="Lab Assignments"data-term="" >Lab</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/info/calendar/"title="Assignment Calendar"data-term="" ><i class='fa fa-calendar' aria-hidden='true'></i>&nbsp;Cal</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-More" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">More</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-More"><a class="dropdown-item" href="/f23/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+<a class="dropdown-item" href="/f23/info_list/"title="List of General Information Pages"data-term="" >Info Pages</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Links" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Links</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Links"><a class="dropdown-item" href="https://gauchospace.ucsb.edu"title="Overall Grade Information"data-term="" >Gauchospace</a>
+
+<a class="dropdown-item" href="https://gradescope.com"title="HW and Lab Grades"data-term="" >GradeScope</a>
+
+<a class="dropdown-item" href="https://piazza.com"title="Q&A Forum"data-term="" >Piazza</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-f23"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-f23</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+    <div id="content"  class="ui-content">
+      
+      
+        <p class="topic-summary">Linked list. Recursion.</p>
+      
+        
+          
+      
+      <h2 id="relevant-topics-in-the-textbook">Relevant topics in the textbook:</h2>
+<p>Data Structures and Other Objects Using C++ Chapter 5 and Chapter 9</p>
+
+<h1 id="linked-list-implementation">Linked List Implementation</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// LinkedList.h
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
+
+struct Node {
+	int data;
+	Node* next;
+};
+
+struct LinkedList {
+	Node* head;
+	Node* tail;
+};
+
+void printList(LinkedList* list);
+void insertToFront(LinkedList* list, int value);
+bool exists(LinkedList* list, int value);
+int length(LinkedList* list);
+void deleteIndex(LinkedList* list, int index);
+
+#endif
+--------------
+// LinkedList.cpp
+#include &lt;iostream&gt;
+#include "LinkedList.h"
+using namespace std;
+
+void printList(LinkedList* list) {
+	for (Node* i = list-&gt;head; i != NULL; i = i-&gt;next) {
+		cout &lt;&lt; "[" &lt;&lt; i-&gt;data &lt;&lt; "]-&gt;";
+	}
+	cout &lt;&lt; "null" &lt;&lt; endl;
+}
+
+void insertToFront(LinkedList* list, int value) {
+	if (list-&gt;head == 0) {		// empty list
+		Node* item = new Node;
+		item-&gt;data = value;
+		item-&gt;next = NULL;
+		list-&gt;head = item;
+		list-&gt;tail = item;
+	} else { 			// not empty
+		Node* item = new Node;
+		item-&gt;data = value;
+		item-&gt;next = list-&gt;head;
+		list-&gt;head = item;
+	}
+}
+
+bool exists(LinkedList* list, int value) {
+	for (Node* i = list-&gt;head; i != NULL; i = i-&gt;next) {
+		if (i-&gt;data == value)
+			return true;
+	}
+	return false;
+}
+
+int length(LinkedList* list) {
+	int counter = 0;
+	// let's use a while loop instead of a for...
+	Node* temp = list-&gt;head;
+	while (temp != 0) {
+		counter++;
+		temp = temp-&gt;next;
+	}
+	return counter;
+}
+
+void deleteIndex(LinkedList* list, int index) {
+	if (index &gt;= length(list) || index &lt; 0) {
+		cerr &lt;&lt; "Invalid index: " &lt;&lt; index &lt;&lt; endl;
+		return;
+	}
+
+	// check if first item
+	if (index == 0 &amp;&amp; list-&gt;head != 0) {
+		Node* temp = list-&gt;head;
+		list-&gt;head = list-&gt;head-&gt;next;
+		delete temp;
+		return;
+	}
+
+	Node* prev = list-&gt;head;
+	Node* curr = list-&gt;head-&gt;next;
+	for (int i = 1; i &lt; index; i++) {
+		prev = prev-&gt;next;
+		curr = curr-&gt;next;
+	}
+
+	// remove the current node
+	prev-&gt;next = curr-&gt;next;
+	delete curr;
+
+	// re-assign list-&gt;tail if curr was the last node.
+	if (index == length(list))
+		list-&gt;tail = prev;
+
+	return;
+}
+----------
+// main.cpp
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;fstream&gt;
+#include "LinkedList.h"
+
+using namespace std;
+
+int main() {
+	LinkedList* list = new LinkedList;
+	list-&gt;head = 0;
+	list-&gt;tail = 0;
+
+	cout &lt;&lt; length(list) &lt;&lt; endl;
+
+	insertToFront(list, 10);
+	cout &lt;&lt; length(list) &lt;&lt; endl;
+	insertToFront(list, 20);
+	insertToFront(list, 30);
+	printList(list);			// 30-&gt;20-&gt;10
+
+	cout &lt;&lt; exists(list, 15) &lt;&lt; endl; 	// 0
+	cout &lt;&lt; exists(list, 30) &lt;&lt; endl; 	// 1
+	cout &lt;&lt; exists(list, -1) &lt;&lt; endl; 	// 0
+
+	cout &lt;&lt; length(list) &lt;&lt; endl;		// 3
+
+	deleteIndex(list, -1); 			// err
+	deleteIndex(list, 5);			// err
+	deleteIndex(list, 3);			// err
+	deleteIndex(list, 2);			// OK!
+	printList(list);			// 30-&gt;20-&gt;null
+
+	return 0;
+}
+----------
+$ g++ -o main main.cpp LinkedList.cpp
+</code></pre></div></div>
+
+<h1 id="recursion">Recursion</h1>
+
+<ul>
+  <li>When a function contains a call to itself.</li>
+  <li>We’re mostly familiar with writing code in an iterative fashion (i.e. one statement after the other).
+    <ul>
+      <li>Several programming languages exist where it’s based purely on recursion.</li>
+    </ul>
+  </li>
+  <li>Useful for problems that can be solved by using the results of similar sub problems.</li>
+</ul>
+
+<h2 id="properties-of-recursion">Properties of Recursion</h2>
+<ul>
+  <li>One or more base cases that providing the “stopping” condition</li>
+  <li>One or more recursive calls, where the arguments are “closer” to the base case than the function input.</li>
+  <li>Any recursive function can be done in an iterative way and any iterative function can be done in a recursive way.</li>
+</ul>
+
+<h2 id="example-factorial">Example: Factorial</h2>
+
+<ul>
+  <li>N! = N * (N-1) * (N-2) * … * 3 * 2 * 1
+    <ul>
+      <li>Note: 0! = 1, 1! = 1</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int factorial (int n) {
+	if (n==0) return 1;
+	
+	return n*factorial(n-1);
+}
+---
+int main() {
+	cout &lt;&lt; factorial(4) &lt;&lt; endl; // 24	
+}
+
+</code></pre></div></div>
+
+<ul>
+  <li>Evaluation of factorial(4)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>factorial(4) = 4 * factorial(3)
+                   3 * factorial(2)
+                       2 * factorial(1)
+                           1
+                       2 * 1
+                   3 * 2
+               4 * 6
+               24
+</code></pre></div></div>
+
+<h2 id="example-fibonacci">Example: Fibonacci</h2>
+
+<ul>
+  <li>A fibonacci sequence is when nth number in the sequence is the sum of the previous two (i.e. f(n) = f(n-1) + f(n-2)).</li>
+  <li>f(n) = f(n-1) + f(n-2))</li>
+  <li>f(0) = 0, f(1) = 1, f(2) = 1, f(3) = 2, f(4) = 3, f(5) = 5, f(6) = 8, … , f(n) = f(n-2) + f(n-1)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int fibonacci(int n) {
+	if (n==1) return 1;
+	if (n==0) return 0;
+	return fibonacci(n-1) + fibonacci(n-2);
+}
+-----
+int main() {
+	cout &lt;&lt; fibonacci(4) &lt;&lt; endl; 3
+}
+</code></pre></div></div>
+
+<ul>
+  <li>Evaluation of fibonacci(4)</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fib(4)
+fib(2)          + fib(3)
+fib(0) + fib(1) + fib(3)
+0      + 1      + fib(3)
+1               + fib(1) + fib(2)
+1               + 1      + fib(2)
+1               + 1      + fib(0) + fib(1)
+1               + 1      + 0      + 1
+3
+</code></pre></div></div>
+
+<h2 id="example-recursively-find-the-length-of-a-c-string">Example: Recursively find the length of a C-string</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int recLength(char* s) {
+	char temp = *s;
+
+	if (temp != '\0') {
+		return 1 + recLength(&amp;s[1]);
+	} else {
+		return 0;
+	}
+}
+----
+char s1[] = {'a', '\0'};
+char s2[] = {'\0'};
+char s3[] = {'a', 'a', 'a', '\0'};
+
+cout &lt;&lt; recLength(s1) &lt;&lt; endl;
+cout &lt;&lt; recLength(s2) &lt;&lt; endl;
+cout &lt;&lt; recLength(s3) &lt;&lt; endl;
+</code></pre></div></div>
+
+<h2 id="recursion-performance">Recursion Performance</h2>
+
+<ul>
+  <li>Recursion consumes more memory than an iterative solution since it keeps adding memory to the call stack.</li>
+  <li>Recursion can sometimes be simply written vs an iterative algorithm (more readable).</li>
+</ul>
+
+<h2 id="stack-overflow">Stack Overflow</h2>
+
+<ul>
+  <li>An event that happens when a program crashes due to running out of memory in its call stack.
+    <ul>
+      <li>Usually happens when there is an infinite loop of recursive calls.</li>
+      <li>For example, forgetting to provide a base case may result in an infinite number of recursive calls.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int factorial (int n) {
+/* REMOVE BASE CASE
+	if (n == 1) // base case
+		return 1;
+*/
+
+	cout &lt;&lt; n &lt;&lt; endl;
+	return n * factorial(n – 1);
+}
+</code></pre></div></div>
+</div><!-- content -->
+    <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/jlects/lect09.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/f23">
+	  <img src="https://travis-ci.org/ucsb-cs24/f23.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+    </div><!-- container -->
+  </body>
+</html>

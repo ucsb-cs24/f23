@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/f23/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/f23/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "F23",
+	"url" : "/",
+	"baseurl" : "/f23",
+	"items" : [
+	    
+	    {
+		"title" : "F23",
+		"url" : "/",
+		"baseurl" : "/f23",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "PA",		    
+		     "url": "/pa_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Lab",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Lab Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Cal",		    
+		     "url": "/info/calendar/", 		    
+		     "description": "Assignment Calendar", 
+		    		    
+		},
+	
+		{
+		    "title": "More",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Syllabus",		    
+			    "url": "/info/syllabus/", 
+			     "description": "Syllabus", 
+			},
+			
+			{
+			    "title": "Info Pages",		    
+			    "url": "/info_list/", 
+			     "description": "List of General Information Pages", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Links",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Gauchospace",		    
+			    "url": "https://gauchospace.ucsb.edu", 
+			     "description": "Overall Grade Information", 
+			},
+			
+			{
+			    "title": "GradeScope",		    
+			    "url": "https://gradescope.com", 
+			     "description": "HW and Lab Grades", 
+			},
+			
+			{
+			    "title": "Piazza",		    
+			    "url": "https://piazza.com", 
+			     "description": "Q&A Forum", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-f23",		    
+			    "url": "https://github.com/ucsb-cs24-f23", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <title>lab02 - Visualizing Climate Change Data - </title>
+  </head>
+    <body id="page-top">
+      <div class="container">
+      
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/f23");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/f23");
+  console.log("offering_url_final=/f23/");
+  console.log("offering_title=F23");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/f23/">
+    F23
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/f23/pa_list/"title="Programming Assignments"data-term="" >PA</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/lab_list/"title="Lab Assignments"data-term="" >Lab</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/info/calendar/"title="Assignment Calendar"data-term="" ><i class='fa fa-calendar' aria-hidden='true'></i>&nbsp;Cal</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-More" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">More</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-More"><a class="dropdown-item" href="/f23/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+<a class="dropdown-item" href="/f23/info_list/"title="List of General Information Pages"data-term="" >Info Pages</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Links" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Links</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Links"><a class="dropdown-item" href="https://gauchospace.ucsb.edu"title="Overall Grade Information"data-term="" >Gauchospace</a>
+
+<a class="dropdown-item" href="https://gradescope.com"title="HW and Lab Grades"data-term="" >GradeScope</a>
+
+<a class="dropdown-item" href="https://piazza.com"title="Q&A Forum"data-term="" >Piazza</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-f23"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-f23</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+        <div id="content"  class="ui-content">
+          <h1>lab02 : Visualizing Climate Change Data</h1>
+          <table class="asn_table">
+            <!-- asn_table_header_row.html -->
+<tr>
+  <th class="asn_num"  >num</th>
+  <th class="asn_ready">ready?</th>
+  <th class="asn_desc" >description</th>
+  <th class="asn_date" >assigned</th>
+  <th class="asn_date" >due</th>
+</tr>
+
+
+            
+            <tr class="ready" >
+  <td class="asn_num"  ><a href="/f23/backup_lab/lab02.html" data-ajax="false">lab02</a></td>
+  <td class="asn_ready">true</td>
+  <td class="asn_desc" >Visualizing Climate Change Data</td>
+  <td class="asn_date" >Thu 01/26 09:00AM</td> 
+  <td class="asn_date" >Wed 02/08 11:59PM</td>
+</tr>
+
+
+
+          </table>
+          <h1 id="pair-programming-for-this-lab">Pair programming for this lab</h1>
+
+<p>This lab may be done solo or in pairs. Before you begin working on the lab, please decide whether you will work solo or with a partner. If you decide to work with a partner, there are a few requirements you must follow:</p>
+<ul>
+  <li>You and your partner must agree to work together outside of the lab section in case you do not finish the lab during your lab section. You are responsible for exchanging contact information in case you need to reach your partner.</li>
+  <li>If you choose to work with a partner for a future lab where pair programming is allowed, then you must choose a partner you have not worked with before.</li>
+  <li>You MUST add your partner on Gradescope when submitting your work EACH TIME you submit your file(s). After uploading your file(s) on Gradescope, there is a “Group Members” link at the bottom (or “Add Group Member” under “Groups”) where you can select the partner you are working with. Whoever uploaded the submission must make sure your partner is part of your Group. Click on “Group Members” -&gt; “Add Member” and select your partner from the list.</li>
+  <li>You must write your Name(s) and Perm number on each file submitted to Gradescope.
+Once you and your partner are in agreement, choose an initial driver and navigator, and have the driver log into their account.</li>
+</ul>
+
+<h1 id="please-read-this-before-you-start-the-lab">Please read this before you start the lab</h1>
+<p>This lab is designed to run in csil. If you run it on your laptop, it may generate errors due to different version of python. Please make sure you have access to csil. Please contact a TA IMMEDIATELY if you don’t have access to your csil machine.</p>
+
+<h1 id="academic-honesty">Academic Honesty</h1>
+<ul>
+  <li>
+    <p>All work submitted for this lab should be your own. Do not use code posted on the internet. If you are using any hints from a previous offering of this course that was posted publicly by a CS24 instructor, you must cite your source.</p>
+  </li>
+  <li>
+    <p>You must use the starter code provided for the lab on the release date 2023-01-26. Do not use ANY code from previous offerings of this code. Similarity with old versions of this assignment, including can be used as the basis for academic dishonesty.</p>
+  </li>
+</ul>
+
+<h1 id="goals-of-this-lab">Goals of this lab</h1>
+
+<p>The goal of this programming assignment is to practice reading and storing data from input files. You are required to parse the data from a csv file, filter the data, smooth the data and plot the data.</p>
+
+<p>We request that you DO NOT ask the staff to debug your code for you. They have been specifically instructed not to debug <em>for</em> you, but rather to <em>guide you</em> through the process of debugging your code yourselves.</p>
+
+<h1 id="instructions">Instructions</h1>
+
+<h2 id="step-1-getting-ready">Step 1: Getting Ready</h2>
+
+<ol>
+  <li>Go to github and find a repo for this lab assigned to your GitHub id.</li>
+  <li>Log on to your CSIL account.</li>
+  <li>Change into your <code class="language-plaintext highlighter-rouge">~/cs24</code> directory</li>
+  <li>Clone your empty lab02 repo into your <code class="language-plaintext highlighter-rouge">~/cs24</code> directory.</li>
+  <li>In your empty repo, do <code class="language-plaintext highlighter-rouge">git checkout -b main</code> to establish that you are on the <code class="language-plaintext highlighter-rouge">main</code> branch as your default branch.</li>
+</ol>
+
+<h2 id="step-2-obtain-the-starter-code">Step 2: Obtain the starter code</h2>
+
+<p>The starter code is in this repo:</p>
+
+<ul>
+  <li><a href="https://github.com/ucsb-cs24-f23/STARTER-lab02">https://github.com/ucsb-cs24-f23/STARTER-lab02</a></li>
+</ul>
+
+<p>Previous labs contain instruction for the process of:</p>
+<ul>
+  <li>Adding a <code class="language-plaintext highlighter-rouge">starter</code> remote for this repo</li>
+  <li>Pulling the code from that <code class="language-plaintext highlighter-rouge">starter</code> remote into your own repo.</li>
+</ul>
+
+<p>Please do those steps now, and then do a <code class="language-plaintext highlighter-rouge">git push origin main</code> to populate your own repo with the starter code.</p>
+
+<p>If you need help with these steps:</p>
+<ul>
+  <li>First consult previous labs for more detailed instructions.</li>
+  <li>Then, if you are still having trouble, ask the staff for help during discussion section or office hours.</li>
+</ul>
+
+<p>Once you’ve populated your repo, typing the <code class="language-plaintext highlighter-rouge">ls</code> command should show you the following files in your current directory</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% ls
+2008CompilationData.csv    dataManipulationFuncs.h  matplotlibcpp.h
+dataManipulationFuncs.cpp  graphingTool.cpp         Makefile
+</code></pre></div></div>
+
+<h2 id="step-3-implement-the-functions">Step 3: Implement the functions</h2>
+
+<h3 id="assignment-background">Assignment Background</h3>
+<p>This programming assignment investigates oceanic carbon and oxygen isotope ratios over time. These ratios are important since they can help us identify moments of significant temperature change. For example:</p>
+<ul>
+  <li>$\delta$<sup>18</sup>O: oxygen-18 / oxygen-16</li>
+  <li>$\delta$<sup>13</sup>C: carbon-13 / carbon-12</li>
+</ul>
+
+<p>Larger values for $\delta$<sup>18</sup>O indicate lower temperatures</p>
+
+<p>Smaller values for $\delta$<sup>13</sup>C indicate higher temperatures.</p>
+
+<p>For more detailed information regarding this assignment, feel free to visit: <a href="http://www.discoveringcs.net/7_data_analysis/project7.1.pdf">http://www.discoveringcs.net/7_data_analysis/project7.1.pdf</a></p>
+
+<h3 id="step-3a-csv-parsing">Step 3a: CSV Parsing</h3>
+
+<p>You will find that all the data is given in csv (comma separated values) format, in three main data types.</p>
+
+<ul>
+  <li>First Column: time (Ma - Millions of Years Ago)</li>
+  <li>Second Column: $\delta$<sup>18</sup>O</li>
+  <li>Third Column: $\delta$<sup>13</sup>C</li>
+</ul>
+
+<p>Your Task:</p>
+
+<p>When working with large amounts of data, it is often useful to store it in a data structure such as a vector. 
+In this case, you are required to parse the data into a vector of size 3, whose each element stores each column of the data as another vector.</p>
+
+<p>In <code class="language-plaintext highlighter-rouge">dataManipulationFuncs.cpp</code> there is a function with the declaration:
+<code class="language-plaintext highlighter-rouge">vector&lt;vector&lt;double&gt;&gt; parseData(const string pathToFile, size_t numCol);</code></p>
+
+<p>Your job is to implement this function by parsing the csv data into a <code class="language-plaintext highlighter-rouge">vector&lt;vector&lt;double&gt;&gt;</code></p>
+
+<p>It takes in two arguments:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">const string pathToFile</code>: the relative file location of the csv data.</li>
+  <li><code class="language-plaintext highlighter-rouge">size_t numCol</code>: The number of columns stored by the data.</li>
+</ul>
+
+<p>It outputs:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">vector&lt;vector&lt;double&gt;&gt;</code>: This structure which is returned should be a vector of all the <strong>data columns</strong>, where each column is also represented as a vector.</li>
+</ul>
+
+<p>Notice there are some data entries that are missing for some rows. When parsing the data, if a row is missing data from any column, you should skip including the <strong>entire row</strong> from your data structure.</p>
+
+<p>Finally, notice that the starter code for that function checks for errors with the file opening process. You should remember to close the file after reading all the data.</p>
+
+<h3 id="step-3b-plotting">Step 3b: Plotting</h3>
+
+<p>This step involves getting experience with matplotlib for c++, which is a useful library to produce plots of data. 
+A good place to get started is the documentation for the matplotlib library: <a href="https://github.com/lava/matplotlib-cpp">https://github.com/lava/matplotlib-cpp</a>
+Go over the README file to familiarize yourself with some of the basics like creating a new figure, making a simple line plot with plt::plot() function, and changing the color of the plot.
+Inside <code class="language-plaintext highlighter-rouge">graphingTool.cpp</code> you will find a function with the following declaration:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void scatterPlot(
+const vector&lt;double&gt;&amp; x, 
+const vector&lt;double&gt;&amp; y, 
+const string xlabel, 
+const string ylabel, 
+const string title, 
+const string color);
+</code></pre></div></div>
+
+<p>Your job is to implement this function to correctly produce a scatter plot using any arguments that may be passed in. Here is a more detailed explanation of each parameter:</p>
+<ul>
+  <li>const vector<double>&amp; x: data point values for a independent variable.</double></li>
+  <li>const vector<double>&amp; y: data point values for a dependent variable.</double></li>
+  <li>const string xlabel: label for the x-axis.</li>
+  <li>const string ylabel: label for the y-axis.</li>
+  <li>const string title: title for the given plot.</li>
+  <li>const string color: color of each point on the scatter plot. (i.e. “blue” or “red”)</li>
+</ul>
+
+<p>Your implementation should save the resultant image into the CURRENT directory in the format: {title}.png</p>
+
+<p>Learning goals: The main learning goal for this problem is to learn about a new plotting function (plt::scatter()) and how to use a new data structure (std::map) by reading the relevant documentation.</p>
+
+<p>Your scatterPlot() function will use plt::scatter() to create scatter plots and additionally saves the plot as as an image (.png) file. plt::scatter() is similar to plt::plot(). To learn more about the scatter() function here: <a href="https://github.com/lava/matplotlib-cpp/blob/master/matplotlibcpp.h#L993">https://github.com/lava/matplotlib-cpp/blob/master/matplotlibcpp.h#L993</a></p>
+
+<p>A simple example for using this function is also provided below:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> plt::figure();
+ plt::scatter(x, y, 1.0, color);
+</code></pre></div></div>
+<p>Note that the third argument to scatter is a C++ map data structure which is similar to Python dictionaries with the difference that map maintains ordering of its elements. 
+Map is used to store key-value pairs and in general can perform search efficiently.
+To learn more about map, see the documentation here: <a href="https://cplusplus.com/reference/map/">https://cplusplus.com/reference/map/</a>
+Example code is available here: <a href="https://cplusplus.com/reference/map/map/at/">https://cplusplus.com/reference/map/map/at/</a>, <a href="https://cplusplus.com/reference/map/map/find/">https://cplusplus.com/reference/map/map/find/</a></p>
+
+<h3 id="step-3c-filtering">Step 3c: Filtering</h3>
+
+<p>In the real world, sometimes we only care about specific data points with specific qualities.
+For example, in the case of this programming assignment, perhaps we would only like to analyze $\delta$<sup>18</sup>O and $\delta$<sup>13</sup>C in a given time period.</p>
+
+<p>In <code class="language-plaintext highlighter-rouge">dataManipulationFuncs.cpp</code> there is a function with the following declaration:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vector&lt;vector&lt;double&gt;&gt; filterData(vector&lt;vector&lt;double&gt;&gt;&amp; rawData, int minAge, int maxAge);
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">filterData</code> should take in the data stored from the parsed csv and return a new <code class="language-plaintext highlighter-rouge">vector&lt;vector&lt;double&gt;&gt;</code> with data points that lie between minAge (inclusive) and maxAge (inclusive). Your implementation should not alter the original data in any way, but should instead return a brand new structure.</p>
+
+<p>Your job in this step is to implement <code class="language-plaintext highlighter-rouge">filterData</code>.</p>
+
+<h3 id="step-3d-smoothing">Step 3d: Smoothing</h3>
+
+<p>Varying results in the data may result in abrupt spikes or dips. Sometimes we want to find general trends in the data by “smoothing” out the curve.</p>
+
+<p>One good way to smooth out the curve is to make each data point an average of those around it given a certain “window” length. “Window” in this case means a sequential grouping of data points within a certain length.</p>
+
+<p>For example, suppose we have a vector of 5 numbers: <code class="language-plaintext highlighter-rouge">4 2 54 1 23</code>. And we will be looking for the smoothed data with window length of 3.</p>
+
+<p>First, we place the window starting at index 0, <code class="language-plaintext highlighter-rouge">4 2 54</code> will be inside the window. We can calculate the moving average for index 0 is (4 + 2 + 54)/3 = 20</p>
+
+<p>Secondly, we move the window one unit to the right. <code class="language-plaintext highlighter-rouge">2 54 1</code> will be inside the window. The moving average for index 1 is (2 + 54 + 1)/3 = 19.</p>
+
+<p>By doing the previous step iteratively, we can finally get our smoothed vector: <code class="language-plaintext highlighter-rouge">20 19 26 12 23</code>.</p>
+
+<p>In <code class="language-plaintext highlighter-rouge">dataManipulationFuncs.cppp</code> there is a function with the declaration:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vector&lt;vector&lt;double&gt;&gt; smoothData(vector&lt;vector&lt;double&gt;&gt;&amp; rawData, size_t windowSize);
+</code></pre></div></div>
+
+<p>You will also notice a helper function in the same file called <code class="language-plaintext highlighter-rouge">getAvgNextValues</code>. This function should be called in smoothData to find the values of the new data points. Note, just like in <code class="language-plaintext highlighter-rouge">filterData</code>, you should <em>not</em> alter the data in the original argument, but instead create and populate a new vector structure.</p>
+
+<h2 id="step-4-what-are-the-plots-saying">Step 4: What are the plots saying?</h2>
+
+<p>When you are finished, you should be able to type <code class="language-plaintext highlighter-rouge">make</code> and then there will be 6 images generated under your current directory. You can verify your functions by comparing the images.</p>
+
+<h3 id="1-d18o-vs-age-ma">1. d18O vs Age (ma)</h3>
+
+<p><img src="https://user-images.githubusercontent.com/72473351/211673249-8fc13597-5170-4196-9a40-f2000db6de0d.png" alt="d18O vs Age (ma)" /></p>
+
+<h3 id="2-d13c-vs-age-ma">2. d13C vs Age (ma)</h3>
+
+<p><img src="https://user-images.githubusercontent.com/72473351/211673357-4eadc780-77c1-4ac6-8532-6de7fabdd38a.png" alt="d13C vs Age (ma)" /></p>
+
+<h3 id="3-d18o-smoothed-vs-age-ma">3. d18O Smoothed vs Age (ma)</h3>
+<p><img src="https://user-images.githubusercontent.com/72473351/213101503-61d97314-cc56-4029-be02-3b74e5534d08.png" alt="d18O Smoothed vs Age (ma)" /></p>
+
+<h3 id="4-d13c-smoothed-vs-age-ma">4. d13C Smoothed vs Age (ma)</h3>
+<p><img src="https://user-images.githubusercontent.com/72473351/213101290-271ce075-9ffa-4736-b114-e35c0aeca306.png" alt="d13C Smoothed vs Age (ma)" /></p>
+
+<h3 id="5-d18o-filtered-vs-age-ma">5. d18O Filtered vs Age (ma)</h3>
+<p><img src="https://user-images.githubusercontent.com/72473351/211673609-fea8419e-eb98-4f19-ad09-b8819b88f466.png" alt="d18O Filtered vs Age (ma)" /></p>
+
+<h3 id="6-d13c-filtered-vs-age-ma">6. d13C Filtered vs Age (ma)</h3>
+
+<p><img src="https://user-images.githubusercontent.com/72473351/211673621-7cbe2c19-9f9c-4269-9976-0f32c0f25002.png" alt="d13C Filtered vs Age (ma)" /></p>
+
+<p>Please note that we will not grade your image. The images are only for you to verify your solutions.</p>
+
+<hr />
+<p>Looking at your smoothed data, you should now clearly see a spike in temperature (i.e., rapid decrease in d18O) around 55 ma. This event is known as the <strong>Palaeocene Eocene Thermal Maximum (PETM)</strong>, during which deep-sea temperatures rose 5 to 6 degree Celsius in fewer than 10,000 years! The fitered plots let you zoom in further to investigate the variations between 53 ma and 57 ma. We have asked you to submit scatter plots for the filtered data. But if you used a line plot, you should be able to see the PETM event more clearly!
+—</p>
+<h2 id="step-5-turn-in-your-code-on-gradescope">Step 5: Turn in your code on Gradescope</h2>
+
+<p>Submit all the .cpp and .h files to Lab02 assignment on Gradescope via your github repo. Then visit Gradescope and check that you have a correct score.</p>
+
+<ul>
+  <li>You must check that you have followed these style guidelines:</li>
+</ul>
+
+<ol>
+  <li>Indentation is neat, consistent and follows good practice (see below)</li>
+  <li>Variable name choice: variables should have sensible names.
+ More on indentation: Your code should be indented neatly. Code that is inside braces should be indented, and code that is at the same “level” of nesting inside braces should be indented in a consistent way. Follow the examples from lecture, the sample code, and from the textbook.</li>
+  <li>Practice the DRY (Don’t Repeat Yourself) principle. Once you have finished implementing your code, try to find areas that are repetitive or redundant and spend some time to optimize.</li>
+</ol>
+
+<p>Commit and push the latest version of your code on github.</p>
+
+<p><strong>Graders will check your code to make sure it follows the coding style guidelines. Egregious violations to the coding style guidelines may be subject a score reduction for your lab grade.</strong> If you are unsure whether your code exhibits good coding style, please ask a member of the course staff during lab.</p>
+
+<h2 id="an-important-word-about-academic-honesty-and-the-gradescope-system">An important word about academic honesty and the gradescope system</h2>
+
+<p>We will test your code against other data files too—not just these.  So while you might be able to pass the tests on gradescope now by just doing a hard-coded “cout” of the expected output, that will NOT receive credit.</p>
+
+<p>To be very clear, code like this will pass on gradescope, BUT REPRESENTS A FORM OF ACADEMIC DISHONESTY since it is an attempt to just “game the system”, i.e. to get the tests to pass without really solving the problem.</p>
+
+<p>I would hope this would be obvious, but I have to say it so that there is no ambiguity: hard coding your output is a form of cheating, i.e. a form of “academic dishonesty”.  Submitting a program of this kind would be subject not only to a reduced grade, but to possible disciplinary penalties. If there is <em>any</em> doubt about this fact, please ask your TA and/or your instructor for clarification.</p>
+
+<h2 id="logging-out">Logging out</h2>
+
+<p>If you are logged in remotely, you can log out using the exit command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ exit
+</code></pre></div></div>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<p>This programming assignment is based off an exercise from “Discovering Computer Science: Second Edition”.</p>
+
+<ul>
+  <li>http://www.discoveringcs.net/7_data_analysis/project7.1.pdf</li>
+</ul>
+
+        </div><!-- content -->
+        
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/backup_lab/lab02.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/f23">
+	  <img src="https://travis-ci.org/ucsb-cs24/f23.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+      </div><!-- container -->
+  </body>
+</html>

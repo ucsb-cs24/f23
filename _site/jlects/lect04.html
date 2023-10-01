@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- head.html; common header items for all layouts -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="/f23/assets/css/main.css">
+  
+<script
+   src="https://code.jquery.com/jquery-3.3.1.min.js"
+   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+   crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
+
+
+<script src="/f23/assets/js/site.js"></script>
+
+<script>
+var nav ={
+    
+    "offerings": {
+	"title" : "F23",
+	"url" : "/",
+	"baseurl" : "/f23",
+	"items" : [
+	    
+	    {
+		"title" : "F23",
+		"url" : "/",
+		"baseurl" : "/f23",
+	    },
+	    
+	],
+    },
+    
+    
+    "offering_links": [
+	
+		{
+		    "title": "PA",		    
+		     "url": "/pa_list/", 		    
+		     "description": "Programming Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Lab",		    
+		     "url": "/lab_list/", 		    
+		     "description": "Lab Assignments", 
+		    		    
+		},
+	
+		{
+		    "title": "Cal",		    
+		     "url": "/info/calendar/", 		    
+		     "description": "Assignment Calendar", 
+		    		    
+		},
+	
+		{
+		    "title": "More",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Syllabus",		    
+			    "url": "/info/syllabus/", 
+			     "description": "Syllabus", 
+			},
+			
+			{
+			    "title": "Info Pages",		    
+			    "url": "/info_list/", 
+			     "description": "List of General Information Pages", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Links",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "Gauchospace",		    
+			    "url": "https://gauchospace.ucsb.edu", 
+			     "description": "Overall Grade Information", 
+			},
+			
+			{
+			    "title": "GradeScope",		    
+			    "url": "https://gradescope.com", 
+			     "description": "HW and Lab Grades", 
+			},
+			
+			{
+			    "title": "Piazza",		    
+			    "url": "https://piazza.com", 
+			     "description": "Q&A Forum", 
+			},
+			
+		    ]
+		    		    
+		},
+	
+		{
+		    "title": "Github",		    
+		    		    
+		    
+		    
+		    "dropdown" : [
+			
+			{
+			    "title": "ucsb-cs24-f23",		    
+			    "url": "https://github.com/ucsb-cs24-f23", 
+			    
+			},
+			
+		    ]
+		    		    
+		},
+	
+     
+    ],
+    
+        
+}
+;
+</script>
+
+
+
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+    
+  <title> CS24 Fall 2023</title>
+  </head>
+  <body id="page-top">
+    <div class="container">
+    
+
+<script>
+  console.log("site.url=http://localhost:4000");
+  console.log("site.baseurl=/f23");
+  console.log("site.data.navigation.home.url=/");
+  console.log("site.data.navigation.home.baseurl=/");
+  console.log("home_url=/");
+  console.log("home_url_final=https://ucsb-cs24.github.io/");
+</script>
+
+
+
+<script>
+  console.log("offering_url=/");
+  console.log("offering_baseurl=/f23");
+  console.log("offering_url_final=/f23/");
+  console.log("offering_title=F23");
+</script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <a class="navbar-brand" href="https://ucsb-cs24.github.io/">UCSB CS24</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <ul class="navbar-nav mr-auto"><li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Resources
+  </a>
+  <div class="dropdown-menu" aria-labelledby="main-dropdown"><a class="dropdown-item" href="https://ucsb-cs24.github.io/topic_list/">Topics</a><a class="dropdown-item" href="https://ucsb-cs24.github.io/resources_list/">Resources</a></div>
+</li><li class="nav-item">
+  <a class="nav-link" href="/f23/">
+    F23
+  </a>
+</li>
+<li class="nav-item"><a class="nav-link" href="/f23/pa_list/"title="Programming Assignments"data-term="" >PA</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/lab_list/"title="Lab Assignments"data-term="" >Lab</a>
+
+</li><li class="nav-item"><a class="nav-link" href="/f23/info/calendar/"title="Assignment Calendar"data-term="" ><i class='fa fa-calendar' aria-hidden='true'></i>&nbsp;Cal</a>
+
+</li><li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-More" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">More</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-More"><a class="dropdown-item" href="/f23/info/syllabus/"title="Syllabus"data-term="" >Syllabus</a>
+
+<a class="dropdown-item" href="/f23/info_list/"title="List of General Information Pages"data-term="" >Info Pages</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Links" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Links</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Links"><a class="dropdown-item" href="https://gauchospace.ucsb.edu"title="Overall Grade Information"data-term="" >Gauchospace</a>
+
+<a class="dropdown-item" href="https://gradescope.com"title="HW and Lab Grades"data-term="" >GradeScope</a>
+
+<a class="dropdown-item" href="https://piazza.com"title="Q&A Forum"data-term="" >Piazza</a>
+
+</div>
+</li>
+
+
+<li class="nav-item dropdown " data-term="">
+  <a class="nav-link dropdown-toggle" href="#" id="navbar-offering-specific-dropdown-Github" data-toggle="dropdown" aria-haspopup="true"
+     aria-expanded="false">Github</a>
+    <div class="dropdown-menu" aria-labelledby="navbar-offering-specific-dropdown-Github"><a class="dropdown-item" href="https://github.com/ucsb-cs24-f23"data-term="" ><i class='fab fa-github' aria-hidden='true'></i>&nbsp;ucsb-cs24-f23</a>
+
+</div>
+</li>
+
+
+</ul>
+  </div>
+</nav>
+
+
+    <div id="content"  class="ui-content">
+      
+      
+        <p class="topic-summary">Pointer arithmetic with Array structures. Dynamic Memory</p>
+      
+        
+          
+      
+      <h2 id="relevant-topics-in-the-textbook">Relevant topics in the textbook:</h2>
+<p>Data Structures and Other Objects Using C++ Chapter 4.1</p>
+
+<h1 id="pointer-arithmetic">Pointer Arithmetic</h1>
+
+<ul>
+  <li>We’ve talked about array variables referring to the memory address of the first element in the array.</li>
+  <li>We can think of an array variable as a pointer!</li>
+  <li>We’ve seen an example where we can either pass in an array variable OR pass in a pointer when using arrays.</li>
+  <li>We also know that arrays must be declared with a size</li>
+  <li>And the size must be kept track of in order to stay within the memory bounds of the memory (avoid seg faults!).</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Recall
+// void printArray(int* values, int size) { // can use a pointer
+void printArray(int values[], int size) {
+	// Note: size is passed in since we won’t know how to get the size with
+	// just the array variable.
+
+	cout &lt;&lt; values &lt;&lt; endl; // prints memory location of start of values[]
+
+	for (int i = 0; i &lt; size; i++) {
+		cout &lt;&lt; "values[" &lt;&lt; i &lt;&lt; "] = " &lt;&lt; values[i] &lt;&lt; endl;
+		cout &lt;&lt; "&amp;values[" &lt;&lt; i &lt;&lt; "] = " &lt;&lt; &amp;values[i] &lt;&lt; endl;
+		// Note: The address values are 4 bytes away since int is 4 bytes
+	}
+}
+
+int main() {
+	int values[3] = { 5, 10, 15 };
+	printArray(values, 3);
+	return 0;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>We also know that we index arrays from [0, size – 1].</li>
+  <li>There is reason behind this!</li>
+  <li>Under-the-hood, C++ is using the index to perform pointer arithmetic!</li>
+  <li>When performing arithmetic to a pointer, it modifies the address by incrementing the number of bytes of the pointer’s type size.</li>
+</ul>
+
+<h2 id="example">Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int main() {
+	int arr[5] = {0,1,2,3,4};
+	int* x = arr;
+
+	cout &lt;&lt; arr &lt;&lt; endl;
+	cout &lt;&lt; x &lt;&lt; endl;
+
+	cout &lt;&lt; x + 1 &lt;&lt; endl; // address is incremented by 1*sizeof(int)
+	cout &lt;&lt; x + 2 &lt;&lt; endl; // address is incremented by 2*sizeof(int)
+	cout &lt;&lt; x + 3 &lt;&lt; endl; // address is incremented by 3*sizeof(int)
+
+	cout &lt;&lt; *(x + 2) &lt;&lt; endl;	// equivalent to x[2] or arr[2]
+	cout &lt;&lt; &amp;(*(x + 2)) &lt;&lt; endl;  // equivalent to x + 2
+	return 0;
+}
+</code></pre></div></div>
+
+<h2 id="illustration">Illustration</h2>
+
+<ul>
+  <li>The array index is the “offset” from the start of the array</li>
+  <li>To access specific elements in the array using pointer arithmetic, the address is calculated as:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>elementAddress = startOfArrayAddress + (i * (size of type pointer is pointing to))
+</code></pre></div></div>
+
+<h2 id="example---trace-the-code">Example - trace the code</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int arr[] = {10,15,20};
+int* x;
+x = arr;
+cout &lt;&lt; x + 1 &lt;&lt; endl; // Address of arr[1]
+cout &lt;&lt; *x + 1 &lt;&lt; endl; // 11
+</code></pre></div></div>
+
+<ul>
+  <li>x + 1 uses pointer arithmetic to calculate a memory address</li>
+  <li>*x + 1 defeferences the array pointer and adds 1 to the first element</li>
+</ul>
+
+<h2 id="example---using---and-pointer-arithmetic">Example - using [ ] and pointer arithmetic</h2>
+
+<ul>
+  <li>Assume we have a function that initializes an array:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void initializeArray(int* values, int size, int initialValue) {
+	for (int i = 0; i &lt; size; i++) {
+		values[i] = initialValue;
+		cout &lt;&lt; values[i] &lt;&lt; “ “;
+	}
+}
+</code></pre></div></div>
+
+<ul>
+  <li>We can also write this same algorithm using pointer arithmetic:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	for (int i = 0; i &lt; size; i++) {
+		*(values + i) = initialValue;
+		cout &lt;&lt; *(values + i) &lt;&lt; " ";
+	}
+</code></pre></div></div>
+
+<h2 id="segmentation-faults">Segmentation Faults</h2>
+
+<ul>
+  <li>If you’re trying to access memory outside the range of an array, you may be accessing junk data or your program may crash with a <b>segmentation fault</b></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for (int i = 0; i &lt; 1000000; i++) {
+	*(values + i) = initialValue;
+}
+</code></pre></div></div>
+
+<h2 id="another-example---passing-pointers-by-value--reference">Another Example - passing pointers by value / reference</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void incrementPointer(int* p) {
+	p++;
+}
+
+int main() {
+	int arr[] = {10,20,30};
+	int* x = arr;
+
+	incrementPointer(x);
+
+	cout &lt;&lt; *x &lt;&lt; endl; // 10
+	return 0;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>Remember that even though pointers contain memory addresses, the pointer variable is a variable with its own address.</li>
+  <li>The scenario above passes the pointer by value.</li>
+  <li>
+    <p>Any modification we make to the pointer’s address in incrementPointer is local to the incrementPointer function.</p>
+  </li>
+  <li>
+    <p>What can we do to actually increment the array using the incrementPointer function?</p>
+  </li>
+  <li>We can pass the pointer by reference.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void incrementPointer(int*&amp; p) {
+	p++;
+}
+</code></pre></div></div>
+
+<ul>
+  <li>We can pass a pointer to a pointer.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void incrementPointer(int** p) {
+	//p++;		
+	*p = *p + 1;	// need to modify the original pointer’s address
+}
+
+int main() {
+	int arr[] = {1,2,3};
+	int* x = arr;
+
+	incrementPointer(&amp;x); 	// since a pointer to a pointer expects the address of
+				// a pointer to an int. 
+	cout &lt;&lt; *x &lt;&lt; endl;
+	return 0;
+}
+</code></pre></div></div>
+
+<h1 id="dynamic-memory-management">Dynamic Memory Management</h1>
+
+<ul>
+  <li>So far, we have been working exclusively with static allocation and stack memory.</li>
+  <li>… but there are situations where knowing the exact size BEFORE runtime is limiting.</li>
+  <li>It’s not feasible to store dynamically growing / shrinking objects on the stack!</li>
+  <li>For dynamically allocating memory during the execution of a program, there’s the free store, or more commonly known as the heap.</li>
+</ul>
+
+<h1 id="heap">Heap</h1>
+<ul>
+  <li>The heap allows users to manually decide when, how much, and what will be stored in it.</li>
+  <li>On the flip side, you must also decide when memory will be deallocated (deleted) in order to reuse it.</li>
+  <li><b>Q:</b> What happens if you forget to delete stuff from the heap?
+    <ul>
+      <li>Memory leaks! Memory space is finite and eventually your program will crash if unused memory is not being deleted.</li>
+    </ul>
+  </li>
+  <li><b>Q:</b> But we can store strings of different sizes on the stack… what’s up with that?
+    <ul>
+      <li>On the stack, strings are a fixed size containing fields such as the length of the string, and a memory address to the sequence of characters on the heap.</li>
+      <li>Note that a memory address and integer size ARE of fixed length (as well as other information the string class may have).</li>
+      <li>Behind the scenes, as strings may grow and shrink on the heap, the address that points to the sequence of chars on the heap can change.</li>
+    </ul>
+  </li>
+  <li>The programmer manages heap memory space manually.</li>
+</ul>
+
+<h2 id="new-operator">“new” operator</h2>
+
+<ul>
+  <li>The primary use for pointers are to access objects that have been dynamically allocated on the heap.</li>
+  <li>The result of “new” is a pointer to the object that was allocated on the heap.</li>
+</ul>
+
+<h2 id="example-1">Example</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int* p = new int(10);	// allocate an int on the heap and point p to it
+*p = 2;			// sets the int value to 2 (without address change)
+int&amp; q = *p;		// q refers to the value that p points to
+q = 4;			// change int value to 4
+
+cout &lt;&lt; *p &lt;&lt; endl;	// prints 4
+
+int* r = &amp;q;		// make r point to the address that q refers to
+*r = 6;			// change int value that r points to to 6
+
+cout &lt;&lt; *p &lt;&lt; endl;	// prints 6
+cout &lt;&lt; q &lt;&lt; endl;	// prints 6
+cout &lt;&lt; *r &lt;&lt; endl;	// prints 6
+</code></pre></div></div>
+
+<h2 id="delete-operator">“delete” operator</h2>
+
+<ul>
+  <li>Anytime you use the “new” operator, consider if you need to eventually delete the memory it consumes.
+    <ul>
+      <li>Otherwise, your program will have memory leaks and eventually crash!</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="example-of-memory-leaks">Example of memory leaks</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void g(int x) {
+	int* p = new int(x);	// memory leak!
+	delete p;		// remove this and see application size grow!
+	return;
+}
+
+int main() {
+for (int i = 0; i &lt; 100000000; i++)
+		g(i);
+}
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Check size of the memory being used for the process with:
+‘’’
+ps -o pid,user,%mem,command ax | sort -b -k3 -r
+‘’’</p>
+  </li>
+  <li>since int* p in g() is a local variable, this gets removed from the stack, BUT THE VALUE ON THE HEAP REMAINS.
+    <ul>
+      <li>Once the variable is removed when the function exits, there is no way to remove this from the heap.
+        <ul>
+          <li>This is a memory leak!</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>“delete” is the opposite of new
+    <ul>
+      <li>“new” creates an object on the heap and returns a pointer to it.</li>
+      <li>“delete” takes a pointer and removes the data from the heap.
+        <ul>
+          <li>“delete p;” doesn’t delete the variable p, it deletes what p points to on the heap!</li>
+          <li>“delete” only works for values that exist on the heap.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="dangling-pointers">Dangling Pointers</h1>
+<ul>
+  <li>After a pointer’s memory is deleted, the pointer itself is still available to use.</li>
+  <li>BUT, you should never use a dangling pointer (the behavior of it is undefined).
+    <ul>
+      <li>And why would you want to use a pointer to something that shouldn’t be there?</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="dangling-pointers-example">Dangling Pointers Example</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int g(int x) {
+	double* p = new double(x);
+	delete p;	// delete value from the heap
+	return *p; 	// p is a dangling pointer since heap contents were removed!
+			// Results in undefined behavior. Shouldn’t do this!
+}
+</code></pre></div></div>
+
+<h1 id="dynamically-allocating-arrays">Dynamically allocating arrays</h1>
+<ul>
+  <li>We have been allocating arrays on the stack, but we can also do this on the heap!
+    <ul>
+      <li>Actually, we SHOULD do this on the heap if our array size is not known during compile time.</li>
+      <li>Example of declaring and deleting an array on the heap.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int* arr = new int[10];	// create an array of 10 integers on the heap
+delete [] arr;		// removes the array from the heap. Note the [] syntax for deleting arrays from the heap.
+</code></pre></div></div>
+
+<ul>
+  <li>Some compilers may have extended functionality to support dynamically allocating arrays using the syntax for statically allocating arrays.
+    <ul>
+      <li>For example, g++/clang++ allows this, but VisualStudio currently does not:</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int x;
+cout &lt;&lt; "Enter a positive number: ";
+cin &gt;&gt; x;
+// int intArray[x]; // ERROR IN VisualStudio, NOT g++ / clang++
+int* intArray = new int[x]; // LEGAL IN BOTH
+for (int i = 0; i &lt; x; i++) {
+	intArray[i] = i;
+	cout &lt;&lt; intArray[i] &lt;&lt; endl;
+}
+
+// Note: to delete an array on the heap, use delete [] intArray;
+delete [] intArray;
+</code></pre></div></div>
+</div><!-- content -->
+    <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23">github site</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/jlects/lect04.md">edit this page on github</a>
+      <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/f23">
+	  <img src="https://travis-ci.org/ucsb-cs24/f23.svg?branch=master" alt="Build Status">
+	</a>
+      </span>
+    </div>
+  </div>
+</nav>
+
+    </div><!-- container -->
+  </body>
+</html>
