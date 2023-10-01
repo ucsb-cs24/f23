@@ -1,4 +1,4 @@
-var cal_dates = [ {"label":"First day of classes", "date":"2023-10-02" }, {"label":"Drop deadline (no W grade)","date":"2023-10-25" }, {"label":"Thanksgiving - No lecture", "date":"2023-11-22" }, {"label":"F23 Instruction Ends", "date":"2023-12-08" },   {"label":"Final Exam: noon - 3PM", "date":"2023-12-12" }, {"label":"F23 Quarter Ends", "date":"2023-12-15" }           ]
+var cal_dates = [ {"label":"First day of classes", "date":"2023-10-02" }, {"label":"Drop deadline (no W grade)","date":"2023-10-25" }, {"label":"Thanksgiving - No lecture", "date":"2023-11-22" }, {"label":"F23 Instruction Ends", "date":"2023-12-08" },   {"label":"F23 Quarter Ends", "date":"2023-12-15" }           ]
 ;
 
 var dates = [{
