@@ -38,11 +38,12 @@ Hello everyone! My name is Zack Glazewski and I'm a 3rd year CS Major. I feel ve
 
 
 <br>
-## Karanina Zim, LA
 
-<img src="" alt="Karanina" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+## Karanina (Laszlo) Zim, LA
 
-Hello everyone! My name is Karanina Zim
+<img src="../staff/CS24-F23-Laszlo-Z.jpeg" alt="Laszlo" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+
+Hello everyone! My name is Karanina Zim, but I go by Laszlo. I'm a third year year CS & Chinese double major. Some of my hobbies are cafe-hopping and being a dedicated servant to my dear cat Stinkie. I also love music and I enjoy attending concerts in my (very limited) free time. I absolutely love being a ULA so please feel more than welcome to approach me with questions and I'll be happy to help! Looking forward to meeting everybody this quarter!
 
 <br>
 
