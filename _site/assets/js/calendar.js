@@ -42,7 +42,7 @@ var dates = [{
     
         
     "ready" : "true",
-    "desc" : "CS 16 Review",
+    "desc" : "Course introduction, Review of C16 concepts",
     
       "date" : "2023-10-02",
     
