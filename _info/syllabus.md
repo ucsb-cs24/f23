@@ -61,6 +61,7 @@ If you ask coding questions on Piazza, please:
 - Include any code as a code snippet, not a screenshot or cell phone photo.
 - If you include more than a few lines of your code, make your question private.
 
+Link to join Piazza: <https://piazza.com/ucsb/fall2023/cmpsc24>
 
 ## Grading
 
