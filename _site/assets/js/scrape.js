@@ -332,13 +332,6 @@ var DEBUGGING_ONLY = {
 	},
 	
 	{
-	    "path" : "/backup_lec/CS24_Lecture1.pdf",
-	    "name" : "CS24_Lecture1.pdf"
-	    "basename" : "CS24_Lecture1"
-	    "extname" : ".pdf"	    
-	},
-	
-	{
 	    "path" : "/backup_lec/CS24_Lecture10.pdf",
 	    "name" : "CS24_Lecture10.pdf"
 	    "basename" : "CS24_Lecture10"
