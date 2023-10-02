@@ -7,9 +7,10 @@ ready: true
 
 ## Mehak Dhaliwal, TA
 
-<img src="" alt="Mehak" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+<img src="../staff/CS24-F23-Mehak-D.jpg" alt="Mehak" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
 
-Hi everyone, my name is Mehak Dhaliwal. I am a first year MS student under BS/MS program in UCSB. I was working on Amazon Alexa team this summer and developed a smart notification delivery system to deliver notifications at an appropriate time. I enjoy riding bikes and I have a white kawasaki. I will ride my bike to school everyday unless it is raining. Don't hesitate to ask me anything about homework, internship, or anything else.
+Hi everyone, my name is Mehak Dhaliwal (she/her). I am a first year PhD student working with Prof. Yao Qin on AI for healthcare. I'm also interested in Natural Language Processing (NLP) and AI for Social Good.
+Please feel free to reach out to me with any questions. I'm looking forward to meeting and working with you all!
 
 ## Sherry Chen, TA
 
