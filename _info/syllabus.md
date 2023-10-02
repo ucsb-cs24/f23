@@ -47,6 +47,8 @@ like best.  If you prefer learning from textbooks, here are some possibilities:
 - **Data Structures and Algorithm Analysis in C++** by Mark Allen Weiss\
   This is the standard textbook for CS 130A.
 
+**In class participation using iclicker cloud** 
+Join the class use this link to engage with the course content: <https://join.iclicker.com/HFXE>
 
 ## Piazza
 
