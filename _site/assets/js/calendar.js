@@ -47,6 +47,18 @@ var dates = [{
       "date" : "2023-10-02",
     
 }
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect02/",	   
+    "num" : "lect02",
+    
+        
+    "ready" : "true",
+    "desc" : "Abstract Data Types, operator overloading",
+    
+      "date" : "2023-10-04",
+    
+}
 ,];
 
 for (var i=0; i<cal_dates.length; i++) {
