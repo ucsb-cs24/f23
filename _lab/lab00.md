@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab00
-ready: false
+ready: true
 desc: "Getting started"
 assigned: 2023-10-05 10:00:00.00-8
 due: 2023-10-11 23:59:00.00-8
@@ -14,20 +14,30 @@ Your first lab for this week is an introduction to programming on CSIL and tools
 
 * Get to know the course staff and help us get to know you
 * Learn about the tools you will be using in this class: gradescope and github
-* Find a partner for lab01
+
 
 This lab will count towards 1% of your total lab grade. All other labs are weighed equally.
 
-This lab must be completed INDIVIDUALLY. In the subsequent labs you are encouraged to work with your programming partner.
+This lab must be completed INDIVIDUALLY. 
  
 
 # Get setup with the tools for this course
 
 ## Create a CoE account if you don't have one already
 
-We encourage you to complete all programming assignments by logging in to the machines in the Computer Science labs, or to connect remotely. To do this you will need a **College of Engineering account**. You can create an account online at <a href="https://accounts.engr.ucsb.edu/create" target="_blank">https://accounts.engr.ucsb.edu/create</a>.
+We encourage you to complete all programming assignments by logging in to the machines in the Computer Science labs, or to connect remotely. To do this you will need a **College of Engineering account**.
 
-If you are enrolled in <i>any</i> CoE course this quarter (including CS24), you can create your account immediately. If you are not, you will need to contact the ECI Help Desk at <a href="mailto:help@engineering.ucsb.edu">help@engineering.ucsb.edu</a>.
+Everyone enrolled in CS24 should already have an account.
+If your account was created when you tool CS16, use that account (there is nothing else you need to do).
+Otherwise, check your email for an invitation from the college of Engineering Help Desk.
+
+If you still don't have an account, use the links below to either request one or reset your password.
+
+* CoE account creation portal: <https://accounts.engr.ucsb.edu/create>
+* New Community Member info: 
+<https://ucsb-engr.atlassian.net/wiki/spaces/EPK/pages/575373516/New+UCSB+Community+Member+Information?src=search>
+* maintain portal (also password reset link with UCSBnetID): <https://accounts.engr.ucsb.edu/maintain/login>
+
 
 ## Get setup with github
 

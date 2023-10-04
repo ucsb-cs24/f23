@@ -31,7 +31,7 @@ var dates = [{
     "num" : "lab00",
     "assigned" : "2023-10-05 10:00:00 -0800",
     "due" : "2023-10-11 23:59:00 -0800",    
-    
+    "ready" : "true",
     "desc" : "Getting started",
     
 }
