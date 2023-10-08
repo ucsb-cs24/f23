@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- head.html; common header items for all layouts -->
+  <!-- head.html; common header items for all layouts -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -150,17 +150,12 @@ var nav ={
 
 
 
-
-    <!-- start custom head snippets -->
-
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
-    
-  <title> CS24 Fall 2023</title>
+ 
+  <title> Lect03 |  CS24 Fall 2023</title>
   </head>
   <body id="page-top">
-    <div class="container">
+    
+    <div id="container" data-role="page">
     
 
 <script>
@@ -244,33 +239,33 @@ var nav ={
 
 
     <div id="content"  class="ui-content">
-      
-      
-        <p class="topic-summary">Debugging (linked list errors) with gdb and valgrind</p>
-      
-        
-          
-      
-      <h1 id="topics">Topics</h1>
+    
 
-<p>Code that we’ll be working with</p>
+
+
+
+<table>
+<tr>
+
+  <td><a href="/f23/lectures/lect02/">Previous Lecture</a></td>
+  
+<td>lect03</td>
+
+</tr>
+</table>
+
+ 
+    <h1 id="code-from-lecture">Code from lecture</h1>
+
+<p><a href="https://github.com/ucsb-cs24-f23/cs24-f23-lectures/tree/main/lect03">https://github.com/ucsb-cs24-f23/cs24-f23-lectures/tree/main/lect03</a></p>
+
+<h1 id="topics">Topics</h1>
 <ul>
-  <li><a href="https://github.com/ucsb-cs24-w23/diba-cs16-final-solutions">CS16 final exam solutions (from last lecture)</a></li>
-  <li><a href="https://github.com/ucsb-cs24-w23/buggy-cs16-final-demo">Buggy student code</a></li>
+  <li>We’ll discuss the what, why, and how of operator overloading in C++!</li>
+  <li>We’ll review the Linked List data structure and contrast a procedural implementation with an OOP style implementation</li>
 </ul>
 
-<p>Last lecture, we talked about how to debug using print statements
-Today, I’ll demo two new debugging tools: gdb and valgrind.
-We’ll do some exploration with these tools and talk about how a combination of drawing memory diagrams and gdb can help us find bugs in code.</p>
-
-<ul>
-  <li><a href="https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf">GDB cheatsheet</a></li>
-  <li><a href="https://valgrind.org/docs/manual/quick-start.html">Valgrind quick start guide</a></li>
-</ul>
-</div><!-- content -->
-    <!-- start custom footer snippets -->
-
-<!-- end custom footer snippets -->
+    </div><!-- content -->
     
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
@@ -280,7 +275,7 @@ We’ll do some exploration with these tools and talk about how a combination of
   <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23">github site</a>
-      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/backup_lec/lect03.md">edit this page on github</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/_lectures/lect03.md">edit this page on github</a>
       <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/f23">
 	  <img src="https://travis-ci.org/ucsb-cs24/f23.svg?branch=master" alt="Build Status">
 	</a>
