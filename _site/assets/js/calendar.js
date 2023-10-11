@@ -36,6 +36,16 @@ var dates = [{
     
 }
 ,{
+    "type" : "lab",
+    "url" :  "/f23/lab/lab01/",	   
+    "num" : "lab01",
+    "assigned" : "2023-10-12 09:00:00 -0800",
+    "due" : "2023-10-18 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Objective Cars",
+    
+}
+,{
     "type" : "lectures",
     "url" :  "/f23/lectures/lect01/",	   
     "num" : "lect01",
@@ -69,6 +79,18 @@ var dates = [{
     "desc" : "Operator overloading, linked list (OOP style)",
     
       "date" : "2023-10-09",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect04/",	   
+    "num" : "lect04",
+    
+        
+    "ready" : "true",
+    "desc" : "C++ Linked Lists contd + Rule of Three",
+    
+      "date" : "2023-10-11",
     
 }
 ,];

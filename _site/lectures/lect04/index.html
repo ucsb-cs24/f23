@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- head.html; common header items for all layouts -->
+  <!-- head.html; common header items for all layouts -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -150,17 +150,12 @@ var nav ={
 
 
 
-
-    <!-- start custom head snippets -->
-
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
-    
-  <title> CS24 Fall 2023</title>
+ 
+  <title> Lect04 |  CS24 Fall 2023</title>
   </head>
   <body id="page-top">
-    <div class="container">
+    
+    <div id="container" data-role="page">
     
 
 <script>
@@ -244,23 +239,131 @@ var nav ={
 
 
     <div id="content"  class="ui-content">
-      
-      
-        <p class="topic-summary">C++ Classes: Operator Overloading</p>
-      
-        
-          
-      
-      <h1 id="code-from-lecture">Code from lecture</h1>
+    
+
+
+
+
+<table>
+<tr>
+
+  <td><a href="/f23/lectures/lect03/">Previous Lecture</a></td>
+  
+<td>lect04</td>
+
+</tr>
+</table>
+
+ 
+    <h1 id="code-from-lecture">Code from lecture</h1>
 
 <p><a href="https://github.com/ucsb-cs24-f23/cs24-f23-lectures/tree/main/lect04">https://github.com/ucsb-cs24-f23/cs24-f23-lectures/tree/main/lect04</a></p>
 
 <h1 id="topics">Topics</h1>
-<p>We’ll discuss the what, why, and how of operator overloading in C++!</p>
-</div><!-- content -->
-    <!-- start custom footer snippets -->
+<p>Recursion, dynamic memory errors, rule of three!</p>
 
-<!-- end custom footer snippets -->
+<h2 id="rule-of-three">Rule of three</h2>
+<ul>
+  <li>In C++ there is a rule of thumb that states if any of the copy-constructor, copy assignment or destructor are overloaded, the others must be overloaded as well. We’s like to understand the reasoning behind this rule of thumb. We looked at why and how we need to overload the destructor and the copy-constructor in the last class. We’ll focus on the copy assignment operator in this class.</li>
+</ul>
+
+<p>The questions we ask are:</p>
+<ol>
+  <li>What is the behavior of these defaults (taking linked lists as our running example)?</li>
+  <li>When and why do we need to overload these?</li>
+  <li>What is the outcome we desire to have with the overloaded de’tor, copy con’tor and copy assignment operator for the linked list class?</li>
+</ol>
+
+<h2 id="destructor">Destructor</h2>
+
+<p>In general the destructor is called when 
+a) a stack object goes out of local scope and has to be removed from memory
+b) delete is called on a pointer that is pointing to an object of the class on the heap</p>
+
+<p>Here are two scenarios where the destructor is called</p>
+
+<p>Case 1:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void foo(){
+   LinkedList l1; 
+   ....
+   ....
+   //l1's destructor is called  right after the function returns
+}
+
+</code></pre></div></div>
+<p>Case 2:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  LinkedList* p = new LinkedList; // This line may be in any function
+  .....
+  delete p; // This line may be in a function different from where the object was created with new
+</code></pre></div></div>
+
+<p>Now suppose we had a linked list object (either on the stack or the heap) that has the following elements</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>l1:1-&gt;2-&gt;5-&gt;null
+</code></pre></div></div>
+<ul>
+  <li>What is the state of memory after l1’s default destructor is called?</li>
+  <li>Do you see a problem with the default behavior?</li>
+  <li>How would you fix this problem?</li>
+</ul>
+
+<h2 id="copy-constructor">Copy constructor</h2>
+
+<p>The default copy constructor copies the values of the member variables of a source object to the objects that is being created.</p>
+
+<p>For we created the following linked list in memory:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>l1:1-&gt;2-&gt;5-&gt;null
+</code></pre></div></div>
+<p>As far as the compiler is concerened its perfectly valid to create a new object l2 that is the copy of l1 as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LinkedList l2(l1); // l2's copy constructor is called and l1 is passed as a parameter
+</code></pre></div></div>
+<p>OR</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LinkedList l2 = l1; // l2's copy constructor is called and l1 is passed as a parameter
+</code></pre></div></div>
+
+<p>OR we could create the new object on the heap as follows</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LinkedList* p = new LinkedList(l1); 
+</code></pre></div></div>
+
+<p>In all the above cases the default copy constructor of the new object is called.</p>
+
+<ul>
+  <li>What is the state of memory in each case?</li>
+  <li>Do you see a problem with the default behavior? (Talk about shallow vs deep copy)</li>
+  <li>How can we fix this problem?</li>
+</ul>
+
+<h2 id="copy-assignment-operator">Copy assignment operator</h2>
+
+<p>The default assignment operator works like the copy constructor except it copies values from one existing object to another object that already exists</p>
+
+<p>For we had two linked lists in memory:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>l1:1-&gt;2-&gt;5-&gt;null
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>l2:10-&gt;20-&gt;50-&gt;60-&gt;null
+</code></pre></div></div>
+
+<p>The copy assignment operator will be called in all of the following cases:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>l2 = l1; // l2's copy assignment is called and l1 is passed as a parameter
+</code></pre></div></div>
+<p>OR</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>l2 = l2; //l2's copy assignment is called and l2 is passed as a parameter!
+</code></pre></div></div>
+
+<ul>
+  <li>What is the state of memory in each case?</li>
+  <li>Do you see a problem with the default behavior?</li>
+  <li>How can we fix this problem? Describe the desired behavior.</li>
+</ul>
+
+
+    </div><!-- content -->
     
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
@@ -270,7 +373,7 @@ var nav ={
   <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23">github site</a>
-      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/backup_lec/lect04.md">edit this page on github</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/_lectures/lect04.md">edit this page on github</a>
       <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/f23">
 	  <img src="https://travis-ci.org/ucsb-cs24/f23.svg?branch=master" alt="Build Status">
 	</a>
