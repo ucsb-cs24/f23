@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab01
-ready: true
+ready: false
 desc: "Objective Cars"
 assigned: 2023-10-12 9:00:00.00-8
 due: 2023-10-18 23:59:00.00-8

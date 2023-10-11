@@ -41,7 +41,7 @@ var dates = [{
     "num" : "lab01",
     "assigned" : "2023-10-12 09:00:00 -0800",
     "due" : "2023-10-18 23:59:00 -0800",    
-    "ready" : "true",
+    
     "desc" : "Objective Cars",
     
 }
