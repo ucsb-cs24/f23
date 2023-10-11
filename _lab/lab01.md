@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab01
-ready: false
+ready: true
 desc: "Objective Cars"
 assigned: 2023-10-12 9:00:00.00-8
 due: 2023-10-18 23:59:00.00-8
@@ -101,5 +101,5 @@ The lab assignment “{{page.num}}” should appear in your Gradescope dashboard
 If you already submitted something on Gradescope, it will take you to their “Autograder Results” page. There is a “Resubmit” button on the bottom right that will allow you to update the files for your submission.
 For this lab, if everything is correct, you’ll see a successful submission passing all of the Autograder tests.
 
-**Remember to check if you can see the uploaded files for Lab02.**
+**Remember to check if you can see the files uploaded correctly in Gradescope.**
 
