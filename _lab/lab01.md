@@ -23,17 +23,187 @@ The starter code is in this repo:
 
 * <https://github.com/{{site.class_org.name}}/STARTER-{{page.num}}>
 
-Please get the starter code in the same way as lab01. This is a great opportunity to practice working with git and GitHub!
+To get the starter code follow these steps
 
-Once you've gotten the starter code, typing the `ls` command on your machine should show you the following files in your current directory:
+## Step 2a: Create an emplty lab01 repo on GitHub (no README)
+
+Log into CSIL. Create a directory for all your cs24 code
+`mkdir cs24` then change into that directory `cd cs24`
+
+Create an **empty** repo in our {{site.class_org.name}} GitHub org under the name `lab01-YOUR-GITHUB-ID`. Remember not to include a README when you create the repo on GitHub.
+
+Following the steps outlined in a previous lab, please use the SSH address to clone this repo by typing the following on the terminal in CSIL, i.e.
+
+```
+git clone git@github.com:{{site.class_org.name}}/lab01-YOUR-GITHUB-ID.git
+```
+
+After that, you should have a directory under `cs24` called `lab01-YOUR-GITHUB-ID`.   Use the `cd` command to move into this directory:
+
+```
+cd lab01-YOUR-GITHUB-ID
+```
+
+You may want to practice moving between this directory and the parent directory a few times, and using the `ls` and `pwd` commands to understand what is happening:
+
+```
+cd ..
+pwd
+ls
+cd lab01-YOUR-GITHUB-ID
+pwd
+ls
+```
+
+Then, as a reminder, while in your `~/cs24/lab01-YOUR-GITHUB-ID` directory (remember that `~` stands for your home directory), use `ls -a` to see that while the directory 
+may appear empty, there is a hidden folder called `.git` that marks this folder as a git repository (or repo for short):
+
+```
+$ ls -a
+.  ..  .git
+$
+```
+
+## Step 2b: Create the `main` branch in your repo
+
+Every git repo can have multiple *branches* of code; this is useful on  projects where there are multiple programmers collaborating on a solution.  Multiple branches allow for
+different versions of the code to live side-by-side in a repository, and then be merged together at a later stage.
+
+* Courses that involve group work (such as CMPSC 148 and/or CMPSC 156) may cover the use of git with multiple branches.
+* However, in this course, to keep things simple, **we'll typically stick to just one branch** 
+
+This single branch is sometimes called the *default branch*.
+* Prior to October 1, 2020, the usual name for that branch was `master`.
+* Starting October 1, 2020, GitHub started calling the default branch `main`
+
+Not all `git` software is updated with this convention however.  Accordingly, when we clone a new repo, to align our local repo with GitHub,
+our first step is to set the current branch to `main`, with this command (please type this now in your `~/cs24/lab01-YOUR-GITHUB-ID` directory:)
+
+```
+git checkout -b main
+```
+
+The `git checkout` command is the one that is used to switch from one branch to another, and the `-b` command says that we are creating a new
+branch in our local repo.
+
+For the time being, and probably throughout CS16, this is likely everything you need to know about branches (at least for the purposes of this course.)
+
+Now we are ready to pull in some starter code.
+
+## Step 2c: Add a remote for starter code.
+
+While in your `~/cs24/lab01-YOUR-GITHUB-ID` directory, type this command:
+
+```
+git remote -v
+```
+
+The `-v` here stands for `verbose`, and it means that the command will give lots of helpful information. The output should look like this:
+
+```
+$ git remote -v
+origin	git@github.com:{{site.class_org.name}}/lab01-YOUR-GITHUB-ID.git (fetch)
+origin	git@github.com:{{site.class_org.name}}/lab01-YOUR-GITHUB-ID.git (push)
+$ 
+```
+
+Explanation:
+* The word *remote* refers here to a Git repo that lives on some other computer; in this case, a GitHub.com server. 
+* The output above shows that you have one *remote* called `origin` and it shows the URL associated with that name `origin`.  
+* By convention, the name `origin` is used for the GitHub repo from which you cloned the current repo, i.e. the one that came after `git clone` in a previous step.
+
+What we are doing to do next is add a second remote, called `starter`.  From this remote, you'll be able to pull in some starter code; your lab solution will involve
+working with some of that starter code.
+
+The starter code lives in this repo, which you can visit in a web browser to look at the starter code:
+* <https://github.com/{{site.class_org.name}}/STARTER-lab01>
+
+To add a remote for this repo, we'll use the ssh url, like this:
+
+```
+git remote add starter git@github.com:{{site.class_org.name}}/STARTER-lab01.git
+```
+
+To see if it worked, you can type the `git remote -v` command again. Output should look like this (with YOUR-GITHUB-ID replaced by your github id. 
+
+```
+$ git remote -v
+origin	git@github.com:{{site.class_org.name}}/lab01-YOUR-GITHUB-ID.git (fetch)
+origin	git@github.com:{{site.class_org.name}}/lab01-YOUR-GITHUB-ID.git (push)
+starter	git@github.com:{{site.class_org.name}}/STARTER-lab01.git (fetch)
+starter	git@github.com:{{site.class_org.name}}/STARTER-lab01.git (push)
+$ 
+```
+
+Note that if the URLs are wrong for either the `origin` or the `starter` remotes, you can fix that by doing this command to remove a remote:
+* `git remote remove origin` to remove the remote `origin`
+* `git remote remove starter` to remove the remote `starter`
+
+Then you can add the remote back with the correct URL, e.g.:
+* `git remote add origin git@github.com:{{site.class_org.name}}/lab01-YOUR-GITHUB-ID.git`
+* `git remote add starter git@github.com:{{site.class_org.name}}/STARTER-lab01.git`
+
+This can be used, for example, if you accidently cloned the repo using the `https` url instead of the one that starts with `git@github.com` (which is the SSH based URL).
+
+Assuming your remote for `starter` is now set up correctly, the next step is to pull in the starter code.
+
+## Step 4: Pull in Starter Code
+
+To pull in the starter code, use:
+
+```
+git pull starter main
+```
+
+Then use an `ls` command, and you should see new files in your directory.  That should look something like this:
+
 ```
 $ ls
+$ git pull starter main
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 10 (delta 2), reused 7 (delta 2), pack-reused 0
+Unpacking objects: 100% (10/10), 2.45 KiB | 47.00 KiB/s, done.
+From github.com:{{site.github_url}}/STARTER-lab03
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> starter/main
+$ls
 car.cpp  car.hpp  doors.hpp  perf.cpp  perf.hpp
 ```
 
-If you don't see those files, go back through the initial instructions from lab01 and make sure you didn’t miss a step. If you still have trouble, ask your TA/ULAs for assistance.
+## Step 5: Push the initial code to the main branch of the origin remote
 
-## Step 2: Understand the Code and Finish car.cpp 
+To push the code to the main branch of your original remote (origin) type the command
+
+```
+$ git push origin main
+```
+This will sync up the commit history and files from your local repo with the main branch of the origin remote (which exists on github.com)
+
+You should see the following message:
+```
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 3.90 KiB | 1.95 MiB/s, done.
+Total 10 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To github.com:ucsb-cs16-f22/llab03-YOUR-GITHUB-ID.git
+ * [new branch]      main -> main
+[dimirza@csilvm-11 lab03_test]$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+
+With these files in place, you are ready to start coding. 
+
+If you don't see those files, go back through the instructions and make sure you didn't miss a step. From here on after you complete each part of the assignment you should add, commit and push your changes to origin main. For instructions on how to do this, scroll down and read the section on "Commit your code to GitHub". If you still have trouble, ask your TA/ULAs for assistance.
+
+## Step 2: Understand the Code and finish car.cpp 
 
 In this lab you will create a comprehensive `Car` class with
 * descriptive member variables, 

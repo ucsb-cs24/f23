@@ -280,16 +280,186 @@ var nav ={
   <li><a href="https://github.com/ucsb-cs24-f23/STARTER-lab01">https://github.com/ucsb-cs24-f23/STARTER-lab01</a></li>
 </ul>
 
-<p>Please get the starter code in the same way as lab01. This is a great opportunity to practice working with git and GitHub!</p>
+<p>To get the starter code follow these steps</p>
 
-<p>Once you’ve gotten the starter code, typing the <code class="language-plaintext highlighter-rouge">ls</code> command on your machine should show you the following files in your current directory:</p>
+<h2 id="step-2a-create-an-emplty-lab01-repo-on-github-no-readme">Step 2a: Create an emplty lab01 repo on GitHub (no README)</h2>
+
+<p>Log into CSIL. Create a directory for all your cs24 code
+<code class="language-plaintext highlighter-rouge">mkdir cs24</code> then change into that directory <code class="language-plaintext highlighter-rouge">cd cs24</code></p>
+
+<p>Create an <strong>empty</strong> repo in our ucsb-cs24-f23 GitHub org under the name <code class="language-plaintext highlighter-rouge">lab01-YOUR-GITHUB-ID</code>. Remember not to include a README when you create the repo on GitHub.</p>
+
+<p>Following the steps outlined in a previous lab, please use the SSH address to clone this repo by typing the following on the terminal in CSIL, i.e.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone git@github.com:ucsb-cs24-f23/lab01-YOUR-GITHUB-ID.git
+</code></pre></div></div>
+
+<p>After that, you should have a directory under <code class="language-plaintext highlighter-rouge">cs24</code> called <code class="language-plaintext highlighter-rouge">lab01-YOUR-GITHUB-ID</code>.   Use the <code class="language-plaintext highlighter-rouge">cd</code> command to move into this directory:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd lab01-YOUR-GITHUB-ID
+</code></pre></div></div>
+
+<p>You may want to practice moving between this directory and the parent directory a few times, and using the <code class="language-plaintext highlighter-rouge">ls</code> and <code class="language-plaintext highlighter-rouge">pwd</code> commands to understand what is happening:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ..
+pwd
+ls
+cd lab01-YOUR-GITHUB-ID
+pwd
+ls
+</code></pre></div></div>
+
+<p>Then, as a reminder, while in your <code class="language-plaintext highlighter-rouge">~/cs24/lab01-YOUR-GITHUB-ID</code> directory (remember that <code class="language-plaintext highlighter-rouge">~</code> stands for your home directory), use <code class="language-plaintext highlighter-rouge">ls -a</code> to see that while the directory 
+may appear empty, there is a hidden folder called <code class="language-plaintext highlighter-rouge">.git</code> that marks this folder as a git repository (or repo for short):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls -a
+.  ..  .git
+$
+</code></pre></div></div>
+
+<h2 id="step-2b-create-the-main-branch-in-your-repo">Step 2b: Create the <code class="language-plaintext highlighter-rouge">main</code> branch in your repo</h2>
+
+<p>Every git repo can have multiple <em>branches</em> of code; this is useful on  projects where there are multiple programmers collaborating on a solution.  Multiple branches allow for
+different versions of the code to live side-by-side in a repository, and then be merged together at a later stage.</p>
+
+<ul>
+  <li>Courses that involve group work (such as CMPSC 148 and/or CMPSC 156) may cover the use of git with multiple branches.</li>
+  <li>However, in this course, to keep things simple, <strong>we’ll typically stick to just one branch</strong></li>
+</ul>
+
+<p>This single branch is sometimes called the <em>default branch</em>.</p>
+<ul>
+  <li>Prior to October 1, 2020, the usual name for that branch was <code class="language-plaintext highlighter-rouge">master</code>.</li>
+  <li>Starting October 1, 2020, GitHub started calling the default branch <code class="language-plaintext highlighter-rouge">main</code></li>
+</ul>
+
+<p>Not all <code class="language-plaintext highlighter-rouge">git</code> software is updated with this convention however.  Accordingly, when we clone a new repo, to align our local repo with GitHub,
+our first step is to set the current branch to <code class="language-plaintext highlighter-rouge">main</code>, with this command (please type this now in your <code class="language-plaintext highlighter-rouge">~/cs24/lab01-YOUR-GITHUB-ID</code> directory:)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout -b main
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">git checkout</code> command is the one that is used to switch from one branch to another, and the <code class="language-plaintext highlighter-rouge">-b</code> command says that we are creating a new
+branch in our local repo.</p>
+
+<p>For the time being, and probably throughout CS16, this is likely everything you need to know about branches (at least for the purposes of this course.)</p>
+
+<p>Now we are ready to pull in some starter code.</p>
+
+<h2 id="step-2c-add-a-remote-for-starter-code">Step 2c: Add a remote for starter code.</h2>
+
+<p>While in your <code class="language-plaintext highlighter-rouge">~/cs24/lab01-YOUR-GITHUB-ID</code> directory, type this command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote -v
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">-v</code> here stands for <code class="language-plaintext highlighter-rouge">verbose</code>, and it means that the command will give lots of helpful information. The output should look like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git remote -v
+origin	git@github.com:ucsb-cs24-f23/lab01-YOUR-GITHUB-ID.git (fetch)
+origin	git@github.com:ucsb-cs24-f23/lab01-YOUR-GITHUB-ID.git (push)
+$ 
+</code></pre></div></div>
+
+<p>Explanation:</p>
+<ul>
+  <li>The word <em>remote</em> refers here to a Git repo that lives on some other computer; in this case, a GitHub.com server.</li>
+  <li>The output above shows that you have one <em>remote</em> called <code class="language-plaintext highlighter-rouge">origin</code> and it shows the URL associated with that name <code class="language-plaintext highlighter-rouge">origin</code>.</li>
+  <li>By convention, the name <code class="language-plaintext highlighter-rouge">origin</code> is used for the GitHub repo from which you cloned the current repo, i.e. the one that came after <code class="language-plaintext highlighter-rouge">git clone</code> in a previous step.</li>
+</ul>
+
+<p>What we are doing to do next is add a second remote, called <code class="language-plaintext highlighter-rouge">starter</code>.  From this remote, you’ll be able to pull in some starter code; your lab solution will involve
+working with some of that starter code.</p>
+
+<p>The starter code lives in this repo, which you can visit in a web browser to look at the starter code:</p>
+<ul>
+  <li><a href="https://github.com/ucsb-cs24-f23/STARTER-lab01">https://github.com/ucsb-cs24-f23/STARTER-lab01</a></li>
+</ul>
+
+<p>To add a remote for this repo, we’ll use the ssh url, like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add starter git@github.com:ucsb-cs24-f23/STARTER-lab01.git
+</code></pre></div></div>
+
+<p>To see if it worked, you can type the <code class="language-plaintext highlighter-rouge">git remote -v</code> command again. Output should look like this (with YOUR-GITHUB-ID replaced by your github id.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git remote -v
+origin	git@github.com:ucsb-cs24-f23/lab01-YOUR-GITHUB-ID.git (fetch)
+origin	git@github.com:ucsb-cs24-f23/lab01-YOUR-GITHUB-ID.git (push)
+starter	git@github.com:ucsb-cs24-f23/STARTER-lab01.git (fetch)
+starter	git@github.com:ucsb-cs24-f23/STARTER-lab01.git (push)
+$ 
+</code></pre></div></div>
+
+<p>Note that if the URLs are wrong for either the <code class="language-plaintext highlighter-rouge">origin</code> or the <code class="language-plaintext highlighter-rouge">starter</code> remotes, you can fix that by doing this command to remove a remote:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git remote remove origin</code> to remove the remote <code class="language-plaintext highlighter-rouge">origin</code></li>
+  <li><code class="language-plaintext highlighter-rouge">git remote remove starter</code> to remove the remote <code class="language-plaintext highlighter-rouge">starter</code></li>
+</ul>
+
+<p>Then you can add the remote back with the correct URL, e.g.:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">git remote add origin git@github.com:ucsb-cs24-f23/lab01-YOUR-GITHUB-ID.git</code></li>
+  <li><code class="language-plaintext highlighter-rouge">git remote add starter git@github.com:ucsb-cs24-f23/STARTER-lab01.git</code></li>
+</ul>
+
+<p>This can be used, for example, if you accidently cloned the repo using the <code class="language-plaintext highlighter-rouge">https</code> url instead of the one that starts with <code class="language-plaintext highlighter-rouge">git@github.com</code> (which is the SSH based URL).</p>
+
+<p>Assuming your remote for <code class="language-plaintext highlighter-rouge">starter</code> is now set up correctly, the next step is to pull in the starter code.</p>
+
+<h2 id="step-4-pull-in-starter-code">Step 4: Pull in Starter Code</h2>
+
+<p>To pull in the starter code, use:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git pull starter main
+</code></pre></div></div>
+
+<p>Then use an <code class="language-plaintext highlighter-rouge">ls</code> command, and you should see new files in your directory.  That should look something like this:</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
+$ git pull starter main
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 10 (delta 2), reused 7 (delta 2), pack-reused 0
+Unpacking objects: 100% (10/10), 2.45 KiB | 47.00 KiB/s, done.
+From github.com:https://github.com/ucsb-cs24/f23/STARTER-lab03
+ * branch            main       -&gt; FETCH_HEAD
+ * [new branch]      main       -&gt; starter/main
+$ls
 car.cpp  car.hpp  doors.hpp  perf.cpp  perf.hpp
 </code></pre></div></div>
 
-<p>If you don’t see those files, go back through the initial instructions from lab01 and make sure you didn’t miss a step. If you still have trouble, ask your TA/ULAs for assistance.</p>
+<h2 id="step-5-push-the-initial-code-to-the-main-branch-of-the-origin-remote">Step 5: Push the initial code to the main branch of the origin remote</h2>
 
-<h2 id="step-2-understand-the-code-and-finish-carcpp">Step 2: Understand the Code and Finish car.cpp</h2>
+<p>To push the code to the main branch of your original remote (origin) type the command</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git push origin main
+</code></pre></div></div>
+<p>This will sync up the commit history and files from your local repo with the main branch of the origin remote (which exists on github.com)</p>
+
+<p>You should see the following message:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 3.90 KiB | 1.95 MiB/s, done.
+Total 10 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To github.com:ucsb-cs16-f22/llab03-YOUR-GITHUB-ID.git
+ * [new branch]      main -&gt; main
+[dimirza@csilvm-11 lab03_test]$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+</code></pre></div></div>
+
+<p>With these files in place, you are ready to start coding.</p>
+
+<p>If you don’t see those files, go back through the instructions and make sure you didn’t miss a step. From here on after you complete each part of the assignment you should add, commit and push your changes to origin main. For instructions on how to do this, scroll down and read the section on “Commit your code to GitHub”. If you still have trouble, ask your TA/ULAs for assistance.</p>
+
+<h2 id="step-2-understand-the-code-and-finish-carcpp">Step 2: Understand the Code and finish car.cpp</h2>
 
 <p>In this lab you will create a comprehensive <code class="language-plaintext highlighter-rouge">Car</code> class with</p>
 <ul>
