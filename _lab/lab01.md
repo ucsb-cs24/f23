@@ -147,7 +147,7 @@ This can be used, for example, if you accidently cloned the repo using the `http
 
 Assuming your remote for `starter` is now set up correctly, the next step is to pull in the starter code.
 
-## Step 4: Pull in Starter Code
+## Step 2d: Pull in Starter Code
 
 To pull in the starter code, use:
 
@@ -172,7 +172,7 @@ $ls
 car.cpp  car.hpp  doors.hpp  perf.cpp  perf.hpp
 ```
 
-## Step 5: Push the initial code to the main branch of the origin remote
+## Step 2e: Push the initial code to the main branch of the origin remote
 
 To push the code to the main branch of your original remote (origin) type the command
 
