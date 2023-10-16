@@ -93,6 +93,18 @@ var dates = [{
       "date" : "2023-10-11",
     
 }
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect05/",	   
+    "num" : "lect05",
+    
+        
+    "ready" : "true",
+    "desc" : "Efficient search and Binary Search Trees:",
+    
+      "date" : "2023-10-16",
+    
+}
 ,];
 
 for (var i=0; i<cal_dates.length; i++) {

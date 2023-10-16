@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- head.html; common header items for all layouts -->
+  <!-- head.html; common header items for all layouts -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -150,17 +150,12 @@ var nav ={
 
 
 
-
-    <!-- start custom head snippets -->
-
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
-    
-  <title> CS 24: Problem Solving with Computers-II , {{site.quarter}} |  CS24 Fall 2023</title>
+ 
+  <title> Lect05 |  CS24 Fall 2023</title>
   </head>
   <body id="page-top">
-    <div class="container">
+    
+    <div id="container" data-role="page">
     
 
 <script>
@@ -244,239 +239,34 @@ var nav ={
 
 
     <div id="content"  class="ui-content">
-      
-      
-        
-          
-      
-      <h1 id="cs-24-f23-problem-solving-with-computers-ii">CS 24 F23: Problem Solving with Computers-II</h1>
+    
 
-<!--CS24, Fall 2023-->
 
-<p><a class="btn btn-primary dropdown-toggle" data-toggle="collapse" href="#info-list" role="button" aria-expanded="false" aria-controls="collapseExample">Information</a></p>
 
-<div class="collapse" id="info-list">
-  <div class="card card-body">
-    <ul>
+
+<table>
+<tr>
+
+  <td><a href="/f23/lectures/lect04/">Previous Lecture</a></td>
   
-  <li><a href="/f23/info/calendar/">Calendar</a></li>
-  
-  <li><a href="/f23/info/staff/">Course Staff</a></li>
-  
-  <li><a href="/f23/info/syllabus/">Syllabus</a></li>
-  
+<td>lect05</td>
+
+</tr>
+</table>
+
+ 
+    <h1 id="code-from-lecture">Code from lecture</h1>
+<p><a href="https://github.com/ucsb-cs24-f23/cs24-f23-lectures/tree/main/lect05">https://github.com/ucsb-cs24-f23/cs24-f23-lectures/tree/main/lect05</a></p>
+
+<h1 id="topics">Topics</h1>
+<ul>
+  <li>Efficient search using binary search</li>
+  <li>Binary trees</li>
+  <li>Binary search trees (BST) - implementation</li>
+  <li>BST operations (search, insert, min, max)</li>
 </ul>
 
-  </div>
-</div>
-
-<p><a class="btn btn-primary dropdown-toggle" data-toggle="collapse" href="#lectures" role="button" aria-expanded="false" aria-controls="collapseExample">Lectures</a></p>
-
-<div class="collapse" id="lectures">
-  <div class="card card-body">
-    <table class="asn_table">
-
-<tr>
-  <th class="asn_desc">lecture date</th>
-  <th class="asn_num">link</th>
-  <th class="asn_ready">ready?</th>
-  <th class="asn_desc">description</th>
-</tr>
-
-
- 
-<tr class="ready">
-  <td class="lect_num">2023-10-02</td>
-  <td class="lect_num"><a href="/f23/lectures/lect01/" data-ajax="false">lect01</a></td>
-  <td class="lect_ready">true</td>
-  <td class="lect_desc">Course introduction, Review of C16 concepts&nbsp;(<a href="/f23/lectures/CS24_Lecture1.pdf">slides</a>)</td>
-
- 
-</tr>
-
-
-
-
- 
-<tr class="ready">
-  <td class="lect_num">2023-10-04</td>
-  <td class="lect_num"><a href="/f23/lectures/lect02/" data-ajax="false">lect02</a></td>
-  <td class="lect_ready">true</td>
-  <td class="lect_desc">Abstract Data Types, operator overloading&nbsp;(<a href="/f23/lectures/CS24_Lecture2.pdf">slides</a>)&nbsp;(<a href="/f23/lectures/CS24_Lecture2_ann.pdf">annotated slides</a>)</td>
-
- 
-</tr>
-
-
-
-
- 
-<tr class="ready">
-  <td class="lect_num">2023-10-09</td>
-  <td class="lect_num"><a href="/f23/lectures/lect03/" data-ajax="false">lect03</a></td>
-  <td class="lect_ready">true</td>
-  <td class="lect_desc">Operator overloading, linked list (OOP style)&nbsp;(<a href="/f23/lectures/CS24_Lecture3.pdf">slides</a>)&nbsp;(<a href="/f23/lectures/CS24_Lecture3_ann.pdf">annotated slides</a>)</td>
-
- 
-</tr>
-
-
-
-
- 
-<tr class="ready">
-  <td class="lect_num">2023-10-11</td>
-  <td class="lect_num"><a href="/f23/lectures/lect04/" data-ajax="false">lect04</a></td>
-  <td class="lect_ready">true</td>
-  <td class="lect_desc">C++ Linked Lists contd + Rule of Three&nbsp;(<a href="/f23/lectures/CS24_Lecture4.pdf">slides</a>)&nbsp;(<a href="/f23/lectures/CS24_Lecture4_ann.pdf">annotated slides</a>)</td>
-
- 
-</tr>
-
-
-
-
- 
-<tr class="ready">
-  <td class="lect_num">2023-10-16</td>
-  <td class="lect_num"><a href="/f23/lectures/lect05/" data-ajax="false">lect05</a></td>
-  <td class="lect_ready">true</td>
-  <td class="lect_desc">Efficient search and Binary Search Trees: &nbsp;(<a href="/f23/lectures/CS24_Lecture5.pdf">slides</a>)</td>
-
- 
-</tr>
-
-
-
-
-</table>
-
-  </div>
-</div>
-
-<p><a class="btn btn-primary dropdown-toggle" data-toggle="collapse" href="#lab" role="button" aria-expanded="false" aria-controls="collapseExample">Lab</a></p>
-
-<div class="collapse" id="lab">
-  <div class="card card-body">
-    <table id="lab_table" class="asn_table">
-  <!-- asn_table_header_row.html -->
-<tr>
-  <th class="asn_num">num</th>
-  <th class="asn_ready">ready?</th>
-  <th class="asn_desc">description</th>
-  <th class="asn_date">assigned</th>
-  <th class="asn_date">due</th>
-</tr>
-
-
-  
-     
-     <tr class="ready">
-  <td class="asn_num"><a href="/f23/lab/lab00/" data-ajax="false">lab00</a></td>
-  <td class="asn_ready">true</td>
-  <td class="asn_desc">Getting started</td>
-  <td class="asn_date">Thu 10/05 10:00AM</td> 
-  <td class="asn_date">Wed 10/11 11:59PM</td>
-</tr>
-
-
-
-    
-  
-    
-  
-    
-  
-     
-     <tr class="ready">
-  <td class="asn_num"><a href="/f23/lab/lab01/" data-ajax="false">lab01</a></td>
-  <td class="asn_ready">true</td>
-  <td class="asn_desc">Objective Cars</td>
-  <td class="asn_date">Thu 10/12 09:00AM</td> 
-  <td class="asn_date">Wed 10/18 11:59PM</td>
-</tr>
-
-
-
-    
-  
-</table>
-
-  </div>
-</div>
-
-<p><a class="btn btn-primary dropdown-toggle" data-toggle="collapse" href="#pa" role="button" aria-expanded="false" aria-controls="collapseExample">Programming Assignments</a></p>
-
-<div class="collapse" id="pa">
-  <div class="card card-body">
-    <table id="pa_table" class="asn_table">
-  <!-- asn_table_header_row.html -->
-<tr>
-  <th class="asn_num">num</th>
-  <th class="asn_ready">ready?</th>
-  <th class="asn_desc">description</th>
-  <th class="asn_date">assigned</th>
-  <th class="asn_date">due</th>
-</tr>
-
-
-
-</table>
-
-  </div>
-</div>
-
-<p><a class="btn btn-primary dropdown-toggle" data-toggle="collapse" href="#exams" role="button" aria-expanded="false" aria-controls="collapseExample">Exams</a></p>
-
-<div class="collapse" id="exams">
-  <div class="card card-body">
-    <table id="exam_table" class="asn_table">
-<!-- exam_table_header_row.html -->
-<tr>
-  <th class="asn_num">num</th>
-  <th class="asn_ready">ready?</th>
-  <th class="asn_desc">description</th>
-  <th class="asn_date">exam date</th>
-</tr>
-
-
- 
-   <tr>
-  <td class="asn_num"><a href="/f23/exam/e01/">e01</a></td>
-  <td class="asn_ready">true</td>
-  <td class="asn_desc">Midterm Exam </td>
-  <td class="asn_date">Wed 11/08 12:30PM</td> 
-</tr>
-
- 
-
- 
-   <tr>
-  <td class="asn_num"><a href="/f23/exam/e02/">e02</a></td>
-  <td class="asn_ready">true</td>
-  <td class="asn_desc">Final Exam: In person noon-3p </td>
-  <td class="asn_date">Tue 12/12 12:00PM</td> 
-</tr>
-
- 
-
-</table>
-
-  </div>
-</div>
-
-<h1 id="staff-office-hours">Staff Office Hours</h1>
-
-<style>
- iframe { width: 100%; height: 550px; }
-</style>
-
-<iframe src="https://calendar.google.com/calendar/embed?src=c_c7788493d2e424992c5a2393def31662bb2ccc39ccd03e51da61510f965f71e3%40group.calendar.google.com&amp;ctz=America%2FLos_Angeles&amp;mode=WEEK&amp;showTitle=0" style="border: 0" frameborder="0" scrolling="no"></iframe>
-
-</div><!-- content -->
-    <!-- start custom footer snippets -->
-
-<!-- end custom footer snippets -->
+    </div><!-- content -->
     
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
@@ -486,7 +276,7 @@ var nav ={
   <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23">github site</a>
-      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/index.md">edit this page on github</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/_lectures/lect05.md">edit this page on github</a>
       <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/f23">
 	  <img src="https://travis-ci.org/ucsb-cs24/f23.svg?branch=master" alt="Build Status">
 	</a>
