@@ -1,11 +1,11 @@
 ---
 lecture_date: 2023-10-16
 num: "lect05"
-desc: "Efficient search and Binary Search Trees: "
+desc: "Efficient search and Binary Search Trees"
 ready: true
 pdfurl: /lectures/CS24_Lecture5.pdf
 annotatedpdfurl: /lectures/CS24_Lecture5_ann.pdf
-annotatedready: false
+annotatedready: true
 ---
 
 # Code from lecture

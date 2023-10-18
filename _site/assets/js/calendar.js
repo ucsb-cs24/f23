@@ -100,9 +100,21 @@ var dates = [{
     
         
     "ready" : "true",
-    "desc" : "Efficient search and Binary Search Trees:",
+    "desc" : "Efficient search and Binary Search Trees",
     
       "date" : "2023-10-16",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect06/",	   
+    "num" : "lect06",
+    
+        
+    "ready" : "true",
+    "desc" : "Tree traversals and BST operations",
+    
+      "date" : "2023-10-18",
     
 }
 ,];
