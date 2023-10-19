@@ -46,6 +46,16 @@ var dates = [{
     
 }
 ,{
+    "type" : "lab",
+    "url" :  "/f23/lab/lab02/",	   
+    "num" : "lab02",
+    "assigned" : "2023-10-19 09:00:00 -0800",
+    "due" : "2023-10-25 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Implementing a linked list- OOP style",
+    
+}
+,{
     "type" : "lectures",
     "url" :  "/f23/lectures/lect01/",	   
     "num" : "lect01",

@@ -77,6 +77,12 @@ var DEBUGGING_ONLY = {
 		   "num" : "lab01",
 		},
 	        
+		{
+		   "collection" : "lab",
+		   "url" : "/lab/lab02/",
+		   "num" : "lab02",
+		},
+	        
 	    ]
 	},
 	
