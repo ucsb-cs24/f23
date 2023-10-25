@@ -83,6 +83,12 @@ var DEBUGGING_ONLY = {
 		   "num" : "lab02",
 		},
 	        
+		{
+		   "collection" : "lab",
+		   "url" : "/lab/lab03/",
+		   "num" : "lab03",
+		},
+	        
 	    ]
 	},
 	
@@ -125,6 +131,18 @@ var DEBUGGING_ONLY = {
 		   "collection" : "lectures",
 		   "url" : "/lectures/lect06/",
 		   "num" : "lect06",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect07/",
+		   "num" : "lect07",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect08/",
+		   "num" : "lect08",
 		},
 	        
 	    ]

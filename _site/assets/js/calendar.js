@@ -56,6 +56,16 @@ var dates = [{
     
 }
 ,{
+    "type" : "lab",
+    "url" :  "/f23/lab/lab03/",	   
+    "num" : "lab03",
+    "assigned" : "2023-10-26 09:00:00 -0800",
+    "due" : "2023-11-01 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Binary Search Tree",
+    
+}
+,{
     "type" : "lectures",
     "url" :  "/f23/lectures/lect01/",	   
     "num" : "lect01",
@@ -125,6 +135,30 @@ var dates = [{
     "desc" : "Tree traversals and BST operations",
     
       "date" : "2023-10-18",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect07/",	   
+    "num" : "lect07",
+    
+        
+    "ready" : "true",
+    "desc" : "BST wrap up + intro to running time analysis",
+    
+      "date" : "2023-10-23",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect08/",	   
+    "num" : "lect08",
+    
+        
+    "ready" : "true",
+    "desc" : "Big-O running time analysis",
+    
+      "date" : "2023-10-25",
     
 }
 ,];
