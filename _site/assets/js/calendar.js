@@ -161,6 +161,18 @@ var dates = [{
       "date" : "2023-10-25",
     
 }
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect09/",	   
+    "num" : "lect09",
+    
+        
+    "ready" : "true",
+    "desc" : "running time analysis – best/worst case and BST operations",
+    
+      "date" : "2023-10-30",
+    
+}
 ,];
 
 for (var i=0; i<cal_dates.length; i++) {

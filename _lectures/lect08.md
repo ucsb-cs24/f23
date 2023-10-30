@@ -5,12 +5,9 @@ desc: "Big-O running time analysis"
 ready: true
 pdfurl: /lectures/CS24_Lecture8.pdf
 annotatedpdfurl: /lectures/CS24_Lecture8_ann.pdf
-annotatedready: false	
+annotatedready: true	
 ---
-# Code from lecture
-[{{site.lect_repo}}/tree/main/{{page.num}}]({{site.lect_repo}}/tree/main/{{page.num}})
 
 # Topics
-* We'll wrap up our discussion of BSTs
-  - Remaining BST operations (predecessor, successor, delete)
-* Discuss and motivate runtime analysis
+* Big-O formal definition and examples
+* Analysis of recursive fibonacci algorithm (two different ways)
