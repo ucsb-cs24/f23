@@ -1,7 +1,7 @@
 ---
 lecture_date: 2023-10-30
 num: "lect09"
-desc: "running time analysis – best/worst case and BST operations"
+desc: "Running time analysis – best/worst case and BST operations"
 ready: true
 pdfurl: /lectures/CS24_Lecture9.pdf
 annotatedpdfurl: /lectures/CS24_Lecture9_ann.pdf

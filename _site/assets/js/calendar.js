@@ -168,7 +168,7 @@ var dates = [{
     
         
     "ready" : "true",
-    "desc" : "running time analysis – best/worst case and BST operations",
+    "desc" : "Running time analysis – best/worst case and BST operations",
     
       "date" : "2023-10-30",
     
