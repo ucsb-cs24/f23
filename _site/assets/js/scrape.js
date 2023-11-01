@@ -165,6 +165,12 @@ var DEBUGGING_ONLY = {
 	    "label" : "pa",
 	    "items" : [
 		
+		{
+		   "collection" : "pa",
+		   "url" : "/pa/pa01/",
+		   "num" : "pa01",
+		},
+	        
 	    ]
 	},
 	

@@ -2,7 +2,7 @@
 lecture_date: 2023-11-01
 num: "lect10"
 desc: "Stack ADT, C++ STL, templates"
-ready: false
+ready: true
 pdfurl: /lectures/CS24_Lecture10.pdf
 annotatedpdfurl: /lectures/CS24_Lecture10_ann.pdf
 annotatedready: false

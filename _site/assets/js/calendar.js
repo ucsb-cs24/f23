@@ -179,10 +179,20 @@ var dates = [{
     "num" : "lect10",
     
         
-    
+    "ready" : "true",
     "desc" : "Stack ADT, C++ STL, templates",
     
       "date" : "2023-11-01",
+    
+}
+,{
+    "type" : "pa",
+    "url" :  "/f23/pa/pa01/",	   
+    "num" : "pa01",
+    "assigned" : "2023-11-02 09:00:00 -0800",
+    "due" : "2023-11-15 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Card game using Binary Search Trees",
     
 }
 ,];
