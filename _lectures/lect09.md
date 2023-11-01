@@ -5,7 +5,7 @@ desc: "Running time analysis – best/worst case and BST operations"
 ready: true
 pdfurl: /lectures/CS24_Lecture9.pdf
 annotatedpdfurl: /lectures/CS24_Lecture9_ann.pdf
-annotatedready: false	
+annotatedready: true	
 ---
 # Code from lecture
 [{{site.lect_repo}}/tree/main/{{page.num}}]({{site.lect_repo}}/tree/main/{{page.num}})

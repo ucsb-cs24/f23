@@ -173,6 +173,18 @@ var dates = [{
       "date" : "2023-10-30",
     
 }
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect10/",	   
+    "num" : "lect10",
+    
+        
+    
+    "desc" : "Stack ADT, C++ STL, templates",
+    
+      "date" : "2023-11-01",
+    
+}
 ,];
 
 for (var i=0; i<cal_dates.length; i++) {
