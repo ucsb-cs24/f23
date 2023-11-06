@@ -186,6 +186,18 @@ var dates = [{
     
 }
 ,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect11/",	   
+    "num" : "lect11",
+    
+        
+    "ready" : "true",
+    "desc" : "C++ set ADT (balanced BST), Iterators, Queue with applications",
+    
+      "date" : "2023-11-06",
+    
+}
+,{
     "type" : "pa",
     "url" :  "/f23/pa/pa01/",	   
     "num" : "pa01",
