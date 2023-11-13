@@ -163,6 +163,12 @@ var DEBUGGING_ONLY = {
 		   "num" : "lect11",
 		},
 	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect12/",
+		   "num" : "lect12",
+		},
+	        
 	    ]
 	},
 	

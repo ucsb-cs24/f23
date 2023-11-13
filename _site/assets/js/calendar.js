@@ -198,6 +198,18 @@ var dates = [{
     
 }
 ,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect12/",	   
+    "num" : "lect12",
+    
+        
+    "ready" : "true",
+    "desc" : "Graphs: terminology, representation, and graph search (BFS)",
+    
+      "date" : "2023-11-13",
+    
+}
+,{
     "type" : "pa",
     "url" :  "/f23/pa/pa01/",	   
     "num" : "pa01",
