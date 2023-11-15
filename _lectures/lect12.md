@@ -16,7 +16,6 @@ annotatedready: false
 * Size of graphs, dense vs. sparse graphs
 * Representation: adjacency matrix vs. adjacency list (space complexity)
 * Graph search overview and breadh first search
-* Implementing the graph ADT (in class exercise), linkk to handout: <https://bit.ly/CS24F23GraphsHandout
->
+* Implementing the graph ADT (in class exercise), link to handout: <https://bit.ly/CS24F23GraphsHandout>
 
 

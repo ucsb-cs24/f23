@@ -210,6 +210,18 @@ var dates = [{
     
 }
 ,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect13/",	   
+    "num" : "lect13",
+    
+        
+    "ready" : "true",
+    "desc" : "Graph search (BFS, DFS) and applications",
+    
+      "date" : "2023-11-14",
+    
+}
+,{
     "type" : "pa",
     "url" :  "/f23/pa/pa01/",	   
     "num" : "pa01",
