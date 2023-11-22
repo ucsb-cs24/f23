@@ -66,6 +66,16 @@ var dates = [{
     
 }
 ,{
+    "type" : "lab",
+    "url" :  "/f23/lab/lab04/",	   
+    "num" : "lab04",
+    "assigned" : "2023-11-27 09:00:00 -0800",
+    "due" : "2023-12-06 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Big O practice",
+    
+}
+,{
     "type" : "lectures",
     "url" :  "/f23/lectures/lect01/",	   
     "num" : "lect01",
@@ -219,6 +229,18 @@ var dates = [{
     "desc" : "Graph search (BFS, DFS) and applications",
     
       "date" : "2023-11-14",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect14/",	   
+    "num" : "lect14",
+    
+        
+    "ready" : "true",
+    "desc" : "Interview Practice + Heaps",
+    
+      "date" : "2023-11-20",
     
 }
 ,{

@@ -252,26 +252,28 @@ var nav ={
           
       
       <h1 id="collaboration-policy">Collaboration policy</h1>
-<p>This assignment must be completed solo.</p>
+<p>This assignment may be completed in pairs using the pair-programming style of developing code described in previous assignments.</p>
 
 <h1 id="introduction">Introduction</h1>
 
+<p>Please read the entire writeup before beginning the PA. In particular, take a look at part 3a to understand your requirements for a full score before attempting to implement a solution. You are graded on the running time efficiency of your solution.</p>
+
 <p>In this assignment, you will</p>
 <ul>
-  <li>Use a container data structure from the C++ Standard Template Library (STL) to store and query data.</li>
+  <li>Use a container data structure from the C++ Standard Template Library (STL) where possible and/or write your own data structure to store and query data.</li>
   <li>Analyze the time and space complexity of your algorithms.</li>
 </ul>
 
 <h1 id="goal-of-this-assignment">Goal of this assignment</h1>
 
 <ul>
-  <li>Use data structures from the C++ STL (STL) to efficiently solve a problem on a large, real-world dataset.</li>
+  <li>Use data structures from the C++ STL (STL) to solve a problem on a large, real-world dataset efficiently.</li>
   <li>Analyze the complexity of your algorithms using Big-O notation</li>
   <li>Explore the tradeoffs between time and space complexity.</li>
-  <li>Organize your project’s code on your own (not just filling in a template).</li>
+  <li>Organize your project’s code independently (not just filling in a template).</li>
 </ul>
 
-<p><em>Note: The goals above are very important in industry and in interviews!</em></p>
+<p><em>Note: The goals above are very important in the industry and interviews!</em></p>
 
 <h1 id="getting-started">Getting Started</h1>
 
@@ -281,8 +283,7 @@ var nav ={
 
 <p>Refer to lab01 for instructions on how to set up a GitHub repository and 
 pull the starter code for this lab.
-Obtain the starter code from this repo:
-<a href="https://github.com/ucsb-cs24-s22/STARTER-pa02">https://github.com/ucsb-cs24-s22/STARTER-pa02</a></p>
+Obtain the starter code from this repo: <a href="https://github.com/ucsb-cs24-f23/STARTER-pa02">https://github.com/ucsb-cs24-f23/STARTER-pa02</a></p>
 
 <h3 id="contents">Contents</h3>
 <ul>
@@ -293,15 +294,21 @@ Obtain the starter code from this repo:
   <li><code class="language-plaintext highlighter-rouge">input_100_random.csv</code></li>
   <li><code class="language-plaintext highlighter-rouge">input_1000_ordered.csv</code></li>
   <li><code class="language-plaintext highlighter-rouge">input_1000_random.csv</code></li>
+  <li><code class="language-plaintext highlighter-rouge">input_76920_ordered.csv</code></li>
+  <li><code class="language-plaintext highlighter-rouge">input_76920_random.csv</code></li>
+  <li><code class="language-plaintext highlighter-rouge">prefix_small.txt</code></li>
+  <li><code class="language-plaintext highlighter-rouge">prefix_medium.txt</code></li>
+  <li><code class="language-plaintext highlighter-rouge">prefix_large.txt</code></li>
 </ul>
 
-<p>You are given 6 datasets in CSV files. Each CSV file:</p>
+<p>You are given eight datasets in CSV files. Each CSV file:</p>
 <ul>
-  <li>has either 20, 100, or 1000 entries</li>
+  <li>has either 20, 100, 1000, 76920 entries</li>
   <li>is either ordered in alphabetical order of movie name or ordered randomly</li>
 </ul>
 
-<p><strong>Example of alphabetical order</strong></p>
+<p><strong>Example of alphabetical order</strong>
+Below is a list of movie names  and their ratings, ordered alphabetically by movie name</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ace ventura: when nature calls,6.1
 balto,7.1
 casino,7.8
@@ -351,7 +358,7 @@ money train,5.4
 <ul>
   <li><code class="language-plaintext highlighter-rouge">movies.cpp, movies.h</code>: these files should contain any abstractions that you need to define.
     <ul>
-      <li>We strongly discourage implementing any data structures from scratch.</li>
+      <li>We strongly discourage implementing any data structure available in the C++ STL from scratch. However, you are encouraged to think creatively about improving the running time efficiency of your solution and implement your own data structure if those provided in the STL are insufficient to meet your needs.</li>
     </ul>
   </li>
   <li><code class="language-plaintext highlighter-rouge">main.cpp</code>: this file should read in the movies from input files and produce the expected output.</li>
@@ -359,33 +366,29 @@ money train,5.4
 </ul>
 
 <h2 id="problem-statement">Problem statement</h2>
-<p>This assignment has 3 parts. You should <strong>separate your algorithm for part 1 from your algorithm for part 2</strong> because in part 3, you need to analyze the running time complexity of your solution to <strong>part 2 only</strong>.</p>
+<p>This assignment has three parts. You should <strong>separate your algorithm for part 1 from your algorithm for part 2</strong> because in part 3, you need to analyze the running time complexity of your solution to <strong>part 2 only</strong>.</p>
 <ul>
   <li>In part 1, your task is to print all movie names and ratings (from the CSV file) in alphabetical order of movie name.</li>
-  <li>In part 2, you are given <code class="language-plaintext highlighter-rouge">m</code> prefixes of movie names. Your task is to find the movies whose names start with each prefix and find the highest rated movie for each prefix.</li>
+  <li>In part 2, you are given <code class="language-plaintext highlighter-rouge">m</code> prefixes of movie names. Your task is to find the movies whose names start with each prefix and find the highest-rated movie for each prefix.</li>
   <li>In part 3, you will analyze the time and space complexity of your solution for part 2.</li>
 </ul>
 
 <h2 id="command-line-arguments">Command-line arguments</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies filename prefix_1 prefix_2 prefix_3 ... prefix_m
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies movieFilename prefixFilename
 </code></pre></div></div>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">filename</code> represents the input file containing movies and ratings (as described before).</li>
-  <li><code class="language-plaintext highlighter-rouge">prefix_i</code> is a prefix for one or more movie names.
+  <li><code class="language-plaintext highlighter-rouge">movieFilename</code> represents the input file containing movies and ratings (as described before).</li>
+  <li><code class="language-plaintext highlighter-rouge">prefixFilename</code> is an optional parameter which is the name of a .txt file that contains a list of prefixes, see <code class="language-plaintext highlighter-rouge">prefix_medium.txt</code> as an example.
     <ul>
-      <li>There may be up to <code class="language-plaintext highlighter-rouge">m</code> such prefixes in the command-line arguments.</li>
-      <li>If a prefix contains white spaces, it must be placed within quotation marks <code class="language-plaintext highlighter-rouge">"</code>.</li>
+      <li>There may be up to <code class="language-plaintext highlighter-rouge">m</code> such prefixes in the file.</li>
+      <li>Prefixes may include whitespace, see <code class="language-plaintext highlighter-rouge">prefix_medium.txt</code> for examples. Each line in the file corresponds to exactly one prefix.</li>
     </ul>
   </li>
 </ul>
 
-<p><strong>Example of a prefix with whitespaces</strong></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies input_1000_random.csv "the american" ab
-</code></pre></div></div>
-
 <h1 id="part-1-print-all-movie-names-and-ratings">Part 1: Print all movie names and ratings</h1>
-<p>Your program should print out all the movies in <strong>alphabetical order of movie name</strong>. You may use <strong>only one data structure</strong> of your choice to store the data from the CSV file. When testing this part, do not give any prefixes as command-line arguments!</p>
+<p>Your program should print out all the movies in <strong>alphabetical order of movie name</strong>. You may use <strong>only one data structure</strong> of your choice to store the data from the CSV file. When testing this part, do not include the prefix file as a command-line argument!</p>
 
 <p><strong>Example with no prefixes</strong></p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies input_20_random.csv 
@@ -414,25 +417,28 @@ waiting to exhale, 6.1
 </code></pre></div></div>
 
 <h2 id="part-2-find-movies-based-on-prefixes">Part 2: Find movies based on prefixes</h2>
-<p>If one or more prefixes are given as command-line arguments, then for each prefix, your program should:</p>
+<p>In Part 2, the goal is to search for movies based on their prefixes. This involves finding movies whose titles begin with a particular set of letters or words. The search results will be limited to movies that match the specified prefix criteria.</p>
+
+<p>In this case, your program will take an extra command-line argument that specifies the name of a second file containing one or more prefixes.
+Then for each prefix, your program should:</p>
 <ul>
   <li>Find the movies whose names start with that prefix.</li>
-  <li>Find the highest rated movie for that prefix.</li>
+  <li>Find the highest-rated movie for that prefix.</li>
 </ul>
 
-<p>You may use additional data structures from the C++ STL to help you solve this part of the assignment.</p>
+<p>You may use additional data structures from the C++ STL to help you solve this part of the assignment, or you may write your own structure.</p>
 
 <h3 id="part-2a-all-movies-starting-with-a-prefix">Part 2a: All movies starting with a prefix</h3>
-<p>First, for each prefix, your program should print out all the movies whose names start with that prefix in <strong>decreasing order of rating</strong>. If multiple movies have the same rating, then print them in alphabetical order of movie name. For example, print <code class="language-plaintext highlighter-rouge">the american president, 6.5</code> before <code class="language-plaintext highlighter-rouge">the confessional, 6.5</code>. If no movie names start with that prefix, then print</p>
+<p>First, for each prefix, your program should print out all the movies whose names start with that prefix in <strong>decreasing order of rating</strong>. If multiple movies have the same rating, print them in alphabetical order of movie name. For example, print <code class="language-plaintext highlighter-rouge">the american president, 6.5</code> before <code class="language-plaintext highlighter-rouge">the confessional, 6.5</code>. If no movie names start with that prefix, then print</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>No movies found with prefix &lt;prefix_value&gt;
 </code></pre></div></div>
 
-<h3 id="part-2b-highest-rated-movie-for-a-prefix">Part 2b: Highest rated movie for a prefix</h3>
-<p>Second, for each prefix, your program should print the <strong>highest rated</strong> movie whose name starts with that prefix. If there is a tie for highest rated movie, then use the movie whose name comes first in alphabetical order.</p>
+<h3 id="part-2b-highest-rated-movie-for-a-prefix">Part 2b: Highest-rated movie for a prefix</h3>
+<p>Second, for each prefix, your program should print the <strong>highest rated</strong> movie whose name starts with that prefix. If there is a tie for the highest-rated movie, then use the movie whose name comes first in alphabetical order.</p>
 
 <h3 id="examples">Examples</h3>
-<p><strong>Example with 3 prefixes and multiple movies with same rating</strong></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies input_100_random.csv to th w
+<p><strong>Example with three prefixes and multiple movies with the same rating</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies input_100_random.csv prefix_small.txt
 </code></pre></div></div>
 <p>This should produce the following output:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>toy story, 7.7
@@ -462,8 +468,9 @@ Best movie with prefix th is: the usual suspects with rating 8.1
 Best movie with prefix w is: wings of courage with rating 6.8
 </code></pre></div></div>
 
-<p><strong>Another example multiple movies with same rating</strong></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies input_1000_random.csv be
+<p><strong>Another example of multiple movies with the same rating</strong>
+<em>let prefix.txt be a file that contains the prefix “be”</em></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies input_1000_random.csv prefix.txt
 </code></pre></div></div>
 <p>should produce the output:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>before sunrise, 7.7
@@ -482,8 +489,9 @@ beyond bedlam, 4.0
 Best movie with prefix be is: before sunrise with rating 7.7
 </code></pre></div></div>
 
-<p><strong>Example with no movies for a given prefix</strong></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies input_100_random.csv t xyz
+<p><strong>Example with no movies for a given prefix</strong>
+*Let prefix.txt be a file that contains the prefixes: “t” and “xyz”</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./runMovies input_100_random.csv prefix.txt
 </code></pre></div></div>
 <p>should produce the output</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>the usual suspects, 8.1
@@ -514,24 +522,46 @@ Best movie with prefix t is: the usual suspects with rating 8.1
 <p>Assume that</p>
 <ul>
   <li>there are <code class="language-plaintext highlighter-rouge">n</code> movies in the dataset.</li>
-  <li>there are <code class="language-plaintext highlighter-rouge">m</code> prefixes in the command-line arguments .</li>
+  <li>there are <code class="language-plaintext highlighter-rouge">m</code> prefixes specified in a given run of your program.</li>
   <li>at most <code class="language-plaintext highlighter-rouge">k</code> movies begin with each prefix.</li>
+  <li><code class="language-plaintext highlighter-rouge">l</code> is the maximum number of characters in a moview name</li>
 </ul>
 
 <h3 id="part-3a-analyze-time-complexity">Part 3a: Analyze time complexity</h3>
-<p>Analyze the worst case Big-O time complexity of your algorithm from part 2 of the assignment. You may assume that</p>
+<p>Analyze the worst-case Big-O time complexity of your algorithm from part 2 of the assignment. You may assume that</p>
 <ul>
   <li>all <code class="language-plaintext highlighter-rouge">n</code> movies are already stored in your data structure.</li>
   <li>all <code class="language-plaintext highlighter-rouge">m</code> prefixes are already stored in an array.</li>
 </ul>
 
-<p>You must provide the time complexity analysis as a <strong>commented block</strong> right after your <code class="language-plaintext highlighter-rouge">main()</code> function in <code class="language-plaintext highlighter-rouge">main.cpp</code>. Note that</p>
+<ol>
+  <li>You must provide the time complexity analysis as a <strong>commented block</strong> right after your <code class="language-plaintext highlighter-rouge">main()</code> function in <code class="language-plaintext highlighter-rouge">main.cpp</code>. Note that</li>
+</ol>
+
 <ul>
-  <li>your final answer will be some function of <code class="language-plaintext highlighter-rouge">n</code>, <code class="language-plaintext highlighter-rouge">m</code>, and/or <code class="language-plaintext highlighter-rouge">k</code>.</li>
+  <li>select the parameters that could affect the running time complexity of your algorithm among <code class="language-plaintext highlighter-rouge">n</code>, <code class="language-plaintext highlighter-rouge">m</code>, <code class="language-plaintext highlighter-rouge">k</code>, and <code class="language-plaintext highlighter-rouge">l</code>.</li>
+  <li>express your final Big-O running time in terms of the relevant parameters.</li>
   <li>your final answer will depend on your data structure and algorithm choices.</li>
 </ul>
 
-<p>You will be graded for the efficiency of your algorithms but also the clarity and correctness of your analysis. However, we are not giving you a target Big-O time complexity. A set of solutions that have similar Big-O time complexities will receive the same grade.</p>
+<ol>
+  <li>Your analysis should also report on <strong>specific running times achieved by your solution</strong> on <em>each</em> random input file. For example, write down the number of milliseconds it takes for your solution to run on each input. Only report on the randomized datasets.</li>
+</ol>
+
+<ul>
+  <li>Be sure to check that the trend in your proposed time complexity from (1) somewhat matches with trends in your runtimes from (2)</li>
+</ul>
+
+<p>You will be graded for the efficiency of your algorithms but also the clarity and correctness of your analysis.</p>
+
+<p>Here are runtime plots of three different types of solutions. These runtimes were gathered on the csil machines. If you want to get a proper runtime comparison, please run your code on csil.</p>
+<ul>
+  <li><strong>Full credit will be given to solutions with an efficiency similar to <code class="language-plaintext highlighter-rouge">Mystery Implementation #2</code></strong></li>
+  <li>Note that ** <code class="language-plaintext highlighter-rouge">Mystery Implementation #1</code> and <code class="language-plaintext highlighter-rouge">#4</code> use different data structures but have almost the same running times.</li>
+  <li>The students who achieve the top 5 runtimes will receive <strong>extra credit</strong></li>
+</ul>
+
+<p><img src="./Part2RuntimeBenchmarks.svg" alt="Part2" width="80%" style="display:block; margin: 5px 10px 10px 10px;" /></p>
 
 <h3 id="part-3b-analyze-space-complexity">Part 3b: Analyze space complexity</h3>
 <p>Analyze the worst case Big-O space complexity of your algorithm from part 2 of the assignment. You may assume that</p>
@@ -542,16 +572,17 @@ Best movie with prefix t is: the usual suspects with rating 8.1
 
 <p>You must provide the space complexity analysis as a <strong>commented block</strong> under your time complexity analysis. Note that</p>
 <ul>
-  <li>your final answer will be some function of <code class="language-plaintext highlighter-rouge">n</code>, <code class="language-plaintext highlighter-rouge">m</code>, and/or <code class="language-plaintext highlighter-rouge">k</code>.</li>
+  <li>select the parameters that could affect the space complexity of your algorithm among <code class="language-plaintext highlighter-rouge">n</code>, <code class="language-plaintext highlighter-rouge">m</code>, <code class="language-plaintext highlighter-rouge">k</code>, and <code class="language-plaintext highlighter-rouge">l</code>.</li>
+  <li>express your final Big-O space complexity in terms of the relevant parameters.</li>
   <li>your final answer will depend on your data structure and algorithm choices.</li>
 </ul>
 
-<p>You will be graded for the efficiency of your algorithms but also the clarity and correctness of your analysis. However, we are not giving you a target Big-O space complexity. A set of solutions that have similar Big-O space complexities will receive the same grade.</p>
+<p>You will be graded for the efficiency of your algorithms but also the clarity and correctness of your analysis. However, we are not giving you a target Big-O space complexity.</p>
 
 <h3 id="part-3c-explore-tradeoffs-between-timespace-complexity">Part 3c: Explore tradeoffs between time/space complexity</h3>
 <p>Briefly state how you designed your algorithm from part 2 of the assignment for the task at hand. More specifically, answer this question:</p>
 <ul>
-  <li>Did you design your algorithm for a low time complexity, a low space complexity, or both?</li>
+  <li>Did you design your algorithm for a low time complexity, a low space complexity, or both? What were your target complexities?</li>
 </ul>
 
 <p>Based on your answer to the question above, answer one of the following:</p>
@@ -585,10 +616,11 @@ Best movie with prefix t is: the usual suspects with rating 8.1
 <p>For this programming assignment, you will have a lot of flexibility on your implementation (which just means we won’t be providing a code framework for you to fill in). However, there are a few requirements that you need to keep in mind as you think about your solution:</p>
 
 <ul>
-  <li>You must make appropriate use of data structures from the STL</li>
+  <li>You must make appropriate use of data structures from the STL where possible, and implement your own only when needed. For example, if you need a bst, just use the implementation provided in the STL instead of implementing it from scratch.</li>
+  <li>First, try to come up with a correct implementation, then think of how to optimize it.</li>
   <li>Your code should be readable</li>
   <li>Your classes should define clear interfaces and hide implementation details as much as possible.</li>
-  <li>You must include your space and time complexity analyses in <code class="language-plaintext highlighter-rouge">main.cpp</code>, as a commented block under the <code class="language-plaintext highlighter-rouge">main()</code> function</li>
+  <li>You must include your space and time complexity analyses (part 3) in <code class="language-plaintext highlighter-rouge">main.cpp</code>, as a commented block under the <code class="language-plaintext highlighter-rouge">main()</code> function</li>
   <li>Your <code class="language-plaintext highlighter-rouge">Makefile</code> must produce an executable called <code class="language-plaintext highlighter-rouge">runMovies</code> from the <code class="language-plaintext highlighter-rouge">make</code> command.</li>
 </ul>
 </div><!-- content -->

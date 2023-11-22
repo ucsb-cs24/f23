@@ -89,6 +89,12 @@ var DEBUGGING_ONLY = {
 		   "num" : "lab03",
 		},
 	        
+		{
+		   "collection" : "lab",
+		   "url" : "/lab/lab04/",
+		   "num" : "lab04",
+		},
+	        
 	    ]
 	},
 	
@@ -173,6 +179,12 @@ var DEBUGGING_ONLY = {
 		   "collection" : "lectures",
 		   "url" : "/lectures/lect13/",
 		   "num" : "lect13",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect14/",
+		   "num" : "lect14",
 		},
 	        
 	    ]
@@ -670,6 +682,13 @@ var DEBUGGING_ONLY = {
 	    "name" : "CS24_Lecture9_ann.pdf"
 	    "basename" : "CS24_Lecture9_ann"
 	    "extname" : ".pdf"	    
+	},
+	
+	{
+	    "path" : "/backup_pa/Part2RuntimeBenchmarks.svg",
+	    "name" : "Part2RuntimeBenchmarks.svg"
+	    "basename" : "Part2RuntimeBenchmarks"
+	    "extname" : ".svg"	    
 	},
 	
 	{
