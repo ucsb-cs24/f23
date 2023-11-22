@@ -32,9 +32,9 @@ TBD
 
 ## Zackary Glazewski, LA
 
-<img src="../staff/CS16-zackGlazewski.jpg" alt="Zack" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+<img src="staff/CS24-F23-Zackary-G.jpg" alt="Zack" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
 
-Hello everyone! My name is Zack Glazewski and I'm a 3rd year CS Major. I feel very excited to help you all not only learn, but enjoy the process along the way. Some more information about me: I love cats (I have a cat named Link who is bascially my child), playing piano, and developing my own games. I'm always happy to help, so please don't hesitate if you have any questions. I look forward to meeting you all!
+Hello everyone! My name is Zack Glazewski and I'm a 4th year CS Major. I feel very excited to help you all learn and enjoy the process along the way. Some more information about me: I love cats (I have a cat named Link), playing piano, and developing my own games. I'm always happy to help, so please don't hesitate if you have any questions. I look forward to meeting you all!
 
 
 <br>
