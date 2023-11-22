@@ -80,7 +80,7 @@ var dates = [{
     "url" :  "/f23/lab/lab05/",	   
     "num" : "lab05",
     "assigned" : "2023-11-28 09:00:00 -0800",
-    "due" : "2023-12-07 23:59:00 -0800",    
+    "due" : "2023-12-05 23:59:00 -0800",    
     "ready" : "true",
     "desc" : "Implementing a min-heap",
     

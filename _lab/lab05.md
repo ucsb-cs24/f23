@@ -4,7 +4,7 @@ num: lab05
 ready: true
 desc: "Implementing a min-heap"
 assigned: 2023-11-28 9:00:00.00-8
-due: 2023-12-07 23:59:00.00-8
+due: 2023-12-05 23:59:00.00-8
 ---
 
 # Collaboration policy
