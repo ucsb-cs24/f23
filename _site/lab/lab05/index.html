@@ -151,17 +151,11 @@ var nav ={
 
 
 
-    <!-- start custom head snippets -->
-
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
-    
-  <title> Homework |  CS24 Fall 2023</title>
+    <title>lab07 - Implementing a min-heap - </title>
   </head>
-  <body id="page-top">
-    <div class="container">
-    
+    <body id="page-top">
+      <div class="container">
+      
 
 <script>
   console.log("site.url=http://localhost:4000");
@@ -243,116 +237,82 @@ var nav ={
 </nav>
 
 
-    <div id="content"  class="ui-content">
-      
-      
-        
-          
-      
-      <h1 id="cs24-fall-2023">CS24, Fall 2023</h1>
-
-<h2 id="labs">Labs:</h2>
-<table id="lab_table" class="asn_table">
-  <!-- asn_table_header_row.html -->
+        <div id="content"  class="ui-content">
+          <h1>lab07 : Implementing a min-heap</h1>
+          <table class="asn_table">
+            <!-- asn_table_header_row.html -->
 <tr>
-  <th class="asn_num">num</th>
+  <th class="asn_num"  >num</th>
   <th class="asn_ready">ready?</th>
-  <th class="asn_desc">description</th>
-  <th class="asn_date">assigned</th>
-  <th class="asn_date">due</th>
+  <th class="asn_desc" >description</th>
+  <th class="asn_date" >assigned</th>
+  <th class="asn_date" >due</th>
 </tr>
 
 
-  
-     
-     <tr class="ready">
-  <td class="asn_num"><a href="/f23/lab/lab00/" data-ajax="false">lab00</a></td>
+            
+            <tr class="ready" >
+  <td class="asn_num"  ><a href="/f23/lab/lab05/" data-ajax="false">lab07</a></td>
   <td class="asn_ready">true</td>
-  <td class="asn_desc">Getting started</td>
-  <td class="asn_date">Thu 10/05 10:00AM</td> 
-  <td class="asn_date">Wed 10/11 11:59PM</td>
+  <td class="asn_desc" >Implementing a min-heap</td>
+  <td class="asn_date" >Wed 11/22 09:00AM</td> 
+  <td class="asn_date" >Thu 12/07 11:59PM</td>
 </tr>
 
 
 
-    
-  
-    
-  
-    
-  
-     
-     <tr class="ready">
-  <td class="asn_num"><a href="/f23/lab/lab01/" data-ajax="false">lab01</a></td>
-  <td class="asn_ready">true</td>
-  <td class="asn_desc">Objective Cars</td>
-  <td class="asn_date">Thu 10/12 09:00AM</td> 
-  <td class="asn_date">Wed 10/18 11:59PM</td>
-</tr>
+          </table>
+          <h1 id="collaboration-policy">Collaboration policy</h1>
+<p>The lab may be done solo.</p>
 
+<h1 id="goals-for-this-lab">Goals for this lab</h1>
 
+<p>By the time you have completed this lab, you should be able to</p>
 
-    
-  
-     
-     <tr class="ready">
-  <td class="asn_num"><a href="/f23/lab/lab02/" data-ajax="false">lab02</a></td>
-  <td class="asn_ready">true</td>
-  <td class="asn_desc">Implementing a linked list- OOP style</td>
-  <td class="asn_date">Thu 10/19 09:00AM</td> 
-  <td class="asn_date">Wed 10/25 11:59PM</td>
-</tr>
+<ul>
+  <li>Understand the purpose and behavior of a priority queue</li>
+  <li>Understand how to implement an array-based heap</li>
+</ul>
 
+<p>This lab may be done with a partner</p>
 
+<h2 id="step-by-step-instructions">Step by Step Instructions</h2>
 
-    
-  
-     
-     <tr class="ready">
-  <td class="asn_num"><a href="/f23/lab/lab03/" data-ajax="false">lab03</a></td>
-  <td class="asn_ready">true</td>
-  <td class="asn_desc">Binary Search Tree</td>
-  <td class="asn_date">Thu 10/26 09:00AM</td> 
-  <td class="asn_date">Wed 11/01 11:59PM</td>
-</tr>
+<h2 id="step-1-get-the-starter-code">Step 1: Get the starter code</h2>
+<p>Use scp to copy the starter code from CSIL from the following directory:</p>
 
+<p><a href="https://github.com/ucsb-cs24-f23/STARTER-lab05">https://github.com/ucsb-cs24-f23/STARTER-lab05</a></p>
 
+<p>You should have the following files:</p>
 
-    
-  
-     
-     <tr class="ready">
-  <td class="asn_num"><a href="/f23/lab/lab04/" data-ajax="false">lab04</a></td>
-  <td class="asn_ready">true</td>
-  <td class="asn_desc">Big O practice</td>
-  <td class="asn_date">Fri 11/17 09:00AM</td> 
-  <td class="asn_date">Mon 11/27 11:59PM</td>
-</tr>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-bash-4.3$ ls
+examheap.cpp heap.cpp heap.h
+</code></pre></div></div>
 
+<p>First look at heap.h to see the basic operations for a heap. You will implement all of these operations of a min-heap in this lab. Also notice the storage mechanism we will be using for the heap: a <a href="http://www.cplusplus.com/reference/vector/">http://www.cplusplus.com/reference/vector/</a>. It will probably be a good idea to read through the documentation for this standard library class (linked above) if you are not familiar with it.</p>
 
+<p>Now look at examheap.cpp. This file will test your heap’s behavior. The first test is quite simple and just adds a couple elements to your heap. For larger numbers of inputs, it uses the <code class="language-plaintext highlighter-rouge">std::priority_queue</code> class from the standard library as ground truth to test your code against. The first thing you need to do is compose your Makefile to compile <code class="language-plaintext highlighter-rouge">examheap.cpp</code> with <code class="language-plaintext highlighter-rouge">heap.cpp</code> to executable <code class="language-plaintext highlighter-rouge">examheap</code>. Then, feel free to compile and run <code class="language-plaintext highlighter-rouge">examheap</code> before starting on your code. However, note that all the tests will fail and say “Aborted (core dumped)”.</p>
 
-    
-  
-     
-     <tr class="ready">
-  <td class="asn_num"><a href="/f23/lab/lab05/" data-ajax="false">lab07</a></td>
-  <td class="asn_ready">true</td>
-  <td class="asn_desc">Implementing a min-heap</td>
-  <td class="asn_date">Wed 11/22 09:00AM</td> 
-  <td class="asn_date">Thu 12/07 11:59PM</td>
-</tr>
+<h2 id="step-2-implement-the-functions-of-heapcpp">Step 2: Implement the functions of heap.cpp</h2>
 
+<p>There are four functions you need to implement in heap.cpp: <code class="language-plaintext highlighter-rouge">push</code>, <code class="language-plaintext highlighter-rouge">pop</code>, <code class="language-plaintext highlighter-rouge">top</code>, and <code class="language-plaintext highlighter-rouge">empty</code>. Note that only <code class="language-plaintext highlighter-rouge">push</code> and <code class="language-plaintext highlighter-rouge">pop</code> modify the heap, while <code class="language-plaintext highlighter-rouge">empty</code> and <code class="language-plaintext highlighter-rouge">top</code> only return values. When testing your code, be sure to run the large tests (4 and 5) to find any minor bugs in your code that may not show up on the smaller tests.</p>
 
+<p>You are allowed to add helper functions in heap.h and heap.cpp if you need them. However, you should use the vector in heap.h as the underlying storage for your heap.</p>
 
-    
-  
-</table>
+<h2 id="step-3-submit-heapcpp-and-heaph">Step 3: Submit heap.cpp and heap.h</h2>
 
-</div><!-- content -->
-    <!-- start custom footer snippets -->
+<p>Submit the files heap.cpp, heap.h, and Makefile to the assignment on Gradescope.</p>
 
-<!-- end custom footer snippets -->
-    
+<h2 id="evaluation-and-grading">Evaluation and Grading</h2>
+
+<p>Each student must accomplish the following to earn full credit for this lab:
+heap.cpp and heap.h are saved, with your name(s) in a comment at the top and other evidence of your work. Both of these files should compile and execute properly too.</p>
+
+<h2 id="course-evaluation">Course evaluation</h2>
+<p>Please fill out the course (ESCIs) for the instructor and TAs. Links should be available through Gauchospace.</p>
+
+        </div><!-- content -->
+        
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light footer-navbar ">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footer-navbar-NavAltMarkup" aria-controls="footer-navbar-NavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -361,7 +321,7 @@ var nav ={
   <div class="collapse navbar-collapse" id="footer-navbar-NavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23">github site</a>
-      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/_pages/lab_list.md">edit this page on github</a>
+      <a class="nav-item nav-link" href="https://github.com/ucsb-cs24/f23/edit/master/_lab/lab05.md">edit this page on github</a>
       <span class="nav-item travis-ci-status "><a class="nav-link" href="https://travis-ci.org/ucsb-cs24/f23">
 	  <img src="https://travis-ci.org/ucsb-cs24/f23.svg?branch=master" alt="Build Status">
 	</a>
@@ -370,6 +330,6 @@ var nav ={
   </div>
 </nav>
 
-    </div><!-- container -->
+      </div><!-- container -->
   </body>
 </html>

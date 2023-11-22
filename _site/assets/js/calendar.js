@@ -69,10 +69,20 @@ var dates = [{
     "type" : "lab",
     "url" :  "/f23/lab/lab04/",	   
     "num" : "lab04",
-    "assigned" : "2023-11-27 09:00:00 -0800",
-    "due" : "2023-12-06 23:59:00 -0800",    
+    "assigned" : "2023-11-17 09:00:00 -0800",
+    "due" : "2023-11-27 23:59:00 -0800",    
     "ready" : "true",
     "desc" : "Big O practice",
+    
+}
+,{
+    "type" : "lab",
+    "url" :  "/f23/lab/lab05/",	   
+    "num" : "lab07",
+    "assigned" : "2023-11-22 09:00:00 -0800",
+    "due" : "2023-12-07 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Implementing a min-heap",
     
 }
 ,{
