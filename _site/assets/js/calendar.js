@@ -253,6 +253,16 @@ var dates = [{
     "desc" : "Card game using Binary Search Trees",
     
 }
+,{
+    "type" : "pa",
+    "url" :  "/f23/pa/pa02/",	   
+    "num" : "pa02",
+    "assigned" : "2023-11-22 09:00:00 -0800",
+    "due" : "2023-12-08 23:59:59 -0800",    
+    "ready" : "true",
+    "desc" : "Application of data structures to a movie dataset",
+    
+}
 ,];
 
 for (var i=0; i<cal_dates.length; i++) {

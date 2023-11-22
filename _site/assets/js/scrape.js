@@ -201,6 +201,12 @@ var DEBUGGING_ONLY = {
 		   "num" : "pa01",
 		},
 	        
+		{
+		   "collection" : "pa",
+		   "url" : "/pa/pa02/",
+		   "num" : "pa02",
+		},
+	        
 	    ]
 	},
 	
