@@ -98,7 +98,7 @@ var DEBUGGING_ONLY = {
 		{
 		   "collection" : "lab",
 		   "url" : "/lab/lab05/",
-		   "num" : "lab07",
+		   "num" : "lab05",
 		},
 	        
 	    ]

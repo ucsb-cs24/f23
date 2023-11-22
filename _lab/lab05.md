@@ -1,6 +1,6 @@
 ---
 layout: lab
-num: lab07
+num: lab05
 ready: true
 desc: "Implementing a min-heap"
 assigned: 2023-11-22 9:00:00.00-8

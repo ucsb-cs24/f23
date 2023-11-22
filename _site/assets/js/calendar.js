@@ -78,7 +78,7 @@ var dates = [{
 ,{
     "type" : "lab",
     "url" :  "/f23/lab/lab05/",	   
-    "num" : "lab07",
+    "num" : "lab05",
     "assigned" : "2023-11-22 09:00:00 -0800",
     "due" : "2023-12-07 23:59:00 -0800",    
     "ready" : "true",
