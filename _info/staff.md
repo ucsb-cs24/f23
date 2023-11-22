@@ -7,9 +7,10 @@ ready: true
 
 ## Mehak Dhaliwal, TA
 
-<img src="" alt="Mehak" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+<img src="../staff/CS24-F23-Mehak-D.jpg" alt="Mehak" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
 
-Hi everyone, my name is Mehak Dhaliwal. I am a first year MS student under BS/MS program in UCSB. I was working on Amazon Alexa team this summer and developed a smart notification delivery system to deliver notifications at an appropriate time. I enjoy riding bikes and I have a white kawasaki. I will ride my bike to school everyday unless it is raining. Don't hesitate to ask me anything about homework, internship, or anything else.
+Hi everyone, my name is Mehak Dhaliwal (she/her). I am a first year PhD student working with Prof. Yao Qin on AI for healthcare. I'm also interested in Natural Language Processing (NLP) and AI for Social Good.
+Please feel free to reach out to me with any questions. I'm looking forward to meeting and working with you all!
 
 ## Sherry Chen, TA
 
@@ -32,17 +33,18 @@ TBD
 
 ## Zackary Glazewski, LA
 
-<img src="../staff/CS16-zackGlazewski.jpg" alt="Zack" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+<img src="staff/CS24-F23-Zackary-G.jpg" alt="Zack" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
 
-Hello everyone! My name is Zack Glazewski and I'm a 3rd year CS Major. I feel very excited to help you all not only learn, but enjoy the process along the way. Some more information about me: I love cats (I have a cat named Link who is bascially my child), playing piano, and developing my own games. I'm always happy to help, so please don't hesitate if you have any questions. I look forward to meeting you all!
+Hello everyone! My name is Zack Glazewski and I'm a 4th year CS Major. I feel very excited to help you all learn and enjoy the process along the way. Some more information about me: I love cats (I have a cat named Link), playing piano, and developing my own games. I'm always happy to help, so please don't hesitate if you have any questions. I look forward to meeting you all!
 
 
 <br>
-## Karanina Zim, LA
 
-<img src="" alt="Karanina" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+## Karanina (Laszlo) Zim, LA
 
-Hello everyone! My name is Karanina Zim
+<img src="../staff/CS24-F23-Laszlo-Z.jpeg" alt="Laszlo" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+
+Hello everyone! My name is Karanina Zim, but I go by Laszlo. I'm a third year year CS & Chinese double major. Some of my hobbies are cafe-hopping and being a dedicated servant to my dear cat Stinkie. I also love music and I enjoy attending concerts in my (very limited) free time. I absolutely love being a ULA so please feel more than welcome to approach me with questions and I'll be happy to help! Looking forward to meeting everybody this quarter!
 
 <br>
 
@@ -50,4 +52,6 @@ Hello everyone! My name is Karanina Zim
 
 <img src="../staff/CS24-F23-Torin-S.jpg" alt="Torin" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
 
+
 Hey! My name is Torin Schlunk and I'm a 4th year Computer Engineering Major. I'm looking forward to getting to know you guys this quarter! Aside from coding, I enjoy building custom computer keyboards and designing my own PCBs for them! I love to answer questions and talk about all things computing so feel free to come talk to me at my office hours or post any questions on Piazza.
+

@@ -71,6 +71,24 @@ var DEBUGGING_ONLY = {
 		   "num" : "",
 		},
 	        
+		{
+		   "collection" : "lab",
+		   "url" : "/lab/lab01/",
+		   "num" : "lab01",
+		},
+	        
+		{
+		   "collection" : "lab",
+		   "url" : "/lab/lab02/",
+		   "num" : "lab02",
+		},
+	        
+		{
+		   "collection" : "lab",
+		   "url" : "/lab/lab03/",
+		   "num" : "lab03",
+		},
+	        
 	    ]
 	},
 	
@@ -91,6 +109,72 @@ var DEBUGGING_ONLY = {
 		   "num" : "lect02",
 		},
 	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect03/",
+		   "num" : "lect03",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect04/",
+		   "num" : "lect04",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect05/",
+		   "num" : "lect05",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect06/",
+		   "num" : "lect06",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect07/",
+		   "num" : "lect07",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect08/",
+		   "num" : "lect08",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect09/",
+		   "num" : "lect09",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect10/",
+		   "num" : "lect10",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect11/",
+		   "num" : "lect11",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect12/",
+		   "num" : "lect12",
+		},
+	        
+		{
+		   "collection" : "lectures",
+		   "url" : "/lectures/lect13/",
+		   "num" : "lect13",
+		},
+	        
 	    ]
 	},
 	
@@ -99,6 +183,12 @@ var DEBUGGING_ONLY = {
 	    "label" : "pa",
 	    "items" : [
 		
+		{
+		   "collection" : "pa",
+		   "url" : "/pa/pa01/",
+		   "num" : "pa01",
+		},
+	        
 	    ]
 	},
 	

@@ -4,11 +4,15 @@ desc: "Abstract Data Types, operator overloading"
 ready: true
 pdfurl: /lectures/CS24_Lecture2.pdf
 annotatedpdfurl: /lectures/CS24_Lecture2_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2023-10-04
 ---
 
 # Code from lecture
+
+[{{site.lect_repo}}/tree/main/{{page.num}}]({{site.lect_repo}}/tree/main/{{page.num}})
+
+
 
 
 # Topics

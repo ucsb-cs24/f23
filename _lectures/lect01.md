@@ -8,10 +8,6 @@ annotatedpdfurl: /lectures/CS24_Lecture1_ann.pdf
 annotatedready: false
 ---
 
-# Code from lecture
-
-[{{site.lect_repo}}/tree/main/{{page.num}}]({{site.lect_repo}}/tree/main/{{page.num}})
-
 
 # Topics
 

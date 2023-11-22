@@ -36,6 +36,36 @@ var dates = [{
     
 }
 ,{
+    "type" : "lab",
+    "url" :  "/f23/lab/lab01/",	   
+    "num" : "lab01",
+    "assigned" : "2023-10-12 09:00:00 -0800",
+    "due" : "2023-10-18 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Objective Cars",
+    
+}
+,{
+    "type" : "lab",
+    "url" :  "/f23/lab/lab02/",	   
+    "num" : "lab02",
+    "assigned" : "2023-10-19 09:00:00 -0800",
+    "due" : "2023-10-25 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Implementing a linked list- OOP style",
+    
+}
+,{
+    "type" : "lab",
+    "url" :  "/f23/lab/lab03/",	   
+    "num" : "lab03",
+    "assigned" : "2023-10-26 09:00:00 -0800",
+    "due" : "2023-11-01 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Binary Search Tree",
+    
+}
+,{
     "type" : "lectures",
     "url" :  "/f23/lectures/lect01/",	   
     "num" : "lect01",
@@ -57,6 +87,148 @@ var dates = [{
     "desc" : "Abstract Data Types, operator overloading",
     
       "date" : "2023-10-04",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect03/",	   
+    "num" : "lect03",
+    
+        
+    "ready" : "true",
+    "desc" : "Operator overloading, linked list (OOP style)",
+    
+      "date" : "2023-10-09",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect04/",	   
+    "num" : "lect04",
+    
+        
+    "ready" : "true",
+    "desc" : "C++ Linked Lists contd + Rule of Three",
+    
+      "date" : "2023-10-11",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect05/",	   
+    "num" : "lect05",
+    
+        
+    "ready" : "true",
+    "desc" : "Efficient search and Binary Search Trees",
+    
+      "date" : "2023-10-16",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect06/",	   
+    "num" : "lect06",
+    
+        
+    "ready" : "true",
+    "desc" : "Tree traversals and BST operations",
+    
+      "date" : "2023-10-18",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect07/",	   
+    "num" : "lect07",
+    
+        
+    "ready" : "true",
+    "desc" : "BST wrap up + intro to running time analysis",
+    
+      "date" : "2023-10-23",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect08/",	   
+    "num" : "lect08",
+    
+        
+    "ready" : "true",
+    "desc" : "Big-O running time analysis",
+    
+      "date" : "2023-10-25",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect09/",	   
+    "num" : "lect09",
+    
+        
+    "ready" : "true",
+    "desc" : "Running time analysis – best/worst case and BST operations",
+    
+      "date" : "2023-10-30",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect10/",	   
+    "num" : "lect10",
+    
+        
+    "ready" : "true",
+    "desc" : "Stack ADT, C++ STL, templates",
+    
+      "date" : "2023-11-01",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect11/",	   
+    "num" : "lect11",
+    
+        
+    "ready" : "true",
+    "desc" : "C++ set ADT (balanced BST), Iterators, Queue with applications",
+    
+      "date" : "2023-11-06",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect12/",	   
+    "num" : "lect12",
+    
+        
+    "ready" : "true",
+    "desc" : "Graphs: terminology, representation, and graph search (BFS)",
+    
+      "date" : "2023-11-13",
+    
+}
+,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect13/",	   
+    "num" : "lect13",
+    
+        
+    "ready" : "true",
+    "desc" : "Graph search (BFS, DFS) and applications",
+    
+      "date" : "2023-11-14",
+    
+}
+,{
+    "type" : "pa",
+    "url" :  "/f23/pa/pa01/",	   
+    "num" : "pa01",
+    "assigned" : "2023-11-02 09:00:00 -0800",
+    "due" : "2023-11-15 23:59:00 -0800",    
+    "ready" : "true",
+    "desc" : "Card game using Binary Search Trees",
     
 }
 ,];
