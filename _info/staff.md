@@ -50,6 +50,8 @@ Hello everyone! My name is Karanina Zim, but I go by Laszlo. I'm a third year ye
 
 ## Torin Schlunk, LA
 
-<img src="" alt="Torin" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+<img src="../staff/CS24-F23-Torin-S.jpg" alt="Torin" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
 
-Hello everyone! My name is Torin Schlunk
+
+Hey! My name is Torin Schlunk and I'm a 4th year Computer Engineering Major. I'm looking forward to getting to know you guys this quarter! Aside from coding, I enjoy building custom computer keyboards and designing my own PCBs for them! I love to answer questions and talk about all things computing so feel free to come talk to me at my office hours or post any questions on Piazza.
+
