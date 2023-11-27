@@ -254,6 +254,18 @@ var dates = [{
     
 }
 ,{
+    "type" : "lectures",
+    "url" :  "/f23/lectures/lect15/",	   
+    "num" : "lect15",
+    
+        
+    "ready" : "true",
+    "desc" : "Heaps (contd) and heap sort",
+    
+      "date" : "2023-11-27",
+    
+}
+,{
     "type" : "pa",
     "url" :  "/f23/pa/pa01/",	   
     "num" : "pa01",
