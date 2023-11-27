@@ -5,7 +5,7 @@ desc: "Graph search (BFS, DFS) and applications"
 ready: true
 pdfurl: /lectures/CS24_Lecture13.pdf
 annotatedpdfurl: /lectures/CS24_Lecture13_ann.pdf
-annotatedready: false
+annotatedready: true
 ---
 
 # Code from lecture
