@@ -1,7 +1,7 @@
 ---
 lecture_date: 2023-11-29
 num: "lect16"
-desc: "Coding demo + Interview Practice"
+desc: "Coding demo + Interview practice"
 ready: true
 pdfurl: /lectures/CS24_Lecture16.pdf
 annotatedpdfurl: /lectures/CS24_Lecture16_ann.pdf
